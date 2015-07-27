@@ -1,5 +1,5 @@
 <?php
-namespace nltool\Models;
+namespace messetool\Models;
 
 class Languages extends \Phalcon\Mvc\Model{
 	/**

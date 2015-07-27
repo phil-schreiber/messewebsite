@@ -1,12 +1,12 @@
 <?php
-namespace nltool\Acl;
+namespace messetool\Acl;
 
 use Phalcon\Mvc\User\Component,
 Phalcon\Acl\Adapter\Memory as AclMemory,
 Phalcon\Acl\Role as AclRole,
 Phalcon\Acl\Resource as AclResource,
-nltool\Models\Profiles as Profiles,
-nltool\Models\Resources as Resources;
+messetool\Models\Profiles as Profiles,
+messetool\Models\Resources as Resources;
 
 /**
  * nltest\Acl\Acl

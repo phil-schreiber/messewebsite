@@ -1,5 +1,5 @@
 <?php
-namespace nltool\Helper;
+namespace messetool\Helper;
 
 class Tag extends \Phalcon\Tag
 {

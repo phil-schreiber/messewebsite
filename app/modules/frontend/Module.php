@@ -83,12 +83,12 @@ $di->set(
             )
         );
 		$volt->getCompiler()->addFunction('tr', function ($key) {
-			return "nltool\Modules\Modules\Frontend\Controllers\ControllerBase::translate({$key})";
+			return "messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate({$key})";
 		});
 		 $volt->getCompiler()->addFunction(
                     'roundTwo',
                     function ($resolvedArgs, $exprArgs) {
-                        return 'nltool\Helper\Tag::roundTwo(' . $resolvedArgs . ')';
+                        return 'messetool\Helper\Tag::roundTwo(' . $resolvedArgs . ')';
                     }
                 );
         $volt->getCompiler()->addFunction('number_format', function($resolvedArgs) {
@@ -96,7 +96,7 @@ $di->set(
         });
 		
 		$volt->getCompiler()->addFunction('linkAllowed', function($args) {
-			return "nltool\Acl\Acl::linkAllowed({$args})";
+			return "messetool\Acl\Acl::linkAllowed({$args})";
 		});
 
         return $volt;

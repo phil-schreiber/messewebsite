@@ -22,18 +22,17 @@ require.config({
 		addressfolders:'addressfolders',
 		segmentobjects:'segmentobjects',
 		datatables:'jquery.dataTables',
-		profiles:'profiles'
+		profiles:'profiles',
+		stepsform:'stepsForm',
+		modernizr:'modernizr-2.6.2.min'
     }
 });
 
 require(['jquery'], function( jQuery ) {
 	require(['jqueryui']);
-	require(['main']);	
-    
+
+	require(['main']);	    
 	require(['bootstrap']);
-	
-	
-	
-	
+
 });
 

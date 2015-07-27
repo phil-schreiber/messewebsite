@@ -11,11 +11,11 @@ use Phalcon\Mvc\Model\Metadata\Memory as MemoryMetaDataAdapter;
 use Phalcon\Session\Adapter\Files as SessionAdapter;
 use Phalcon\Cache\Backend\File as FileCache;
 use Phalcon\Mvc\Dispatcher as MvcDispatcher;
-use nltool\Notifications\Checker as NotificationsChecker;
+use messetool\Notifications\Checker as NotificationsChecker;
 //use Sum\Oauth2 AS Oauth2;
-use nltool\Auth\Auth;
-use nltool\Acl\Acl;
-use nltool\Helper\Mailrenderer;
+use messetool\Auth\Auth;
+use messetool\Acl\Acl;
+use messetool\Helper\Mailrenderer;
 
 
 
@@ -40,7 +40,7 @@ $di->set(
 	
 $di->set('tag', function() {
 	
-    return new nltool\Helper\Tag();
+    return new messetool\Helper\Tag();
 });
 
 $di->set('modelsManager', function() {

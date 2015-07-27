@@ -1,5 +1,5 @@
 <?php
-namespace nltool\Models;
+namespace messetool\Models;
 use Phalcon\Mvc\Model;
 use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
 use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
@@ -35,16 +35,7 @@ class Feusers extends \Phalcon\Mvc\Model{
     }
 	
 	public function initialize(){
-		$this->hasOne('profileid', 'nltool\Models\Profiles', 'uid', array(
-            'alias' => 'profile'
-        ));
-		$this->hasOne('usergroup', 'nltool\Models\Usergroups', 'uid', array(
-            'alias' => 'usergroup'
-        ));
-		$this->hasOne('userlanguage','nltool\Models\Languages','uid',array(
-			'alias'=>'userlanguage'
-		));
-		  $this->hasMany("uid", "nltool\Models\Review", "cruser_id",array('alias' => 'reviews'));
+	
 	}
 }
 

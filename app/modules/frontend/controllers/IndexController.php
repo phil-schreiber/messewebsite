@@ -1,6 +1,6 @@
 <?php
-namespace nltool\Modules\Modules\Frontend\Controllers;
-
+namespace messetool\Modules\Modules\Frontend\Controllers;
+use messetool\Models\Feusers AS Feusers;
 /**
  * Class IndexController
  *
@@ -20,7 +20,16 @@ class IndexController extends ControllerBase
     public function indexAction()
     {		
 		
+		$feusers=Feusers::find(array(
+				'conditions' => 'deleted=0 AND usergroup = 2'
+			));
 		
+		$environment= $this->config['application']['debug'] ? 'development' : 'production';
+		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
+		$path=$baseUri.'/'.$this->view->language.'/feusers/update/';
+		
+		$this->view->setVar('path',$path);
+		$this->view->setVar('feusers',$feusers);
         
         
     }

@@ -13,7 +13,7 @@ $router->add(
 		'controller' => 1,
 		'action' => 2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 $router->add(
@@ -23,7 +23,7 @@ $router->add(
 		'controller' => 2,
 		'action' => "index",
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -35,7 +35,7 @@ $router->add(
 		'action' => 3,
 		'uid'=>4,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -47,7 +47,7 @@ $router->add(
 		'controller' => "linkreferer",
 		'action' => "index",		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 $router->add(
@@ -57,7 +57,7 @@ $router->add(
 		'controller' => "linkreferer",
 		'action' => "index",		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -69,7 +69,7 @@ $router->add(
 		'controller' => "linkreferer",
 		'action' => "open",		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -79,7 +79,7 @@ $router->add(
 		'controller' => "triggersend",
 		'action' => "generate",		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -89,7 +89,7 @@ $router->add(
 		'controller' => "triggersend",
 		'action' => "send",		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -101,7 +101,7 @@ $router->add(
 		'action' => "update",
 		'uid' => 2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -113,7 +113,7 @@ $router->add(
 		'action' => "update",
 		'uid' => 2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -125,7 +125,7 @@ $router->add(
 		'action' => "update",
 		'uid' => 2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -136,7 +136,7 @@ $router->add(
 		'action' => "update",
 		'uid' => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -148,7 +148,7 @@ $router->add(
 		'language'=>1,
 		'email'=>2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -159,7 +159,7 @@ $router->add(
 		'controller' => "configurationobjects",
 		'action' => 1,		
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 		)
 );
 
@@ -170,7 +170,7 @@ $router->add(
 		'controller' => 2,
 		'action' => 3,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -182,7 +182,7 @@ $router->add(
 		'action' => "update",
 		'uid' => 2,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers'
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers'
 	)
 );
 
@@ -194,7 +194,7 @@ $router->add(
 		'controller' => 'contentobjects',
 		'action' => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -204,7 +204,7 @@ $router->add(
 		'controller' => 'campaignobjects',
 		'action' => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 $router->add(
@@ -213,7 +213,7 @@ $router->add(
 		'controller' => 'addressfolders',
 		'action' => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -223,7 +223,7 @@ $router->add(
 		'controller' => 'addresses',
 		'action' => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -236,7 +236,7 @@ $router->add(
 		'controller' => 1,
 		'action' => "index",
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 	)
 );
 
@@ -248,7 +248,7 @@ $router->add(
 		'controller' => "index",
 		'action' => "index",
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
 ));
 
 $router->add(
@@ -257,7 +257,7 @@ $router->add(
 		'controller' => 'index',
 		'action'     => 'index',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -267,7 +267,7 @@ $router->add(
 		'controller' => 'session',
 		'action'     => 'index',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -277,7 +277,7 @@ $router->add(
        'controller' => 'session',
        'action'     => 'start',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -287,7 +287,7 @@ $router->add(
        'controller' => 'session',
        'action'     => 'logout',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -297,7 +297,7 @@ $router->add(
        'controller' => 'testmail',
        'action'     => 'create',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 $router->add(
@@ -306,7 +306,7 @@ $router->add(
        'controller' => 'review',
        'action'     => 'update',
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -316,7 +316,7 @@ $router->add(
        'controller' => 'clickconditions',
        'action'     => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -326,7 +326,7 @@ $router->add(
        'controller' => 'addressconditions',
        'action'     => 1,
 		'module'=>'frontend',
-		'namespace'  => 'nltool\Modules\Modules\Frontend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Frontend\Controllers',
     )
 );
 
@@ -337,7 +337,7 @@ $router->add(
 		'controller' => 2,
 		'action' => "index",
 		'module'=>'backend',
-		'namespace'  => 'nltool\Modules\Modules\Backend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
 	)
 );
 $router->add(
@@ -347,7 +347,7 @@ $router->add(
 		'controller' => 2,
 		'action' => 3,		
 		'module'=>'backend',
-		'namespace'  => 'nltool\Modules\Modules\Backend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
 	)
 );
 
@@ -359,7 +359,7 @@ $router->add(
 		'action' => 3,
 		'uid'=>4,
 		'module'=>'backend',
-		'namespace'  => 'nltool\Modules\Modules\Backend\Controllers',
+		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
 	)
 );
 

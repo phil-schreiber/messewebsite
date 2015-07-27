@@ -1,11 +1,11 @@
 <?php
-namespace nltool\Auth;
+namespace messetool\Auth;
 
 use Phalcon\Mvc\User\Component;
-use nltool\Models\Feusers,
-	nltool\Models\SuccessLogins,
-	nltool\Models\FailedLogins,
-	nltool\Modules\Modules\Frontend\Controllers\ControllerBase as controllerBase;
+use messetool\Models\Feusers,
+	messetool\Models\SuccessLogins,
+	messetool\Models\FailedLogins,
+	messetool\Modules\Modules\Frontend\Controllers\ControllerBase as controllerBase;
 //use nltool\Models\RememberTokens;
 
 

@@ -1,9 +1,9 @@
 <?php
-namespace nltool\Modules\Modules\Frontend\Controllers;
+namespace messetool\Modules\Modules\Frontend\Controllers;
 use Phalcon\Mvc\Controller as Controller,
 	Phalcon\Mvc\Dispatcher,
 	Phalcon\DI\FactoryDefault as PhDi,
-	nltool\Models\Languages as Languages;
+	messetool\Models\Languages as Languages;
 
 class ControllerBase extends Controller
 {

@@ -1,5 +1,5 @@
 <?php
-namespace nltool\Models;
+namespace messetool\Models;
 
 use Phalcon\Mvc\Model;
 
