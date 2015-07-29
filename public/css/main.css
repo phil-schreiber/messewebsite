@@ -56,8 +56,8 @@ textarea{
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	width:400px;
-	padding:5px;
+	
+	padding:10px;
 	background: #f5f5f5;
 	border: 1px solid #ccc;		
 	line-height: 1.6;	
@@ -163,7 +163,7 @@ textarea {
 a {
     text-decoration:none;
     color:#01994e;
-    border-radius:0.2em;
+    
     -webkit-transition: color 0.15s ease-in;
     -moz-transition: color 0.15s ease-in;
     -o-transition: color 0.15s ease-in;
@@ -1988,326 +1988,157 @@ li.list-group-item img{
 .logo{
 	float:left;
 }
-
-
-/*SIMFORM*/
-
-
-.simform {
-	position: relative;
-	margin: 0 auto;
-	padding: 2em 0;
-	max-width: 860px;
-	width: 100%;
-	text-align: left;
-	font-size: 2.5em;
+#contact{
+	position:relative;
+}
+.form{
+	height:60%;
+	position:relative;
+}
+.form label{
+	font-size:1em;
+}
+/*Form transition base styles*/
+.pt-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    perspective: 1200px;
 }
 
-.simform .submit {
-	display: none;
-}
-
-/* Question list style */
-.simform ol {
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	position: relative;
-	-webkit-transition: height 0.4s;
-	transition: height 0.4s;
-}
-
-.simform ol:before {
-	content: '';
-	background-color: rgba(0,0,0,0.1);
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2.35em;
-}
-
-.questions li {
-	z-index: 100;
-	position: relative;
-	visibility: hidden;
-	height: 0;
-	-webkit-transition: visibility 0s 0.4s, height 0s 0.4s;
-	transition: visibility 0s 0.4s, height 0s 0.4s;
-}
-
-.questions li.current,
-.no-js .questions li {
-	visibility: visible;
-	height: auto;
-	-webkit-transition: none;
-	transition: none;
-}
-
-/* Labels */
-.questions li > span {
-	display: block;
-	overflow: hidden;
-}
-
-.questions li > span label {
-	display: block;
-	-webkit-transition: -webkit-transform 0.4s;
-	transition: transform 0.4s;
-	-webkit-transform: translateY(-100%);
-	transform: translateY(-100%);
-}
-
-.questions li.current > span label,
-.no-js .questions li > span label {
-	-webkit-transition: none;
-	transition: none;
-	-webkit-transform: translateY(0);
-	transform: translateY(0);
-}
-
-.show-next .questions li.current > span label {
-	-webkit-animation: moveUpFromDown 0.4s both;
-	animation: moveUpFromDown 0.4s both;
-}
-
-@-webkit-keyframes moveUpFromDown {
-	from { -webkit-transform: translateY(100%); }
-	to { -webkit-transform: translateY(0); }
-}
-
-@keyframes moveUpFromDown {
-	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
-	to { -webkit-transform: translateY(0); transform: translateY(0); }
-}
-
-/* Input field */
-.questions input {
-	display: block;
-	margin: 0.3em 0 0 0;
-	padding: 0.5em 1em 0.5em 0.7em;
-	width: calc(100% - 2em);
-	border: none;
-	background: transparent;
-	color: rgba(0,0,0,0.8);
-	font-size: 1em;
-	line-height: 1;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s;
-	transition: opacity 0.3s;
-}
-
-.questions .current input,
-.no-js .questions input {
-	opacity: 1;
-}
-
-.questions input:focus,
-.simform button:focus {
-	outline: none;
-}
-
-/* Next question button */
-.next {
-	position: absolute;
-	right: 0;
-	bottom: 2.15em; /* padding-bottom of form plus progress bar height */
-	display: block;
-	padding: 0;
-	width: 2em;
-	height: 2em;
-	border: none;
-	background: none;
-	color: rgba(0,0,0,0.4);
+.pt-page {
+	background:#e5e5e5;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    overflow: hidden;
 	text-align: center;
-	opacity: 0;
-	z-index: 100;
-	cursor: pointer;
-	-webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
-	transition: transform 0.3s, opacity 0.3s;
-	-webkit-transform: translateX(-20%);
-	transform: translateX(-20%);
-	pointer-events: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	font-size:2em;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
-.next:hover {
-	color: rgba(0,0,0,0.5);
+.pt-page-current, .no-js .pt-page {
+    visibility: visible;
+    z-index: 1;
+}
+.pt-page-ontop {
+    z-index: 999;
+}
+a.pt-trigger,a.navButton{
+	    -webkit-transition: all 0.2s ease-in-out;
+    -ms-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    width: 100px;
+    padding: 10px;
+    background: #f5f5f5;
+    border: 1px solid #ccc;
+    line-height: 1.6;
+	font-size:1em;
+	cursor:pointer;
+	display:inline-block;
+}
+a.pt-trigger:hover,a.navButton:hover{
+	text-decoration: none;
+	background: #fff;
+    border: 1px solid #01994e;
+    outline: none;
+}
+a.navButton{
+	width:auto;	
+	position: relative;
+}
+a.navButton span{
+	font-size:1.5em;
+}
+/*.pt-page-1 {
+    background: #0ac2d2;
 }
 
-.next::after {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	content: "\e600";
-	text-transform: none;
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	font-family: 'icomoon';
-	line-height: 2;
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+.pt-page-2 {
+    background: #7bb7fa;
 }
 
-.next.show {
-	opacity: 1;
-	-webkit-transform: translateX(0);
-	transform: translateX(0);
-	pointer-events: auto;
+.pt-page-3 {
+    background: #60d7a9;
 }
 
-/* Progress bar */
-.simform .progress {
-	width: 0%;
-	height: 0.15em;
-	background: rgba(0,0,0,0.3);
-	-webkit-transition: width 0.4s ease-in-out;
-	transition: width 0.4s ease-in-out;
+.pt-page-4 {
+    background: #fdc162;
 }
 
-.simform .progress::before {
-	position: absolute;
-	top: auto;
-	width: 100%;
-	height: inherit;
-	background: rgba(0,0,0,0.05);
-	content: '';
+.pt-page-5 {
+    background: #fd6a62;
 }
 
-/* Number indicator */
-.simform .number {
-	position: absolute;
-	right: 0;
-	overflow: hidden;
-	margin: 0.4em 0;
-	width: 3em;
-	font-weight: 700;
-	font-size: 0.4em;
+.pt-page-6 {
+    background: #f68dbb;
+}*/
+
+table.formTable{
+	width:100%;
+	height:100%;
+	vertical-align: middle;
+	text-align:center;
+	
+}
+table.formTable td{
+	font-size:2em;
+}
+table.formTable table{
+	margin-left:auto;
+	margin-right:auto;
+}
+table.formTable table td{
+	padding:5px;
 }
 
-.simform .number:after {
-	position: absolute;
-	left: 50%;
-	content: '/';
-	opacity: 0.4;
-	-webkit-transform: translateX(-50%);
-	transform: translateX(-50%);
+#virtualKeyboard{
+	/*position:absolute;
+	z-index: 199;
+	top:0;*/
 }
 
-.simform .number span {
-	float: right;
-	width: 40%;
-	text-align: center;
+/*BayWa Icon*/
+.icon, .icon_l, input[type=checkbox]+label, input[type=radio]+label, .i_radio_checked, .i_checkbox_checked {
+    background: transparent url("../images/sprite_x2.svg") no-repeat 0 0;
+    -webkit-background-size: 36em auto;
+    background-size: 36em auto;    
+    height: 2em;
+    position:absolute;
+    text-indent: 100%;
+    width: 2em;	
+	left:0px;
+	top:0.3em;
 }
 
-.simform .number .number-current {
-	float: left;
+.i_right_primary, .button:hover .i_right_invert, .nav_active > a .i_right_invert, .cat > a:hover .i_right {
+    background-position: -10em -12em;
 }
 
-.simform .number-next {
-	position: absolute;
-	left: 0;
+.btn_label{
+	display:inline-block;
+	margin-left:20px;
+	
 }
 
-.simform.show-next .number-current {
-	-webkit-transition: -webkit-transform 0.4s;
-	transition: transform 0.4s;
-	-webkit-transform: translateY(-100%);
-	transform: translateY(-100%);
-}
-
-.simform.show-next .number-next {
-	-webkit-animation: moveUpFromDown 0.4s both;
-	animation: moveUpFromDown 0.4s both;
-}
-
-/* Error and final message */
-.simform .error-message,
-.simform .final-message {
-	position: absolute;
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: opacity 0.4s;
-	transition: opacity 0.4s;
-}
-
-.simform .error-message {
-	padding: 0.4em 3.5em 0 0;
-	width: 100%;
-	color: rgba(0,0,0,0.7);
-	font-style: italic;
-	font-size: 0.4em;
-}
-
-.final-message {
-	top: 50%;
-	left: 0;
-	padding: 0.5em;
-	width: 100%;
-	text-align: center;
-	-webkit-transform: translateY(-50%);
-	transform: translateY(-50%);
-}
-
-.error-message.show,
-.final-message.show {
-	visibility: visible;
-	opacity: 1;
-}
-
-.final-message.show {
-	-webkit-transition-delay: 0.5s;
-	transition-delay: 0.5s;
-}
-
-/* Final hiding of form / showing message */
-.simform-inner.hide {
-	visibility: hidden;
-	opacity: 0;
-	-webkit-transition: opacity 0.3s, visibility 0s 0.3s;
-	transition: opacity 0.3s, visibility 0s 0.3s;
-}
-
-/* No JS Fallback */
-.no-js .simform {
-	font-size: 1.75em;
-}
-
-.no-js .questions li {
-	padding: 0 0 2em;
-}
-
-.no-js .simform .submit {
-	display: block;
-	float: right;
-	padding: 10px 20px;
-	border: none;
-	background: rgba(0,0,0,0.3);
-	color: rgba(0,0,0,0.4);
-}
-
-.no-js .simform .controls {
-	display: none;
-}
-
-/* Remove IE clear cross */
-input[type=text]::-ms-clear {
-    display: none;
-}
-
-/* Adjust form for smaller screens */
-@media screen and (max-width: 44.75em) {
-	.simform {
-		font-size: 1.8em;
-	}
-}
-
-@media screen and (max-width: 33.5625em) {
-	.simform {
-		font-size: 1.2em;
-	}
-}
+/*autocomplete suggestions*/
+.autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: #F0F0F0; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }

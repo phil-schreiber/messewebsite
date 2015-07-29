@@ -106,7 +106,7 @@
 			</div>
 			<div class='clearfix'></div>
 		</header>
-		<ul class='list-group'>
+		<ul class="list-group clearfix">
 		<?php foreach ($feusers as $index => $feuser) { ?>
 		<li class='list-group-item'>
 			<table>
@@ -126,8 +126,11 @@
 			<input type="hidden" value="<?php echo $feuser->uid; ?>">
 		</li>
 		</ul>
-	
 		<?php } ?>
+		<br>
+		<div class="clearfix">
+			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultantNotFound'); ?></span></a>
+		</div>
 	</section>
 	<section id="contact">
 		<a name="contact"></a>
@@ -141,65 +144,143 @@
 			</div>
 			<div class='clearfix'></div>
 		</header>
-		<div id="contactFormWrapper">
-			<form id="contactForm" class="simform" autocomplete="off">
-				<div class="simform-inner">
-					<ol class="questions">
-						<li class="current">
-							<span><label for="consultant"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultant'); ?></label></span>
-				<select id="consultantSelect" name="consultant">
-					<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('pleaseSelect'); ?></option>
-				<?php foreach ($feusers as $index => $feuser) { ?>
-					<option value="<?php echo $feuser->uid; ?>"><?php echo $feuser->first_name; ?> <?php echo $feuser->last_name; ?></option>					
-				<?php } ?>
-				</select><br><br>
-				</li>
-				<li>
-				<label for="firstname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('firstname'); ?></label><br>
-				<input type="text" name="firstname"><br><br>
-				<label for="lastname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('lastname'); ?></label><br>
-				<input type="text" name="lastname"><br><br>
-				<label for="farmer"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('farmer'); ?></label><br>
-				<input type="radio" name="farmer" value="1" checked><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('yes'); ?> / 
-				<input type="radio" name="farmer" value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('no'); ?><br><br>
-				</li>
-				<li>
-				<label for="email"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('email'); ?></label><br>
-				<input type="text" name="email"><br><br>
-				<label for="phone"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('phone'); ?></label><br>
-				<input type="text" name="phone"><br><br>
-				<label for="zip"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('zip'); ?></label><br>
-				<input type="text" name="zip"><br><br>
-				<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
-				<input type="text" name="city"><br><br>
-				</li>
-				<li>
-				<label for="message"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message'); ?></label><br>
-				<select name="consultant">
-					<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message1'); ?></option>
-					<option value="2"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message2'); ?></option>
-					<option value="3"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message3'); ?></option>
-					<option value="4"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message4'); ?></option>
-				</select><br>
-				</li>
-				
-				</ol>	
-				<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('submitSMS'); ?>">
-			<div class="controls">
-							<button class="next"></button>
-							<div class="progress"></div>
-							<span class="number">
-								<span class="number-current"></span>
-								<span class="number-total"></span>
-							</span>
-							<span class="error-message"></span>
-						</div>	
-				</div>
-			</form>
+		<form id="contactForm" autocomplete="off" class="form">
+		<div id="contactFormWrapper" class="pt-wrapper">
 			
-		
-		
+				<div class="pt-page pt-page-1 pt-page-current">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="consultant"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultant'); ?></label><br>
+								<select id="consultantSelect" name="consultant">
+									<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('pleaseSelect'); ?></option>
+								<?php foreach ($feusers as $index => $feuser) { ?>
+									<option value="<?php echo $feuser->uid; ?>"><?php echo $feuser->first_name; ?> <?php echo $feuser->last_name; ?></option>					
+								<?php } ?>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-2">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="firstname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('firstname'); ?></label><br>
+								<input type="text" name="firstname"><br><br>
+								<label for="lastname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('lastname'); ?></label><br>
+								<input type="text" name="lastname"><br><br>
+								<label for="farmer"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('farmer'); ?></label><br>
+								<input type="radio" name="farmer" value="1" checked><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('yes'); ?> / 
+								<input type="radio" name="farmer" value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('no'); ?><br><br>
+							</td>
+							<td>
+								<div id="virtualKeyboard"></div>
+							</td>
+						</tr>
+						<tr>
+							<td >
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="3">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-3">
+					<table class="formTable">
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td>
+											<label for="email"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('email'); ?></label><br>
+											<input type="text" name="email"><br><br>
+											<label for="phone"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('phone'); ?></label><br>
+											<input type="text" name="phone"><br><br>
+										</td>
+										<td>
+											<label for="zip"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('zip'); ?></label><br>
+											<input type="text" name="zip"><br><br>
+											<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
+											<input type="text" name="city"><br><br>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="4">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-4">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="message"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message'); ?></label><br>					
+								<select name="consultant">
+									<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message1'); ?></option>
+									<option value="2"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message2'); ?></option>
+									<option value="3"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message3'); ?></option>
+									<option value="4"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message4'); ?></option>
+								</select><br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('submitSMS'); ?>">
+							</td>
+						</tr>
+					</table>					
+				</div>
+				 
+			
+		</div>
+		</form>
+		  
 	</section>
-	
+	<section id="search">
+		<a name="search"></a>
+		<header>
+			<div class="logo">
+				<?php echo $this->tag->image(array('images/baywa-logo.png', 'class' => 'logo')); ?>
+			</div>
+			<div class="headerWrap">
+				<h1><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('searchHeader'); ?></h1>
+				<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('searchHeaderInfo'); ?></h2>
+			</div>
+			<div class='clearfix'></div>
+			
+		</header>
+		<form id="searchForm" autocomplete="off" class="form">
+			<div class="pt-page" style="display:block;visibility: visible">
+					<table class="formTable">
+						<tr>
+							
+							<td>
+								<label for="name"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('name'); ?></label><br>
+								<input type="text" name="name" id="searchName">
+							</td>
+							<td>
+								<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
+								<input type="text" name="city" id="searchCity">
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>">
+							</td>
+						</tr>
+					</table>
+			</div>
+		</form>
+	</section>
 	
 		

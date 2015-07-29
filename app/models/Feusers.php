@@ -15,7 +15,7 @@ class Feusers extends \Phalcon\Mvc\Model{
 	
 	
 		
-    public function validation()
+   public function validation()
     {
         $this->validate(new EmailValidator(array(
             'field' => 'email'
@@ -35,7 +35,20 @@ class Feusers extends \Phalcon\Mvc\Model{
     }
 	
 	public function initialize(){
+		$this->hasOne('profileid', 'messetool\Models\Profiles', 'uid', array(
+            'alias' => 'profile'
+        ));
+		$this->hasOne('usergroup', 'messetool\Models\Usergroups', 'uid', array(
+            'alias' => 'usergroup'
+        ));
+		$this->hasOne('userlanguage','messetool\Models\Languages','uid',array(
+			'alias'=>'userlanguage'
+		));
+		
 	
+		$this->hasManyToMany("uid", "nltool\Models\Feuser_zipcodes_lookup", "uid_local", "uid_foreign", "nltool\Models\Zipcodes", "zip",array('alias' => 'userzips'));
+	
+		  
 	}
 }
 

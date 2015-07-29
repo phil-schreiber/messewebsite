@@ -58,9 +58,26 @@ class Acl extends Component
             'create',
             'retrieve',
             'update',
-            'delete'
-            
+            'delete'            
         ),
+		'session' => array(
+			'index',
+			'start'
+		),
+		'message' => array(
+			'index',
+			'create',
+			'retrieve',
+			'update',
+			'delete'
+		),
+		'search' => array(
+			'index',
+			'create',
+			'retrieve',
+			'update',
+			'delete'
+		)
 		
 	);
 

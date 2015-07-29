@@ -37,7 +37,7 @@ class Module implements ModuleDefinitionInterface
      *
      * @param Phalcon\DI $di
      */
-    public function registerServices($di)
+    public function registerServices(\Phalcon\DiInterface $di)
     {
         /**
          * Read configuration
@@ -83,14 +83,14 @@ $di->set(
             )
         );
 		$volt->getCompiler()->addFunction('tr', function ($key) {
-			return "nltool\Modules\Modules\Backend\Controllers\ControllerBase::translate({$key})";
+			return "messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate({$key})";
 		});
 
         $volt->getCompiler()->addFunction('number_format', function($resolvedArgs) {
             return 'number_format(' . $resolvedArgs . ')';
         });
 		$volt->getCompiler()->addFunction('linkAllowed', function($args) {
-			return "nltool\Acl\Acl::linkAllowed({$args})";
+			return "messetool\Acl\Acl::linkAllowed({$args})";
 		});
 
         return $volt;

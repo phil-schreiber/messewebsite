@@ -106,7 +106,7 @@
 			</div>
 			<div class='clearfix'></div>
 		</header>
-		<ul class='list-group'>
+		<ul class="list-group clearfix">
 		{% for index,feuser in feusers %}
 		<li class='list-group-item'>
 			<table>
@@ -126,8 +126,11 @@
 			<input type="hidden" value="{{feuser.uid}}">
 		</li>
 		</ul>
-	
 		{% endfor %}
+		<br>
+		<div class="clearfix">
+			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('consultantNotFound')}}</span></a>
+		</div>
 	</section>
 	<section id="contact">
 		<a name="contact"></a>
@@ -141,65 +144,143 @@
 			</div>
 			<div class='clearfix'></div>
 		</header>
-		<div id="contactFormWrapper">
-			<form id="contactForm" class="simform" autocomplete="off">
-				<div class="simform-inner">
-					<ol class="questions">
-						<li class="current">
-							<span><label for="consultant">{{tr('consultant')}}</label></span>
-				<select id="consultantSelect" name="consultant">
-					<option value="0">{{tr('pleaseSelect')}}</option>
-				{% for index,feuser in feusers %}
-					<option value="{{feuser.uid}}">{{feuser.first_name}} {{feuser.last_name}}</option>					
-				{% endfor %}
-				</select><br><br>
-				</li>
-				<li>
-				<label for="firstname">{{tr('firstname')}}</label><br>
-				<input type="text" name="firstname"><br><br>
-				<label for="lastname">{{tr('lastname')}}</label><br>
-				<input type="text" name="lastname"><br><br>
-				<label for="farmer">{{tr('farmer')}}</label><br>
-				<input type="radio" name="farmer" value="1" checked>{{tr('yes')}} / 
-				<input type="radio" name="farmer" value="0">{{tr('no')}}<br><br>
-				</li>
-				<li>
-				<label for="email">{{tr('email')}}</label><br>
-				<input type="text" name="email"><br><br>
-				<label for="phone">{{tr('phone')}}</label><br>
-				<input type="text" name="phone"><br><br>
-				<label for="zip">{{tr('zip')}}</label><br>
-				<input type="text" name="zip"><br><br>
-				<label for="city">{{tr('city')}}</label><br>
-				<input type="text" name="city"><br><br>
-				</li>
-				<li>
-				<label for="message">{{tr('message')}}</label><br>
-				<select name="consultant">
-					<option value="0">{{tr('message1')}}</option>
-					<option value="2">{{tr('message2')}}</option>
-					<option value="3">{{tr('message3')}}</option>
-					<option value="4">{{tr('message4')}}</option>
-				</select><br>
-				</li>
-				
-				</ol>	
-				<input type="submit" value="{{tr('submitSMS')}}">
-			<div class="controls">
-							<button class="next"></button>
-							<div class="progress"></div>
-							<span class="number">
-								<span class="number-current"></span>
-								<span class="number-total"></span>
-							</span>
-							<span class="error-message"></span>
-						</div>	
-				</div>
-			</form>
+		<form id="contactForm" autocomplete="off" class="form">
+		<div id="contactFormWrapper" class="pt-wrapper">
 			
-		
-		
+				<div class="pt-page pt-page-1 pt-page-current">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="consultant">{{tr('consultant')}}</label><br>
+								<select id="consultantSelect" name="consultant">
+									<option value="0">{{tr('pleaseSelect')}}</option>
+								{% for index,feuser in feusers %}
+									<option value="{{feuser.uid}}">{{feuser.first_name}} {{feuser.last_name}}</option>					
+								{% endfor %}
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-2">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="firstname">{{tr('firstname')}}</label><br>
+								<input type="text" name="firstname"><br><br>
+								<label for="lastname">{{tr('lastname')}}</label><br>
+								<input type="text" name="lastname"><br><br>
+								<label for="farmer">{{tr('farmer')}}</label><br>
+								<input type="radio" name="farmer" value="1" checked>{{tr('yes')}} / 
+								<input type="radio" name="farmer" value="0">{{tr('no')}}<br><br>
+							</td>
+							<td>
+								<div id="virtualKeyboard"></div>
+							</td>
+						</tr>
+						<tr>
+							<td >
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="3">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-3">
+					<table class="formTable">
+						<tr>
+							<td>
+								<table>
+									<tr>
+										<td>
+											<label for="email">{{tr('email')}}</label><br>
+											<input type="text" name="email"><br><br>
+											<label for="phone">{{tr('phone')}}</label><br>
+											<input type="text" name="phone"><br><br>
+										</td>
+										<td>
+											<label for="zip">{{tr('zip')}}</label><br>
+											<input type="text" name="zip"><br><br>
+											<label for="city">{{tr('city')}}</label><br>
+											<input type="text" name="city"><br><br>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="4">Weiter</a>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="pt-page pt-page-4">
+					<table class="formTable">
+						<tr>
+							<td>
+								<label for="message">{{tr('message')}}</label><br>					
+								<select name="consultant">
+									<option value="0">{{tr('message1')}}</option>
+									<option value="2">{{tr('message2')}}</option>
+									<option value="3">{{tr('message3')}}</option>
+									<option value="4">{{tr('message4')}}</option>
+								</select><br>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<input type="submit" value="{{tr('submitSMS')}}">
+							</td>
+						</tr>
+					</table>					
+				</div>
+				 
+			
+		</div>
+		</form>
+		  
 	</section>
-	
+	<section id="search">
+		<a name="search"></a>
+		<header>
+			<div class="logo">
+				{{image('images/baywa-logo.png', "class":"logo")}}
+			</div>
+			<div class="headerWrap">
+				<h1>{{tr('searchHeader')}}</h1>
+				<h2>{{tr('searchHeaderInfo')}}</h2>
+			</div>
+			<div class='clearfix'></div>
+			
+		</header>
+		<form id="searchForm" autocomplete="off" class="form">
+			<div class="pt-page" style="display:block;visibility: visible">
+					<table class="formTable">
+						<tr>
+							
+							<td>
+								<label for="name">{{tr('name')}}</label><br>
+								<input type="text" name="name" id="searchName">
+							</td>
+							<td>
+								<label for="city">{{tr('city')}}</label><br>
+								<input type="text" name="city" id="searchCity">
+							</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="3">
+								<input type="submit" value="{{tr('search')}}">
+							</td>
+						</tr>
+					</table>
+			</div>
+		</form>
+	</section>
 	
 		

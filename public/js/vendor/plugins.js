@@ -24,15 +24,17 @@ require.config({
 		datatables:'jquery.dataTables',
 		profiles:'profiles',
 		stepsform:'stepsForm',
-		modernizr:'modernizr-2.6.2.min'
+		modernizr:'modernizr-2.6.2.min',
+		transition:'transition',
+		jsKeyboard:'jsKeyboard',
+		autocomplete:'jquery.autocomplete'
     }
 });
 
 require(['jquery'], function( jQuery ) {
-	require(['jqueryui']);
-
-	require(['main']);	    
-	require(['bootstrap']);
+	require(['jsKeyboard','jqueryui','main','bootstrap','transition','autocomplete']);
+	
+	
 
 });
 

@@ -14,8 +14,10 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		 <?php echo $this->tag->getTitle(); ?>
         <?php echo $this->tag->stylesheetLink('css/normalize.css'); ?>
-		<?php echo $this->tag->stylesheetLink('css/bootstrap.css'); ?>		
+		<?php echo $this->tag->stylesheetLink('css/bootstrap.css'); ?>				
         <?php echo $this->tag->stylesheetLink('css/main.css'); ?>     
+		<?php echo $this->tag->stylesheetLink('css/transition-animations.css'); ?>     
+		<?php echo $this->tag->stylesheetLink('css/jsKeyboard.css'); ?>     
 		<?php echo $this->assets->outputCss(); ?>
 		
 		<script data-main="<?php echo $baseurl; ?>js/vendor/plugins" src="<?php echo $baseurl; ?>js/require.js"></script>

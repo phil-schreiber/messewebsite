@@ -1,11 +1,11 @@
 <?php
-namespace nltool\Modules\Modules\Backend\Controllers;
-use nltool\Models\Feusers,
-	nltool\Models\Profiles,
-	nltool\Models\Languages,
-	nltool\Models\Usergroups,
-	nltool\Models\Permissions,
-	nltool\Models\Resources;
+namespace messetool\Modules\Modules\Backend\Controllers;
+use messetool\Models\Feusers,
+	messetool\Models\Profiles,
+	messetool\Models\Languages,
+	messetool\Models\Usergroups,
+	messetool\Models\Permissions,
+	messetool\Models\Resources;
 /**
  * Class FeusersController
  *

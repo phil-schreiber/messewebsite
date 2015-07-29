@@ -66,14 +66,14 @@ class Profiles extends Model
      */
     public function initialize()
     {
-        $this->hasMany('uid', 'nltool\Models\Feusers', 'profileid', array(
+        $this->hasMany('uid', 'messetool\Models\Feusers', 'profileid', array(
             'alias' => 'feusers',
             'foreignKey' => array(
                 'message' => 'Profile cannot be deleted because it\'s used on Users'
             )
         ));
 
-        $this->hasMany('uid', 'nltool\Models\Permissions', 'profileid', array(
+        $this->hasMany('uid', 'messetool\Models\Permissions', 'profileid', array(
             'alias' => 'permissions'
         ));
     }

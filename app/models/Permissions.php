@@ -74,11 +74,11 @@ class Permissions extends Model
 
     public function initialize()
     {
-        $this->belongsTo('profileid', 'nltool\Models\Profiles', 'uid', array(
+        $this->belongsTo('profileid', 'messetool\Models\Profiles', 'uid', array(
             'alias' => 'profiles'
         ));
 		
-		$this->hasOne('resourceid', 'nltool\Models\Resources', 'uid', array(
+		$this->hasOne('resourceid', 'messetool\Models\Resources', 'uid', array(
             'alias' => 'resource'
         ));
     }

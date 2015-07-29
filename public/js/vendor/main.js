@@ -14,6 +14,48 @@ function init(jQuery){
 		}
 		
 	},1000);
+	
+	var initAutocomplete=function(){
+		jQuery('#searchName').devbridgeAutocomplete({
+				serviceUrl: 'search/index/name/',
+				type:'POST',
+				minChars:3,
+				deferRequestBy:10,
+				onSelect: function (suggestion) {
+
+				}
+			});
+		
+		jQuery('#searchCity').devbridgeAutocomplete({
+					serviceUrl: 'search/index/city/',
+					type:'POST',
+					minChars:3,
+					deferRequestBy:10,
+					onSelect: function (suggestion) {
+						console.log(suggestion);
+						ajaxit(suggestion.data);
+					}
+		});
+	};
+	
+	jQuery(function () {
+		if(typeof(jsKeyboard)==='undefined'){
+			window.setTimeout(function(){jsKeyboard.init("virtualKeyboard");},5000);
+		}else{
+         jsKeyboard.init("virtualKeyboard");
+		}
+		if(typeof(devbridgeAutocomplete)==='undefined'){
+			window.setTimeout(
+				function(){
+					initAutocomplete();					
+				},5000);
+		}else{
+			initAutocomplete();
+		}
+         
+         
+     });
+	
 	jQuery('body').on('click',function(e){
 		time=0;
 	});
@@ -60,18 +102,35 @@ function init(jQuery){
 					}
 					}
             }).delay(delay);
-    }
+    };
     animate_loop("-=100",0);
+	
+	
+	
+	
+	
+	jQuery('a[href^=#].navButton').on('click', function(e){
+			e.preventDefault();			
+			var href = jQuery(this).attr('href');		
+			jQuery('html, body').animate({
+				scrollTop:jQuery(href).offset().top
+			},'slow');				
+			
+		});
+	
+	
 	
 	var addFlipEvents=function(){
 		jQuery('.flipper a[href^=#]').on('click', function(e){
 			e.preventDefault();			
 			var href = jQuery(this).attr('href');		
 			jQuery('html, body').animate({
-			scrollTop:jQuery(href).offset().top
-		},'slow');				
+				scrollTop:jQuery(href).offset().top
+			},'slow');				
+			
 		});
-	}
+	};
+	
 	
 	var addStartImgEvents=function(){
 		jQuery("#startImgWrap").on("click",function(e){				

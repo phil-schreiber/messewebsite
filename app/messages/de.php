@@ -11,7 +11,9 @@ $messages = array(
 	"listHeader" => "Heute für Sie am Stand.",
 	"listHeaderInfo" => "Übersicht aller Standdienstmitarbeiter:",
 	"contactHeader" => "Kontakt zu meinem Berater",
-	"contactHeaderInfo" => "Wählen Sie Ihren Berater aus und schicken Sie ihm oder ihr direkt eine SMS aufs Handy!",
+	"contactHeaderInfo" => "Schicken Sie Ihrem Berater direkt eine SMS aufs Handy!",
+	"searchHeader" => "Beratersuche",
+	"searchHeaderInfo" => "Suchen und kontaktieren Sie Ihren Berater",
 	"consultant" => "Ihre Beraterauswahl",
 	"firstname" => "Vorname",
 	"lastname" => "Nachname",
@@ -28,6 +30,9 @@ $messages = array(
 	"message1" => "Terminvereinbarung",
 	"message2" => "Rückruf",
 	"message3" => "Lorem Ipsum",
-	"message4" => "Lorem Ipsum"
+	"message4" => "Lorem Ipsum",
+	"consultantNotFound" => "Berater nicht gefunden? Hier klicken und suchen.",
+	"search" => "Suchen",
+	"name" => "Name"
 );
 ?>
