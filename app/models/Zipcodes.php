@@ -10,6 +10,6 @@ Model::setup(['notNullValidations' => false]);
  */
 class Zipcodes extends \Phalcon\Mvc\Model{
 	public function initialize(){
-		$this->hasManyToMany("zip", "nltool\Models\Feuser_zipcodes_lookup", "uid_foreign", "uid_local", "nltool\Models\Feusers", "uid",array('alias' => 'feusers'));
+		$this->hasManyToMany("zip", "messetool\Models\Feuser_zipcodes_lookup", "uid_foreign", "uid_local", "messetool\Models\Feusers", "uid",array('alias' => 'feusers'));
 	}
 }

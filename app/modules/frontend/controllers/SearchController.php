@@ -34,6 +34,9 @@ class SearchController extends ControllerBase
 				case 'city':						
 					$suggestions = $this->SearchCity();
 				break;
+				case 'zip':
+					$suggestions=$this->SearchNameFromZip();
+				break;
 			}
 
 			
@@ -59,8 +62,24 @@ class SearchController extends ControllerBase
 				)
 			);
 		foreach($suggestionQuery as $suggestion){
-				$suggestions['suggestions'][]=array(
-					'value' => $suggestion->first_name.' '.$suggestion->last_name.' | '.$suggestion->city,
+				$suggestions['suggestions'][]=array(					
+					'value' =>$suggestion->first_name.' '. $suggestion->last_name.' | '.$suggestion->city,
+					'html' => '<div class="suggestion-item">
+										<table>
+											<tr>
+												<td>
+													<img src="public/media/'.$suggestion->image.'" style="max-height:100px">
+												</td>
+												<td>
+													<div class="">
+														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
+														'.$suggestion->company.',<br>
+														'.$suggestion->city.'
+													</div>
+												</td>
+											</tr>
+										</table>										
+									</div>',					
 					'data' => $suggestion->uid
 				);
 
@@ -98,10 +117,52 @@ class SearchController extends ControllerBase
 				}
 				$suggestions['suggestions'][]=array(
 					'value' => $suggestion->city.' | '.$zipcode,
-					'data' => $suggestion->uid
+					'data' => $suggestion->zipcode
 				);
 
 			}
 			return $suggestions;
+	}
+	
+	private function SearchNameFromZip(){
+		$queryStrng=$this->request->getPost('query');
+		
+		$suggestions=array("suggestions"=>array());
+		$ZipQuery=  City::findFirst(array(
+					'conditions' => 'zip = ?1',
+					'bind' => array(
+						1 => $queryStrng
+					)
+				)				
+			);
+
+		$suggestionQuery=$ZipQuery->getFeusers();
+		
+		foreach($suggestionQuery as $suggestion){
+			
+				$suggestions['suggestions'][]=array(					
+					'value' =>$suggestion->first_name.' '. $suggestion->last_name.' | '.$suggestion->city,
+					'html' => '<div class="suggestion-item">
+										<table>
+											<tr>
+												<td>
+													<img src="public/media/'.$suggestion->image.'" style="max-height:100px">
+												</td>
+												<td>
+													<div class="">
+														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
+														'.$suggestion->company.',<br>
+														'.$suggestion->city.'
+													</div>
+												</td>
+											</tr>
+										</table>										
+									</div>',					
+					'data' => $suggestion->uid
+				);
+
+			}
+		return $suggestions;
+			
 	}
 }

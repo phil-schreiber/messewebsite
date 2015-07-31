@@ -6,7 +6,7 @@ var time=0;
 function init(jQuery){
 	
 	window.setInterval(function(){
-		
+		console.log(time);
 		if(time==300){
 			window.location.href='http://localhost/baywa-messetool/';
 		}else{
@@ -14,15 +14,30 @@ function init(jQuery){
 		}
 		
 	},1000);
-	
+	var goToContact=function(chosenRep){
+		
+			
+			jQuery('html, body').animate({
+				scrollTop:jQuery('#contact').offset().top
+			},'slow');				
+			
+			jQuery('#consultantSelect option').each(function(index,element){
+				console.log(jQuery(element).val());
+				if(jQuery(element).val()==chosenRep){
+					jQuery(element).attr('selected','selected');
+				}
+			});
+	};
 	var initAutocomplete=function(){
 		jQuery('#searchName').devbridgeAutocomplete({
 				serviceUrl: 'search/index/name/',
 				type:'POST',
 				minChars:3,
+				noCache:true,
 				deferRequestBy:10,
+				appendTo:"#searchResults",				
 				onSelect: function (suggestion) {
-
+					goToContact(suggestion.data);
 				}
 			});
 		
@@ -30,17 +45,34 @@ function init(jQuery){
 					serviceUrl: 'search/index/city/',
 					type:'POST',
 					minChars:3,
+					noCache:true,
 					deferRequestBy:10,
+					onSearchStart:function(){
+						jQuery('#searchZip').val('');
+						
+					},
 					onSelect: function (suggestion) {
-						console.log(suggestion);
-						ajaxit(suggestion.data);
+				console.log(suggestion);
+						jQuery('#searchZip').val(suggestion.data);
+						 jQuery('#searchZip').keyup();
+					}
+		});
+		jQuery('#searchZip').devbridgeAutocomplete({
+					serviceUrl: 'search/index/zip/',
+					noCache:true,
+					type:'POST',					
+					deferRequestBy:10,
+					appendTo:"#searchResults",		
+					onSelect: function (suggestion) {
+						
+						goToContact(suggestion.data);
 					}
 		});
 	};
 	
 	jQuery(function () {
 		if(typeof(jsKeyboard)==='undefined'){
-			window.setTimeout(function(){jsKeyboard.init("virtualKeyboard");},5000);
+			window.setTimeout(function(){jsKeyboard.init("virtualKeyboard");},1000);
 		}else{
          jsKeyboard.init("virtualKeyboard");
 		}
@@ -48,7 +80,7 @@ function init(jQuery){
 			window.setTimeout(
 				function(){
 					initAutocomplete();					
-				},5000);
+				},1000);
 		}else{
 			initAutocomplete();
 		}
@@ -150,24 +182,15 @@ function init(jQuery){
 			
 		});
 	};			
-		
+	
 	addStartImgEvents();
 	
 	
 	jQuery('.list-group-item').on('click',function(e){						
+	
 			e.preventDefault();
 			var chosenRep=jQuery(this).find('input').val();
-			
-			jQuery('html, body').animate({
-				scrollTop:jQuery('#contact').offset().top
-			},'slow');				
-			
-			jQuery('#consultantSelect option').each(function(index,element){
-				console.log(jQuery(element).val());
-				if(jQuery(element).val()==chosenRep){
-					jQuery(element).attr('selected','selected');
-				}
-			});
+			goToContact(chosenRep);
 	});
 	
 	jQuery('#contactForm').submit(function(e){

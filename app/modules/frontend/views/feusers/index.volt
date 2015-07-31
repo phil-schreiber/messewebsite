@@ -19,8 +19,7 @@
 			<th>{{ tr('feusers.city') }}</th>
 			<th>{{ tr('feusers.zip') }}</th>
 			<th>{{ tr('feusers.company') }}</th>
-			<th>{{ tr('feusers.usergroup') }}</th>
-			<th>{{ tr('feusers.profile') }}</th>			
+			
 			
 		</tr>
 	</thead>
@@ -36,9 +35,7 @@
 	<td>{{feuser.address}}</td>
 	<td>{{feuser.city}}</td>
 	<td>{{feuser.zip}}</td>
-	<td>{{feuser.company}}</td>
-	<td>{{feuser.getUsergroup().title}}</td>
-	<td>{{feuser.getProfile().title}}</td>	
+	<td>{{feuser.company}}</td>	
 	<td><a href='{{ path }}{{ feuser.uid }}'>>> {{tr('update')}}</a></td>
 	
 	</tr>

@@ -30,14 +30,7 @@ return new \Phalcon\Config(array(
 		'dontSendDuplicates' => true,
 		'version' => '0.1 alpha'
     ),    
-    'smtp'        => array(
-        'host'     => "smtp.iq-pi.org",
-        'port'     => 25,
-        'security' => "tls",
-        'username' => "mailing@iq-pi.org",
-        'password' => "hpkYhxr&mdm7", //
-		'mailcycle' => 300
-    ),
+    
 	
 	'languages'=>array(
 		'de' => 'Deutsch',
@@ -49,7 +42,7 @@ return new \Phalcon\Config(array(
 			'host'     => '002.mysql.db.fge.5hosting.com',
 			'username' => 'u1272_nltool',
 			'password' => 'b8A1uy1Hhz',
-			'dbname'   => 'db1272_nltool',
+			'dbname'   => 'db1272_messetool',
 			'charset'  => 'utf8'
 		),
 		'debug'=>array(

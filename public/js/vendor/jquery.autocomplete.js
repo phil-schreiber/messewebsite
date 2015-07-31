@@ -667,8 +667,11 @@
                 if (groupBy){
                     html += formatGroup(suggestion, value, i);
                 }
-
-                html += '<div class="' + className + '" data-index="' + i + '">' + formatResult(suggestion, value) + '</div>';
+				if(typeof(suggestion.html) !== 'undefined'){
+					html += '<div class="' + className + '" data-index="' + i + '">' + suggestion.html + '</div>';
+				}else{
+					html += '<div class="' + className + '" data-index="' + i + '">' + formatResult(suggestion, value)  + '</div>';
+				}
             });
 
             this.adjustContainerWidth();

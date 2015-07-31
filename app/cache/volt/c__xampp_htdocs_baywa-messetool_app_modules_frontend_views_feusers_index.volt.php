@@ -17,8 +17,7 @@
 			<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.city'); ?></th>
 			<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.zip'); ?></th>
 			<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.company'); ?></th>
-			<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.usergroup'); ?></th>
-			<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.profile'); ?></th>			
+			
 			
 		</tr>
 	</thead>
@@ -34,9 +33,7 @@
 	<td><?php echo $feuser->address; ?></td>
 	<td><?php echo $feuser->city; ?></td>
 	<td><?php echo $feuser->zip; ?></td>
-	<td><?php echo $feuser->company; ?></td>
-	<td><?php echo $feuser->getUsergroup()->title; ?></td>
-	<td><?php echo $feuser->getProfile()->title; ?></td>	
+	<td><?php echo $feuser->company; ?></td>	
 	<td><a href='<?php echo $path; ?><?php echo $feuser->uid; ?>'>>> <?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('update'); ?></a></td>
 	
 	</tr>

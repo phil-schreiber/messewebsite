@@ -36,12 +36,13 @@
 									</div>
 									<div class="back tile2">
 										<!-- back content -->
+										<a href='#search'>
 										<table style="width:100%;height:100%">
 											<tr>											
 												<td style="vertical-align:middle"><p><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('button2'); ?></p></td>											  
 											</tr>
 										  </table>	
-										
+										</a>
 									</div>
 								</div>
 							</div>
@@ -125,8 +126,9 @@
 			</table>
 			<input type="hidden" value="<?php echo $feuser->uid; ?>">
 		</li>
-		</ul>
 		<?php } ?>
+		</ul>
+		
 		<br>
 		<div class="clearfix">
 			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultantNotFound'); ?></span></a>
@@ -270,17 +272,48 @@
 							<td>
 								<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
 								<input type="text" name="city" id="searchCity">
+								<input type="hidden" name="zip" id="searchZip">
 							</td>
 							<td></td>
 						</tr>
 						<tr>
-							<td colspan="3">
-								<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>">
+							<td colspan="3" style="vertical-align: top;height:320px">
+								
+									<div id="searchResults" class="list-group clearfix">
+									
+									
+									
+									</div>																
 							</td>
 						</tr>
 					</table>
 			</div>
 		</form>
 	</section>
+	<section id="survey">
+		<a name="survey"></a>
+		<header>
+			<div class="logo">
+				<?php echo $this->tag->image(array('images/baywa-logo.png', 'class' => 'logo')); ?>
+			</div>
+			<div class="headerWrap">
+				<h1><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyHeader'); ?></h1>
+				
+			</div>
+			<div class='clearfix'></div>
+			
+		</header>
+		<form id="surveyForm" autocomplete="off" class="form">
+		<div id="surveyFormWrapper" class="pt-wrapper">
+			<div class="pt-page pt-page-10">
+				<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyHeaderInfo'); ?>
+				<div style="position:relative;">
+					<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="11"><span><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyButtonStart'); ?></span></a>
+				</div>
+			</div>
+		</div>
+		</form>
+	</section>
+		
 	
 		

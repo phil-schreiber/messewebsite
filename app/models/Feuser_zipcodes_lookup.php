@@ -1,5 +1,5 @@
 <?php
-namespace nltool\Models;
+namespace messetool\Models;
 use Phalcon\Mvc\Model;
 
 
@@ -11,10 +11,10 @@ use Phalcon\Mvc\Model;
 class Feuser_zipcodes_lookup extends Model{
 	
 	public function initialize(){
-		$this->belongsTo('uid_local', 'nltool\Models\Feusers', 'uid', 
+		$this->belongsTo('uid_local', 'messetool\Models\Feusers', 'uid', 
             array('alias' => 'feusers')
         );
-        $this->belongsTo('uid_foreign', 'nltool\Models\Zipcodes', 'zip', 
+        $this->belongsTo('uid_foreign', 'messetool\Models\Zipcodes', 'zip', 
             array('alias' => 'zips')
         );
 	}
