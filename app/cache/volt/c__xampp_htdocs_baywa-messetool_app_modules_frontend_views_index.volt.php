@@ -13,8 +13,8 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		 <?php echo $this->tag->getTitle(); ?>
-        <?php echo $this->tag->stylesheetLink('css/normalize.css'); ?>
-		<?php echo $this->tag->stylesheetLink('css/bootstrap.css'); ?>				
+        
+		
 		<?php echo $this->tag->stylesheetLink('css/jQuery.dataTables.css'); ?>				
         <?php echo $this->tag->stylesheetLink('css/main.css'); ?>     
 		<?php echo $this->tag->stylesheetLink('css/transition-animations.css'); ?>     

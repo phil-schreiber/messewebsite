@@ -35,9 +35,40 @@ $messages = array(
 	"search" => "Suchen",
 	"name" => "Name",
 	"surveyHeader" => "Meine Messebewertung",
-	"surveyHeaderInfo" => "<p>Vielen Dank, dass Sie uns auf der Agritechnica in Hannover besucht haben! Wir freuen uns, wenn Sie uns dabei unterstützen, unsere Messeauftritte zu verbessern und sich einige Minuten Zeit nehmen, den Fragebogen auszufüllen.</p>
-		<p>Sämtliche von Ihnen inder Umfrage gemachten Angaben werden vertraulich und unter Einhaltung der Datenschutzbestimmungen behandelt. Die Daten werden nicht an Dritte weitergegeben und dienen ausschließlich zur Bewertung der Auftritte der BayWa AG.</p>",
-	"surveyButtonStart" => "Umfrage starten"
+	"surveyHeaderInfo" => "<p>Vielen Dank, dass Sie uns auf der Agritechnica in Hannover besuchen! </p>
+		<p>Wir freuen uns, wenn Sie uns dabei unterstützen, unsere Messeauftritte zu verbessern und sich einige Minuten Zeit nehmen, den Fragebogen auszufüllen.</p>
+		<p>Sämtliche von Ihnen im Fragebogen gemachten Angaben werden vertraulich und unter Einhaltung der Datenschutzbestimmungen behandelt. Die Daten werden nicht an Dritte weitergegeben und dienen ausschließlich zur Bewertung der Auftritte der BayWa AG.</p>",
+	"surveyButtonStart" => "Umfrage starten",
+	"surveyButtonGoon" => "Weiter",
+	"question_1"=>"Aus welchem Grund sind Sie heute hier?",
+	"q_1_1" => "Informationsbesuch",
+	"q_1_2" => "Ausflug",
+	"q_1_3" => "Kontakt knüpfen",
+	"q_1_4" => "Geschäfte abschließen",
+	"q_1_5" => "Bekannte treffen",
+	"q_1_6" => "Arbeit",
+	"q_1_7" => "Studium/Schule",
+	"q_1_8" => "Sonstiges",
+	"question_2" => "Wie sind Sie auf diese Veranstaltung aufmerksam geworden?",
+	"q_2_1" => "BayWa Agri-Check App",
+	"q_2_2" => "Internet",
+	"q_2_3" => "BayWa Newsletter",
+	"q_2_4" => "Anzeige in einer Zeitung",
+	"q_2_5" => "Über Bekannte",
+	"q_2_6" => "Arbeit",
+	"q_2_7" => "Studium/Schule",
+	"q_2_8" => "Persönliche Einladung",
+	"q_2_9" => "Bekanntheit der Messe",
+	"q_2_10" => "Flyer/Aushang im BayWa Betrieb",
+	"q_2_11" => "Sonstiges",
+	"question_3" => 'Wie bewerten Sie folgende Bereiche am BayWa Stand in Schulnoten?<br><span class="ratingText">(1 sehr gut - 6 ungenügend)</span>',
+	"q_3_1" => "Qualität/Verfügbarkeit von Informationsmaterial",
+	"q_3_2" => "Qualität der persönlichen Beratung",
+	"q_3_3" => "Verfügbarkeit eines Beraters",
+	"n/a" => "nicht beachtet",
+	"question_4" => 'Welche Schulnote geben Sie dem BayWa Stand allgemein?<br><span class="ratingText">(1 sehr gut - 6 ungenügend)</span>',
+		
+	
 	
 );
 ?>

@@ -5,8 +5,7 @@ var runAnim=true;
 var time=0;
 function init(jQuery){
 	
-	window.setInterval(function(){
-		console.log(time);
+	/*window.setInterval(function(){		
 		if(time==300){
 			window.location.href='http://localhost/baywa-messetool/';
 		}else{
@@ -14,6 +13,7 @@ function init(jQuery){
 		}
 		
 	},1000);
+	*/
 	var goToContact=function(chosenRep){
 		
 			
@@ -198,6 +198,12 @@ function init(jQuery){
 		var params=jQuery(this).serialize();
 		ajaxIt("message","create",params,dummyEmpty);
 	});
+	jQuery('.survey').on('submit',function(e){
+		e.preventDefault();
+		console.log(jQuery(this).serialize());
+	});
+	
+	
 }
 
 

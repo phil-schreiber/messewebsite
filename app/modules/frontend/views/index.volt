@@ -13,8 +13,8 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 		 {{ get_title() }}
-        {{ stylesheet_link('css/normalize.css') }}
-		{{ stylesheet_link('css/bootstrap.css') }}				
+        
+		
 		{{ stylesheet_link('css/jQuery.dataTables.css') }}				
         {{ stylesheet_link('css/main.css') }}     
 		{{ stylesheet_link('css/transition-animations.css') }}     

@@ -246,7 +246,7 @@ CREATE TABLE IF NOT EXISTS `tx_agrarapp_zipcodes` (
   KEY `baywaid` (`baywaid`),
   KEY `zip` (`zip`),
   FULLTEXT KEY `fulltextsearch` (`city`,`area1`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=22900 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 
 CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(  
@@ -255,3 +255,33 @@ CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(
 	KEY `local` (`uid_local`),
     KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `questions` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `tstamp` int(11) NOT NULL DEFAULT '0',
+  `crdate` int(11) NOT NULL DEFAULT '0',
+  `cruser_id` int(11) NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) NOT NULL DEFAULT '0',
+  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+  `questionnumber` int(11) NOT NULL DEFAULT '0',
+  `message` text
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `questionitems` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `tstamp` int(11) NOT NULL DEFAULT '0',
+  `crdate` int(11) NOT NULL DEFAULT '0',
+  `cruser_id` int(11) NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) NOT NULL DEFAULT '0',
+  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+  `questionnumber` int(11) NOT NULL DEFAULT '0',
+  `itemnumber` int(11) NOT NULL DEFAULT '0',
+  `rating` int(11) NOT NULL DEFAULT '0',
+  `checked` tinyint(4) NOT NULL DEFAULT '0',
+  `message` text,
+  `mode` tinyint(4) NOT NULL DEFAULT '0',
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

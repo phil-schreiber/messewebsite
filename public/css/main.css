@@ -25,13 +25,18 @@
 	-webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
-		  font-size:12px;
+		  font-size:1vw;
 }
 h1{
-	font-size:4em;
+	font-size:3vw;
+	color:#01994e;
 }
 h2{
-	font-size: 3em;
+	font-size: 2vw;
+}
+
+h3{
+	font-size: 1.5vw;
 }
 html,
 body{
@@ -40,6 +45,14 @@ body{
 	min-height:100%;
 	width:100%;
 	
+}
+ul,li{
+	list-style: none;
+}
+table{
+	
+	border-collapse: collapse;
+    border-spacing: 0;
 }
 html,
 button,
@@ -57,7 +70,7 @@ textarea{
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
 	
-	padding:10px;
+	padding:0.5em;
 	background: #f5f5f5;
 	border: 1px solid #ccc;		
 	line-height: 1.6;	
@@ -71,9 +84,18 @@ background: #fff;
 	outline: none;
 }
 
-input[type="checkbox"], input[type="radio"]{
+
+
+input[type="checkbox"], input[type="radio"],input[type="submit"]{
 	width:auto;
+	font-size:1.5vw;
 }
+
+input[type="checkbox"], input[type="radio"]{
+	height:1.5vw;
+	width:1.5vw;
+}
+
 
 html {
     font-size: 1em;
@@ -958,7 +980,7 @@ nav ul{
 	
 }
 header{
-	margin-bottom:50px;
+	margin-bottom:2em;
 }
 header, .container{	
 	
@@ -966,7 +988,7 @@ header, .container{
 	/*margin:10px 20px;*/
 }
 .headerWrap{
-	width:50%;
+	width:70%;
 	float:left;
 	margin:90px 0 0 100px;
 }
@@ -1916,6 +1938,9 @@ section#start{
 	width: 250px;
 	height: 250px;
 }
+.flip-container p{
+	font-size:2vw;
+}
 
 /* flip speed goes here */
 .flipper {
@@ -1968,7 +1993,7 @@ section#start{
 .flipper p{
 	font-weight:bold;
 	color:#fff;
-	font-size:3em;
+	
 }
 
 li.list-group-item img{
@@ -1982,7 +2007,7 @@ li.list-group-item img{
 	
 }
 .list-group-item-heading{
-	font-size:2em;
+	
 	margin-left:10px;
 }
 .logo{
@@ -1996,12 +2021,12 @@ li.list-group-item img{
 	position:relative;
 }
 .form label{
-	font-size:1em;
+	font-size:1.5vw;
 }
 
 #surveyFormWrapper p{
 	padding:10px;
-	font-size:1em;
+	font-size:1.3vw;
 	max-width:800px;
 	margin-left:auto;
 	margin-right:auto;
@@ -2037,6 +2062,7 @@ li.list-group-item img{
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
+	    padding-bottom: 1vw;
 }
 
 .pt-page-current, .no-js .pt-page {
@@ -2051,12 +2077,11 @@ a.pt-trigger,a.navButton{
     -ms-transition: all 0.2s ease-in-out;
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    width: 100px;
-    padding: 10px;
+	font-size:1.5vw;
+    padding: 0.5em;
     background: #f5f5f5;
     border: 1px solid #ccc;
     line-height: 1.6;
-	font-size:1em;
 	cursor:pointer;
 	display:inline-block;
 }
@@ -2071,7 +2096,7 @@ a.navButton{
 	position: relative;
 }
 a.navButton span{
-	font-size:1.5em;
+	font-size:1.5vw;
 }
 /*.pt-page-1 {
     background: #0ac2d2;
@@ -2099,13 +2124,13 @@ a.navButton span{
 
 table.formTable{
 	width:100%;
-	height:100%;
+	min-height:100%;
 	vertical-align: middle;
 	text-align:center;
 	
 }
 table.formTable td{
-	font-size:2em;
+
 }
 table.formTable table{
 	margin-left:auto;
@@ -2113,6 +2138,18 @@ table.formTable table{
 }
 table.formTable table td{
 	padding:5px;
+}
+.survey{
+	height:100%;
+}
+.survey table.formTable{
+	text-align: left;
+	width:auto;
+	margin-left:auto;
+	margin-right:auto;
+}
+.survey table.formTable td{
+	width:26vw;
 }
 
 #virtualKeyboard{
@@ -2122,7 +2159,7 @@ table.formTable table td{
 }
 
 /*BayWa Icon*/
-.icon, .icon_l, input[type=checkbox]+label, input[type=radio]+label, .i_radio_checked, .i_checkbox_checked {
+.icon, .icon_l{
     background: transparent url("../images/sprite_x2.svg") no-repeat 0 0;
     -webkit-background-size: 36em auto;
     background-size: 36em auto;    
@@ -2151,3 +2188,42 @@ table.formTable table td{
 .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
 .autocomplete-group { padding: 2px 5px; }
 .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+
+.starRating:not(old){
+  display        : inline-block;
+  
+  height         : 2vw;
+  overflow       : hidden;
+  vertical-align : bottom;
+}
+
+.starRating:not(old) > input{
+  margin-right : -100%;
+  opacity      : 0;
+}
+
+.starRating:not(old) > label{
+  display         : block;
+  float           : right;
+  position        : relative;
+  background      : url('../public/images/star-off.svg');
+  background-size : contain;
+}
+
+.starRating:not(old) > label:before{
+  content         : '';
+  display         : block;
+  width           : 1.5em;
+  height          : 1.5em;
+  background      : url('../public/images/star-on.svg');
+  background-size : contain;
+  opacity         : 0;
+  transition      : opacity 0.2s linear;
+}
+
+.starRating:not(old) > label:hover:before,
+.starRating:not(old) > label:hover ~ label:before,
+.starRating:not(:hover) > :checked ~ label:before{
+  opacity : 1;
+}
