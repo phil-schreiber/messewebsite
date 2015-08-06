@@ -20,6 +20,7 @@ class IndexController extends ControllerBase
     public function indexAction()
     {		
 		
+		
 		$feusers=Feusers::find(array(
 				'conditions' => 'deleted=0 AND usergroup = 2'
 			));

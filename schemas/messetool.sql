@@ -256,6 +256,20 @@ CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(
     KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `surveysession` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `tstamp` int(11) NOT NULL DEFAULT '0',
+  `crdate` int(11) NOT NULL DEFAULT '0',
+  `cruser_id` int(11) NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) NOT NULL DEFAULT '0',
+  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+	PRIMARY KEY (`uid`),
+	KEY `questionnumber` (`questionnumber`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+
 CREATE TABLE IF NOT EXISTS `questions` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
@@ -266,7 +280,9 @@ CREATE TABLE IF NOT EXISTS `questions` (
   `hidden` tinyint(4) NOT NULL DEFAULT '0',
   `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
   `questionnumber` int(11) NOT NULL DEFAULT '0',
-  `message` text
+  `message` text,
+	PRIMARY KEY (`uid`),
+	KEY `questionnumber` (`questionnumber`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `questionitems` (
@@ -284,4 +300,18 @@ CREATE TABLE IF NOT EXISTS `questionitems` (
   `checked` tinyint(4) NOT NULL DEFAULT '0',
   `message` text,
   `mode` tinyint(4) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`uid`),
+	KEY `questionnumber` (`questionnumber`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `surveysession` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `tstamp` int(11) NOT NULL DEFAULT '0',
+  `crdate` int(11) NOT NULL DEFAULT '0',
+  `cruser_id` int(11) NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) NOT NULL DEFAULT '0',
+  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+	PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

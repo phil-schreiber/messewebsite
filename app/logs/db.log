@@ -4339,3 +4339,835 @@
 [Tue, 04 Aug 15 13:11:15 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
 [Tue, 04 Aug 15 13:11:15 +0200][INFO] DESCRIBE `feusers`
 [Tue, 04 Aug 15 13:11:15 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:39:13 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:39:20 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:39:34 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:39:52 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:40:02 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:46:16 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 14:46:18 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:05:03 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:10:08 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:10:09 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:14:34 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:14:41 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:15:17 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:15:26 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:15:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:15:40 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:15:40 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:16:09 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:16:11 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:18:14 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:19:08 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'profiles' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] DESCRIBE `profiles`
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `profiles`.`uid`, `profiles`.`pid`, `profiles`.`tstamp`, `profiles`.`crdate`, `profiles`.`cruser_id`, `profiles`.`deleted`, `profiles`.`hidden`, `profiles`.`title` FROM `profiles` WHERE `profiles`.`deleted` = 0 AND `profiles`.`hidden` = 0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'permissions' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] DESCRIBE `permissions`
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `permissions`.`uid`, `permissions`.`pid`, `permissions`.`tstamp`, `permissions`.`crdate`, `permissions`.`cruser_id`, `permissions`.`deleted`, `permissions`.`hidden`, `permissions`.`profileid`, `permissions`.`resourceid`, `permissions`.`resourceaction` FROM `permissions` WHERE `permissions`.`profileid` = :APR0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'resources' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] DESCRIBE `resources`
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `resources`.`uid`, `resources`.`pid`, `resources`.`tstamp`, `resources`.`crdate`, `resources`.`cruser_id`, `resources`.`deleted`, `resources`.`hidden`, `resources`.`title` FROM `resources` WHERE `resources`.`uid` = :APR0 LIMIT :AP0
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:25:06 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:25:12 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:26:25 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:26:36 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:27:50 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:28:29 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:28:41 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:29:30 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:30:43 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:30:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:50 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:30:51 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:30:51 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:51 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:30:51 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:30:56 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:31:17 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:31:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:21 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:21 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:31:24 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:31:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:41 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:41 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:42 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:42 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:43 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:43 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:43 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:44 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:44 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:45 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:45 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:46 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:46 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:46 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:57 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:57 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:31:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:31:59 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:31:59 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:32:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:32:23 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:32:23 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:32:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:32:24 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:32:24 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 15:32:38 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Tue, 04 Aug 15 15:33:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:33:20 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:33:20 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:33:22 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:33:22 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:33:22 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:33:23 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:33:24 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:33:24 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:33:24 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 15:34:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 15:34:25 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 15:34:25 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] DESCRIBE `languages`
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] DESCRIBE `feusers`
+[Tue, 04 Aug 15 17:00:09 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:16:37 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:18:25 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:33:45 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:33:49 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:38:49 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] DESCRIBE `languages`
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] DESCRIBE `feusers`
+[Wed, 05 Aug 15 09:39:02 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 09:07:56 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Thu, 06 Aug 15 09:34:23 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 09:34:23 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 09:34:23 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 09:34:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 09:34:30 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 09:34:30 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 09:47:54 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 09:47:54 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 09:47:54 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 10:24:11 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 10:24:11 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 10:24:11 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 10:24:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 10:24:21 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 10:24:21 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:01:07 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:01:07 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:01:07 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:14 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:14 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:18 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:18 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:19 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:20 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:20 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:20 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:36 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:36 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:38 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:38 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:39 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:39 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:39 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:39 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:40 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:40 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:40 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:02:41 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:02:41 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:02:41 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:03:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:03:10 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:03:10 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:03:12 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:03:12 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:03:12 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:03:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:03:13 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:03:13 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:00 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:00 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:01 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:01 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:02 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:03 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:03 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:04 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:04 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:05 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:05 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:18:06 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:18:06 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:18:06 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:21:13 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:21:13 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:21:13 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 11:21:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 11:21:35 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 11:21:35 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:09 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:09 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:17 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:17 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:27 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:27 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:28 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:28 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:30 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:31 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:32 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 12:02:33 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:17:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:17:10 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:17:10 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 13:17:19 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 13:46:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:46:36 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:46:36 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:46:45 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 13:46:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:46:55 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:46:55 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 13:47:01 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:28:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:28:36 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:28:36 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:28:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:28:50 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:28:50 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:29:22 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:29:22 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:29:22 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:29:22 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:29:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:29:47 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:29:47 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:29:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:33:36 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:34:03 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:38:05 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:38:09 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:38:09 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:38:10 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:38:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:38:10 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:38:10 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:39:27 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:39:39 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:42 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:39:44 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:40:05 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:41:00 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:02 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:41:03 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:44:25 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:28 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:44:30 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:45:29 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:45:57 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:46:02 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:50:34 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:44 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:50:50 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:51:02 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 14:53:04 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:10 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:14 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:53:18 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 14:53:44 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 15:05:55 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'surveysession' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] DESCRIBE `surveysession`
+[Thu, 06 Aug 15 15:11:34 +0200][INFO] INSERT INTO `surveysession` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`) VALUES (?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 15:11:47 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:47 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:48 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:53 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:11:59 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:11:59 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questions' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] DESCRIBE `questions`
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] INSERT INTO `questions` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `message`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'questionitems' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] DESCRIBE `questionitems`
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:12:00 +0200][INFO] INSERT INTO `questionitems` (`pid`, `tstamp`, `crdate`, `cruser_id`, `deleted`, `hidden`, `session`, `questionnumber`, `itemnumber`, `rating`, `checked`, `message`, `mode`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, DEFAULT, ?, ?)
+[Thu, 06 Aug 15 15:17:21 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:21 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:17:21 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:17:21 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`email` = :0 LIMIT :AP0
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'profiles' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `profiles`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT `profiles`.`uid`, `profiles`.`pid`, `profiles`.`tstamp`, `profiles`.`crdate`, `profiles`.`cruser_id`, `profiles`.`deleted`, `profiles`.`hidden`, `profiles`.`title` FROM `profiles` WHERE `profiles`.`uid` = :APR0 LIMIT :AP0
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'success_logins' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `success_logins`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] INSERT INTO `success_logins` (`pid`, `tstamp`, `endsession`, `crdate`, `cruser_id`, `userid`, `ipaddress`, `attempted`, `useragent`) VALUES (?, ?, ?, ?, ?, ?, ?, DEFAULT, ?)
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:17:29 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:25:44 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:25:53 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:26:25 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:27:57 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:27:58 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:28:55 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`usergroup` = 2
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 15:29:35 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0
+[Thu, 06 Aug 15 15:31:27 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:31:27 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'profiles' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] DESCRIBE `profiles`
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT `profiles`.`uid`, `profiles`.`pid`, `profiles`.`tstamp`, `profiles`.`crdate`, `profiles`.`cruser_id`, `profiles`.`deleted`, `profiles`.`hidden`, `profiles`.`title` FROM `profiles` WHERE `profiles`.`deleted` = 0 AND `profiles`.`hidden` = 0
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = 0 AND `languages`.`hidden` = 0
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'usergroups' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] DESCRIBE `usergroups`
+[Thu, 06 Aug 15 15:31:28 +0200][INFO] SELECT `usergroups`.`uid`, `usergroups`.`pid`, `usergroups`.`tstamp`, `usergroups`.`crdate`, `usergroups`.`cruser_id`, `usergroups`.`deleted`, `usergroups`.`hidden`, `usergroups`.`title`, `usergroups`.`lang` FROM `usergroups` WHERE `usergroups`.`deleted` = 0 AND `usergroups`.`hidden` = 0
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 16:05:52 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`hidden` = 0 AND `feusers`.`usergroup` = :1 ORDER BY `feusers`.`tstamp` DESC
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 16:08:42 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`hidden` = 0 AND `feusers`.`usergroup` = :1 ORDER BY `feusers`.`tstamp` DESC
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 16:09:35 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`hidden` = 0 AND `feusers`.`usergroup` = :1 ORDER BY `feusers`.`tstamp` DESC
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'languages' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] DESCRIBE `languages`
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] SELECT `languages`.`uid`, `languages`.`pid`, `languages`.`tstamp`, `languages`.`crdate`, `languages`.`cruser_id`, `languages`.`deleted`, `languages`.`hidden`, `languages`.`title`, `languages`.`shorttitle` FROM `languages` WHERE `languages`.`deleted` = :deleted AND `languages`.`hidden` = :hidden
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] SELECT IF(COUNT(*) > 0, 1, 0) FROM `INFORMATION_SCHEMA`.`TABLES` WHERE `TABLE_NAME` = 'feusers' AND `TABLE_SCHEMA` = DATABASE()
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] DESCRIBE `feusers`
+[Thu, 06 Aug 15 16:52:17 +0200][INFO] SELECT `feusers`.`uid`, `feusers`.`pid`, `feusers`.`tstamp`, `feusers`.`crdate`, `feusers`.`cruser_id`, `feusers`.`deleted`, `feusers`.`hidden`, `feusers`.`username`, `feusers`.`password`, `feusers`.`first_name`, `feusers`.`last_name`, `feusers`.`title`, `feusers`.`email`, `feusers`.`phone`, `feusers`.`address`, `feusers`.`city`, `feusers`.`zip`, `feusers`.`company`, `feusers`.`profileid`, `feusers`.`usergroup`, `feusers`.`superuser`, `feusers`.`userlanguage`, `feusers`.`image`, `feusers`.`name` FROM `feusers` WHERE `feusers`.`deleted` = 0 AND `feusers`.`hidden` = 0 AND `feusers`.`usergroup` = :1 ORDER BY `feusers`.`tstamp` DESC

@@ -20,7 +20,7 @@ var jsKeyboard = {
         jsKeyboard.addKeyDownEvent();
 
          jsKeyboard.show();
-         $(':input').not('[type="reset"]').not('[type="submit"]').on('focus, click', function(e)
+         $(':input').not('[type="radio"]').not('[type="checkbox"]').not('[type="reset"]').not('[type="submit"]').on('focus, click', function(e)
          {
             jsKeyboard.currentElement = $(this);
             jsKeyboard.currentElementCursorPosition = $(this).getCursorPosition();

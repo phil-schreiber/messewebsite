@@ -1,6 +1,7 @@
 {% include 'partials/flash-messages.volt' %}
 {{ content() }}
-<div class="container">
+<section>
+<div class="container backend">
 	{%- if session.get('auth') -%}
 	<div class="ceElement medium">
 		<h1>{{tr('feusersCreateTitle')}}</h1>
@@ -62,3 +63,4 @@
 {%- endif -%}
 
 </div>
+</section>

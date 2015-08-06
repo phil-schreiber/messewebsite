@@ -17,7 +17,7 @@
 									</div>
 									<div class="back tile1">
 										<!-- back content -->
-										<a href='#list'>
+										<a href='#list' >
 										<table style="width:100%;height:100%">
 											<tr>											
 												<td style="vertical-align:middle"><p>{{tr('button1')}}</p></td>											  
@@ -57,7 +57,7 @@
 									</div>
 									<div class="back tile4">
 										<!-- back content -->
-										<a href='#survey'>
+										<a href='{{language}}/survey'>
 										<table style="width:100%;height:100%">
 											<tr>											
 												<td style="vertical-align:middle"><p>{{tr('button3')}}</p></td>											  
@@ -290,167 +290,5 @@
 			</div>
 		</form>
 	</section>
-	<section id="survey">
-		<a name="survey"></a>
-		<header>
-			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
-			</div>
-			<div class="headerWrap">
-				<h1>{{tr('surveyHeader')}}</h1>
-				
-			</div>
-			<div class='clearfix'></div>
-			
-		</header>
-		<div id="surveyForm" class="form">
-			<div id="surveyFormWrapper" class="pt-wrapper">
-				<div class="pt-page pt-page-10">
-					{{tr('surveyHeaderInfo')}}
-					<div style="position:relative;">
-						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span>{{tr('surveyButtonStart')}}</span></a>
-					</div>
-				</div>
-				<div class="pt-page pt-page-2">
-					<h3>{{tr('question_1')}}</h3>
-					<form autocomplete="off" class="survey" name="question_1">
-						<table class="formTable">
-							<tr>
-								<td>
-									<input type="checkbox" id="q_1_1" name="q_1_1"> <label for="q_1_1">{{tr('q_1_1')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_1_2" name="q_1_2"> <label for="q_1_2">{{tr('q_1_2')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_1_3" name="q_1_3"> <label for="q_1_3">{{tr('q_1_3')}}</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" id="q_1_4" name="q_1_4"> <label for="q_1_4">{{tr('q_1_4')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_1_5" name="q_1_5"> <label for="q_1_5">{{tr('q_1_5')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_1_6" name="q_1_6"> <label for="q_1_6">{{tr('q_1_6')}}</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" id="q_1_7" name="q_1_7"> <label for="q_1_7">{{tr('q_1_7')}}</label>
-								</td>
-								
-								<td>
-									<label for="q_1_8">{{tr('q_1_8')}}</label> <input type="text" id="q_1_8" name="q_1_8"> 
-								</td>
-							</tr>
-							<tr>
-								<td colspan="3" style="text-align:center">
-									
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="3" class="pt-trigger">
-									
-								</td>
-							</tr>
 
-						</table>
-						<input type="hidden" name="question" value="1">
-					</form>
-				</div>
-				<div class="pt-page pt-page-3">
-					<h3>{{tr('question_2')}}</h3>
-					<form autocomplete="off" class="survey" name="question_2">
-						<table class="formTable">
-						<tr>
-								<td>
-									<input type="checkbox" id="q_2_1" name="q_2_1"> <label for="q_2_1">{{tr('q_2_1')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_2" name="q_2_2"> <label for="q_2_2">{{tr('q_2_2')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_3" name="q_2_3"> <label for="q_2_3">{{tr('q_2_3')}}</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" id="q_2_4" name="q_2_4"> <label for="q_2_4">{{tr('q_2_4')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_5" name="q_2_5"> <label for="q_2_5">{{tr('q_2_5')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_6" name="q_2_6"> <label for="q_2_6">{{tr('q_2_6')}}</label>
-								</td>
-							</tr>
-								<tr>
-								<td>
-									<input type="checkbox" id="q_2_7" name="q_2_7"> <label for="q_2_7">{{tr('q_2_7')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_8" name="q_2_8"> <label for="q_2_8">{{tr('q_2_8')}}</label>
-								</td>
-								<td>
-									<input type="checkbox" id="q_2_9" name="q_2_9"> <label for="q_2_9">{{tr('q_2_9')}}</label>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<input type="checkbox" id="q_2_10" name="q_2_10"> <label for="q_2_10">{{tr('q_2_10')}}</label>
-								</td>								
-								<td>
-									<label for="q_2_11">{{tr('q_2_11')}}</label> <input type="text" id="q_2_11" name="q_2_11"> 
-								</td>
-							</tr>
-							<tr>
-								<td colspan="3" style="text-align:center">
-									
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="4" class="pt-trigger">
-									
-								</td>
-							</tr>
-							
-						</table>
-					</form>
-				</div>
-				<div class="pt-page pt-page-4">
-					<h3>{{tr('question_3')}}</h3>
-					<form autocomplete="off" class="survey" name="question_3">
-						<table class="formTable">
-							<tr>
-								<td>
-									<label for="q_3_1">{{tr('q_3_1')}}</label>
-								</td>
-								<td>
-									<span class="starRating">
-										<input id="rating5" type="radio" name="rating" value="5">
-										<label for="rating5">5</label>
-										<input id="rating4" type="radio" name="rating" value="4">
-										<label for="rating4">4</label>
-										<input id="rating3" type="radio" name="rating" value="3">
-										<label for="rating3">3</label>
-										<input id="rating2" type="radio" name="rating" value="2">
-										<label for="rating2">2</label>
-										<input id="rating1" type="radio" name="rating" value="1">
-										<label for="rating1">1</label>
-									  </span>
-								</td>
-							</tr>
-							<tr>
-								<td colspan="3" style="text-align:center">
-									
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="4" class="pt-trigger">
-									
-								</td>
-							</tr>
-						</table>
-					</form>
-				</div>
-			</div>
-		</div>
-	
-	</section>
-		
-	
 		

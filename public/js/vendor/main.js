@@ -91,7 +91,7 @@ function init(jQuery){
 	jQuery('body').on('click',function(e){
 		time=0;
 	});
-	jQuery('a').click(function(e){
+	jQuery('a.pt-trigger').click(function(e){
 		e.preventDefault();
 	});
 	baseurl=document.getElementById('baseurl').value;
@@ -200,7 +200,8 @@ function init(jQuery){
 	});
 	jQuery('.survey').on('submit',function(e){
 		e.preventDefault();
-		console.log(jQuery(this).serialize());
+		var data=jQuery(this).serialize();
+		ajaxIt("survey","create",data,dummyEmpty);
 	});
 	
 	

@@ -77,6 +77,13 @@ class Acl extends Component
 			'retrieve',
 			'update',
 			'delete'
+		),
+		'survey' => array(
+			'index',
+			'create',
+			'retrieve',
+			'update',
+			'delete'
 		)
 		
 	);
