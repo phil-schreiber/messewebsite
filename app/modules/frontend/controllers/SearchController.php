@@ -25,7 +25,7 @@ class SearchController extends ControllerBase
 		
 		if($this->request->isPost()){
 			$suggestions=array(); 			
-			$table=substr($this->dispatcher->getParam('table'),1);
+			/*$table=substr($this->dispatcher->getParam('table'),1);						
 			
 			switch($table){
 				case 'name':
@@ -37,6 +37,12 @@ class SearchController extends ControllerBase
 				case 'zip':
 					$suggestions=$this->SearchNameFromZip();
 				break;
+			}*/
+			if(strlen($this->request->getPost('name'))>0){
+				$suggestions=$this->SearchName($this->request->getPost('name'));
+			}else if(strlen($this->request->getPost('city'))>0){
+				$suggestions=$this->SearchNameFromZip($this->request->getPost('city'));
+				
 			}
 
 			
@@ -51,8 +57,8 @@ class SearchController extends ControllerBase
         
     }
 	
-	private function SearchName(){
-		$queryStrng=$this->request->getPost('query');
+	private function SearchName($queryStrng){
+		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
 		$suggestionQuery=Feusers::find(array(
 					'conditions' => 'name LIKE ?1',
@@ -87,8 +93,8 @@ class SearchController extends ControllerBase
 			return $suggestions;
 	}
 	
-	private function SearchCity(){
-		$queryStrng=$this->request->getPost('query');
+	private function SearchCity($queryStrng){
+		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
 		$placeholder='%';
 		
@@ -108,35 +114,50 @@ class SearchController extends ControllerBase
 					)
 				)
 			);
+		$zips=array();
 		foreach($suggestionQuery as $suggestion){
-			
-				if(strlen($suggestion->zipcode)==4){
-					$zipcode='0'.$suggestion->zipcode;
-				}else{
-					$zipcode=$suggestion->zipcode;
-				}
-				$suggestions['suggestions'][]=array(
-					'value' => $suggestion->city.' | '.$zipcode,
-					'data' => $suggestion->zipcode
-				);
+			$zips[]=$suggestion->zipcode;
+				
 
-			}
-			return $suggestions;
+		}
+		return $zips;
 	}
 	
-	private function SearchNameFromZip(){
-		$queryStrng=$this->request->getPost('query');
+	private function SearchNameFromZip($queryStrng){
+		/*$queryStrng=$this->request->getPost('query');*/
 		
 		$suggestions=array("suggestions"=>array());
-		$ZipQuery=  City::findFirst(array(
-					'conditions' => 'zip = ?1',
+		$placeholder='%';
+		
+		if(is_numeric($queryStrng)){
+			$row='zipcode =';					
+			$placeholder='';
+			if(substr($queryStrng,0,1)=='0'){
+				$queryStrng=substr($queryStrng,1);
+			}
+			$ZipQuery=  City::find(array(
+					'conditions' => $row.'?1',
 					'bind' => array(
 						1 => $queryStrng
 					)
 				)				
 			);
+		}else{
+			$zips=$this->SearchCity($queryStrng);
+			$row='zipcode IN ';
+			$queryStrng='('.implode(',',$zips).')';
+			$ZipQuery=  City::find(array(
+					'conditions' => $row.$queryStrng,
+					
+				)				
+			);
+		}
+		
+		foreach($ZipQuery as $zip){
+			$suggestionQuery[]=$zip->getFeusers();
+		}
 
-		$suggestionQuery=$ZipQuery->getFeusers();
+		
 		
 		foreach($suggestionQuery as $suggestion){
 			

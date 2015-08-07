@@ -14,6 +14,7 @@ function init(jQuery){
 		
 	},1000);
 	*/
+   var virtualKeyboard;
 	var goToContact=function(chosenRep){
 		
 			
@@ -22,13 +23,13 @@ function init(jQuery){
 			},'slow');				
 			
 			jQuery('#consultantSelect option').each(function(index,element){
-				console.log(jQuery(element).val());
+	
 				if(jQuery(element).val()==chosenRep){
 					jQuery(element).attr('selected','selected');
 				}
 			});
 	};
-	var initAutocomplete=function(){
+	/*var initAutocomplete=function(){
 		jQuery('#searchName').devbridgeAutocomplete({
 				serviceUrl: 'search/index/name/',
 				type:'POST',
@@ -52,7 +53,7 @@ function init(jQuery){
 						
 					},
 					onSelect: function (suggestion) {
-				console.log(suggestion);
+				
 						jQuery('#searchZip').val(suggestion.data);
 						 jQuery('#searchZip').keyup();
 					}
@@ -68,22 +69,30 @@ function init(jQuery){
 						goToContact(suggestion.data);
 					}
 		});
-	};
+	};*/
 	
 	jQuery(function () {
 		if(typeof(jsKeyboard)==='undefined'){
-			window.setTimeout(function(){jsKeyboard.init("virtualKeyboard");},1000);
+			window.setTimeout(
+					function(){		
+					virtualKeyboard=jQuery('#virtualKeyboardWrapper');										
+					jsKeyboard.init("virtualKeyboardWrapper");
+		 
+			},
+			1000);
 		}else{
-         jsKeyboard.init("virtualKeyboard");
+			virtualKeyboard=jQuery('#virtualKeyboardWrapper');										
+			jsKeyboard.init("virtualKeyboardWrapper");
+		 
 		}
-		if(typeof(devbridgeAutocomplete)==='undefined'){
+		/*if(typeof(devbridgeAutocomplete)==='undefined'){
 			window.setTimeout(
 				function(){
 					initAutocomplete();					
 				},1000);
 		}else{
 			initAutocomplete();
-		}
+		}*/
          
          
      });
@@ -198,19 +207,62 @@ function init(jQuery){
 		var params=jQuery(this).serialize();
 		ajaxIt("message","create",params,dummyEmpty);
 	});
+	
+	jQuery('#searchForm').submit(function(e){
+		e.preventDefault();
+		var params=jQuery(this).serialize();
+		ajaxIt("search","index",params,showResults);
+	});
 	jQuery('.survey').on('submit',function(e){
 		e.preventDefault();
 		var data=jQuery(this).serialize();
 		ajaxIt("survey","create",data,dummyEmpty);
 	});
-	
+	jQuery(document).on('scroll',function(e){
+		jQuery('.virtualKeyboard').each(function(index,el){
+			if(jQuery(el).css('right')==='0px'){
+			 jQuery(el).animate({
+				right:"-42vw"
+			 });
+			}
+		});
+		
+	});
+	jQuery('input[type="text"], textarea').on('focus',function(e){
+		/*jQuery('.virtualKeyboard').html('');*/
+		if(jQuery(jQuery(this).context.form).attr('id') !=='searchForm'){
+			jQuery('#virtualKeyboard').append(jQuery(virtualKeyboard));
+			jQuery('#virtualKeyboard').animate({
+				right:0
+			});
+		}else{
+			jQuery('#virtualKeyboard2').append(virtualKeyboard);
+			jQuery('#virtualKeyboard2').animate({
+				right:0
+			});
+		}
+	});
+	jQuery(':input[type="radio"],:input[type="checkbox"],:input[type="reset"],:input[type="submit"]').on('focus',function(e){
+		jQuery('.virtualKeyboard').animate({
+			right:"-42vw"
+		});
+	});
 	
 }
 
 
-
-
-
+function showResults(data){
+	jQuery('#searchResults').html('');
+	var suggestions=jQuery.parseJSON(data).suggestions;
+	var suggestionsStrng='';
+	for(var i=0; i<suggestions.length;i++){
+		suggestionsStrng+='<div class="autocomplete-suggestion" data-index="' + suggestions[i].data + '">' + suggestions[i].html + '</div>';
+		
+		
+	}
+	jQuery('#searchResults').append('<div class="autocomplete-suggestions">'+suggestionsStrng+'</div>' );
+	
+}
 
 
 

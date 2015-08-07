@@ -144,8 +144,10 @@
 				<h1>{{tr('contactHeader')}}</h1>
 				<h2>{{tr('contactHeaderInfo')}}</h2>
 			</div>
+			<div id="virtualKeyboard" class="virtualKeyboard"></div>
 			<div class='clearfix'></div>
 		</header>
+		
 		<form id="contactForm" autocomplete="off" class="form">
 		<div id="contactFormWrapper" class="pt-wrapper">
 			
@@ -182,7 +184,7 @@
 								<input type="radio" name="farmer" value="0">{{tr('no')}}<br><br>
 							</td>
 							<td>
-								<div id="virtualKeyboard"></div>
+								
 							</td>
 						</tr>
 						<tr>
@@ -257,9 +259,11 @@
 				<h1>{{tr('searchHeader')}}</h1>
 				<h2>{{tr('searchHeaderInfo')}}</h2>
 			</div>
+			<div id="virtualKeyboard2" class="virtualKeyboard"></div>
 			<div class='clearfix'></div>
 			
 		</header>
+		
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
 					<table class="formTable">
@@ -272,15 +276,16 @@
 							<td>
 								<label for="city">{{tr('city')}}</label><br>
 								<input type="text" name="city" id="searchCity">
-								<input type="hidden" name="zip" id="searchZip">
+								
 							</td>
-							<td></td>
+							
+							<td><input type="submit" value="{{tr('search')}}"></td>
 						</tr>
 						<tr>
 							<td colspan="3" style="vertical-align: top;height:320px">
 								
 									<div id="searchResults" class="list-group clearfix">
-									
+										
 									
 									
 									</div>																
@@ -291,4 +296,4 @@
 		</form>
 	</section>
 
-		
+		<div id="virtualKeyboardWrapper" ></div>
