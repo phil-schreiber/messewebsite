@@ -6,9 +6,9 @@ overflow:hidden;
 }*/
 
 .virtualKeyboard {
-    width: 42vw;
+    width: 50vw;
 	position:absolute;
-	right:-42vw;
+	right:-50vw;
 	top:0;
 	background:hsla(0,0%,91%,0.5);
     text-align: center;
@@ -20,7 +20,7 @@ overflow:hidden;
 }
 
 #keyboard{    
-    width:42vw;
+    width:50vw;
     margin: 0 auto;    
     display:block;    
 /*    position:absolute;*/
@@ -39,7 +39,7 @@ overflow:hidden;
 
 .button
 {
-    width:60px; height:60px;
+    width:3vw; height:3vw;
     background-color:#fff;
     position:relative;
     float:left;

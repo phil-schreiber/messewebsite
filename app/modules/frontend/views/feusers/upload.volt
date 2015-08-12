@@ -9,7 +9,7 @@
 	<div id="mapWrapper" class="{{ filehideshow }}">
 
 	<div class='listelementContainer'>
-	{{ form(language~'/addressfolders/create/', 'method': 'post', 'enctype': 'multipart/form-data') }}
+	{{ form('backend/'~language~'/feusers/upload', 'method': 'post', 'enctype': 'multipart/form-data') }}
 
 
 	<label>{{ tr('firstRowContainsFieldName') }}</label><br>
@@ -37,20 +37,10 @@
 
 	<div id="mapWrapper" class="{{ maphideshow }}">
 		<div class='listelementContainer'>
-		{{ form(language~'/addressfolders/create/', 'method': 'post') }}
+		{{ form('backend/'~language~'/feusers/upload', 'method': 'post') }}
 
 
-	<label>{{ tr('addressFolderSelectLabel') }}</label><br>
-		{{ select('addressFoldersUid', addressfolders, 'using': ['uid', 'title'],
-		'useEmpty': true, 'emptyText': tr('pleaseSelect'), 'emptyValue': '0') }}
-	<br>{{ tr('or') }}<br>
-	<label>{{ tr('addressFolderNewLabel') }} ({{ tr('overwritesPreviousSelection') }})</label><br>
-		{{ text_field("addressfolderCreate","size": 32) }}
-	<br><br>
-	<label>{{ tr('deleteAllExistingAddresses') }}</label><br>
-		{{ check_field('deleteallexisting') }}
-
-		<br><br>	
+	
 
 		<table id="mapTable">
 			<thead><th>Dateifelder</th><th>&nbsp;</th><th>Datenbankfelder</th></thead>
@@ -59,7 +49,7 @@
 			<td>{{uploadfield}}</td>
 			<td> >> </td>
 			<td>
-				{{ select('adressFieldsMap[]', [ '0':tr('pleaseSelect'),'1' : tr('firstname'), '2' : tr('lastname'), '3' : tr('title'), '4' : tr('salutation'), '5' : tr('email'), '6' : tr('company'), '7' : tr('phone'), '8' : tr('address'), '9' : tr('place'), '10' : tr('zip'), '11' : tr('userlanguage'), '12' : tr('gender')]) }}
+				{{ select('adressFieldsMap[]', [ '0':tr('pleaseSelect'),'1' : tr('firstname'), '2' : tr('lastname'), '3' : tr('title'), '4' : tr('salutation'), '5' : tr('email'), '6' : tr('company'), '7' : tr('phone'), '8' : tr('address'), '9' : tr('place'), '10' : tr('zip'), '11' : tr('userlanguage'), '12' : tr('gender'), '13': tr('region'), '14': tr('jobtitle'), '15': tr('division'), '16': tr('specialization')]) }}
 			</td>
 
 		</tr>

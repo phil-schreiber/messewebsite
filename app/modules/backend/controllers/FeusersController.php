@@ -4,6 +4,7 @@ use messetool\Models\Feusers,
 	messetool\Models\Profiles,
 	messetool\Models\Languages,
 	messetool\Models\Usergroups,
+	messetool\Models\Feuser_zipcodes_lookup,
 	messetool\Forms\FeusersForm;
 /**
  * Class FeusersController
@@ -14,6 +15,8 @@ use messetool\Models\Feusers,
 class FeusersController extends ControllerBase
 
 {
+	public $_divider= array(';',',',':','	');
+	public $_dataWrap=array('"',"'");
 	public function indexAction(){
 		$this->assets->addCss('css/jquery.dataTables.css');
 		$feusers=Feusers::find(array(
@@ -186,42 +189,13 @@ class FeusersController extends ControllerBase
 					$this->view->setVar('uploadfields',$fileRowField);
 				}else{
 					$time=time();
-					if($this->request->getPost('addressfolderCreate') != '' && $this->request->getPost('addressFoldersUid') ==0){
-						/*create the segment*/
-						$addressfolder=new Addressfolders();
-						$addressfolder->assign(array(
-							'pid'=>0,
-							'deleted'=>0,
-							'hidden'=>0,
-							'tstamp'=>$time,
-							'crdate'=>$time,
-							'cruser_id' => $this->session->get('auth')['uid'],
-							'usergroup' => $this->session->get('auth')['usergroup'],
-							'title'=>$this->request->getPost('addressfolderCreate','striptags'),
-							'hashtags'=>'' //TODO
-						));
-						if (!$addressfolder->save()) {
-							$this->flash->error($addressfolder->getMessages());
-						}
-					}else{
-						$addressfolder=  Addressfolders::findFirst(array(
-							'conditions'=>'uid=?1',
-							'bind' => array(
-								1=>$this->request->getPost('addressFoldersUid')
-							)
-						));
-						
-						$addressfolder->assign(array(
-								'tstamp'=>$time
-								));
-						$addressfolder->update();
-					}
+					
 						
 						
 
 						$row=0;
 						$insStr='';
-						$addressesDBFielMap=array(
+						$addressesDBFieldMap=array(
 							1=>'first_name',
 							2=>'last_name',
 							3=>'title',
@@ -233,61 +207,121 @@ class FeusersController extends ControllerBase
 							9=>'city',
 							10=>'zip',
 							11=>'userlanguage',
-							12=>'gender'
+							12=>'gender',
+							13 => 'region',
+							14 => 'jobtitle',
+							15 => 'division',
+							16 => 'specialization',
+							18 => 'username',
+							19 => 'password',
+							20 => 'image'
 						);
-						//Using Address Segment n:1 relation; lookup is there, but no mass insert possible 
-						$insField='(pid,tstamp,crdate,cruser_id,usergroup';
+						
+						$addressesDBFieldTypeMap=array(
+							1=>'string',
+							2=>'string',
+							3=>'string',
+							4=>'string',
+							5=>'string',
+							6=>'string',
+							7=>'string',
+							8=>'string',
+							9=>'string',
+							10=>'int',
+							11=>'int',
+							12=>'int',
+							13 => 'string',
+							14 => 'string',
+							15 => 'string',
+							16 => 'string',
+							18 => 'string',
+							19 => 'string',
+							20 => 'string'
+						);
+						
+						$basevals=array(
+									'pid' => 0,
+									'deleted' =>0,
+									'hidden' =>0,
+									'profileid' =>0,
+									'superuser' =>0,
+									'tstamp' => $time,
+									'crdate' => $time,
+									'cruser_id' =>$this->session->get('auth')['uid'],
+									'usergroup' =>2
+									
+								);
+						
 						$indexArray=array();
 						foreach($this->request->getPost('adressFieldsMap') as $addressFieldIndex=> $addressField){
 							if(intval($addressField) !=0 && !is_nan(intval($addressField))){
-								$insField.=','.$addressesDBFielMap[intval($addressField)];
-								array_push($indexArray,$addressFieldIndex);
+								$indexArray[$addressFieldIndex]=$addressesDBFieldMap[$addressField];
+								
 							}
 						}
-						$insField.=')';
-						$basicInsVals=$addressfolder->uid.','.$time.','.$time.','.$this->session->get('auth')['uid'].','.$this->session->get('auth')['usergroup'];
+						foreach($addressesDBFieldMap as $fieldIndex=> $dbFields){
+							if(!array_key_exists($dbFields, $indexArray)){
+								if($addressesDBFieldTypeMap[$fieldIndex]==='string'){
+									$basevals[$dbFields]='';	
+								}else{
+									$basevals[$dbFields]=0;	
+								}
+							}
+						}
+						
+						
+						
 						$tmpFile='../app/cache/tmp/'.$this->request->getPost('time').'_'.$this->request->getPost('filename');
 						if (($handle = fopen($tmpFile, "r")) !== FALSE) {
 							if($this->request->getPost('firstRowFieldNames')==1){
 								$data = fgetcsv($handle, 1000, $this->_divider[$this->request->getPost('divider')],$this->_dataWrap[$this->request->getPost('dataFieldWrap')]);
 							}
 							while(($data = fgetcsv($handle, 1000, $this->_divider[$this->request->getPost('divider')],$this->_dataWrap[$this->request->getPost('dataFieldWrap')])) !== FALSE){
-
-
-									$insStr.='('.$basicInsVals;
-									foreach($data as $valueindex=> $value){
-										if(in_array($valueindex, $indexArray)){
-											if(is_numeric($value)){
-												$insStr.=','.$value;
-											}else{
-												$insStr.=',"'.$value.'"';
-											}								
-										}
+								$feuser=new \messetool\Models\Feusers();
+								$fullname='';
+								$imagename='';
+								$zipArrStrng='';
+								foreach($indexArray as $index => $indexKey){
+									if($indexKey=='zip'){
+										$ins[$indexKey]=0;
+										$zipArrStrng=$data[$index];
+									}elseif($indexKey=='first_name'){
+										$fullname=$data[$index];
+										$imagename=  strtolower($data[$index]);
+										$ins[$indexKey]=$data[$index];
+									}elseif($indexKey=='last_name'){
+										$fullname.=' '.$data[$index];
+										$imagename.='_'.strtolower($data[$index]).'.jpg';
+										$ins[$indexKey]=$data[$index];
+									}else{
+										$ins[$indexKey]=$data[$index];
 									}
-
-									$insStr.='),';									
-									if($row>0 && $row%500==0){
-										$insStr=substr($insStr,0,-1);
-										$this->di->get('db')->query("INSERT INTO addresses ".$insField." VALUES ".$insStr);
-										$insStr='';
-									}							
-
-								$row++;
+									
+								}
+								$insArray=array_merge($basevals,$ins);
+								$insArray['fullname']=$fullname;
+								$insArray['image']=$imagename;
+								$feuser->assign=$insArray;								
+								$feuser->save();
+								
+								$zipArray=explode(',',$zipArrStrng);
+								foreach($zipArray as $zip){
+									$lookup=new \messetool\Models\Feuser_zipcodes_lookup();
+									$lookup->assign(array(
+										'uid_local' => $feuser->uid,
+										'uid_foreign' => $zip
+									));
+									$lookup->save();
+								}
 							}
 						
-							if($data==false && $insStr!=''){
-
-									$insStr=substr($insStr,0,-1);
-									
-									$this->di->get('db')->query("INSERT INTO addresses ".$insField." VALUES ".$insStr);
-
-							}
+							
 
 							fclose($handle);
 							unlink($tmpFile);
 							
 						}
-						$this->response->redirect($this->view->language.'/addressfolders/update/'.$addressfolder->uid.'/'); 
+						$this->response->redirect('backend/'.$this->view->language.'/feusers/'); 
 					$this->view->disable(); 
 
 

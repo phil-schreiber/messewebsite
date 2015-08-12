@@ -1,9 +1,9 @@
-
 	<?php echo $this->getContent(); ?>
 	<section id="start">
+		<a name="start"></a>
 		<div>
 		<h1><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('welcome'); ?></h1>
-		<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('welcomeInfo'); ?></h2>
+		
 		</div><br>
 		<div id="startImgWrap" class="cbutton cbutton--effect-jagoda cbutton--click">
 			<div  id="startTableWrap" class="cbutton cbutton--effect-jagoda2 cbutton--click">
@@ -93,6 +93,7 @@
 				
 			</div>			
 		</div>
+		<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('welcomeInfo'); ?></h2>
 		<?php echo $this->tag->image(array('images/icon-touch-sm.png', 'id' => 'touchIcon')); ?>
 	</section>
 	<section id="list">
@@ -105,6 +106,7 @@
 				<h1><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('listHeader'); ?></h1>
 				<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('listHeaderInfo'); ?></h2>
 			</div>
+			
 			<div class='clearfix'></div>
 		</header>
 		<ul class="list-group clearfix">
@@ -113,13 +115,13 @@
 			<table>
 				<tr>
 					<td>
-						<?php echo $this->tag->image(array('public/media/' . $feuser->image, 'class' => 'userImg')); ?>
+						<?php echo $this->tag->image(array(messetool\Modules\Modules\Frontend\Controllers\ControllerBase::userImgExists($feuser->image), 'class' => 'userImg')); ?>
 					</td>
 					<td>
 						<div class='list-group-item-heading'>
 							<?php echo $feuser->first_name; ?> <?php echo $feuser->last_name; ?>,<br>
-							<?php echo $feuser->company; ?>,<br>
-							<?php echo $feuser->city; ?>
+							<?php echo $feuser->specialization; ?>,<br>
+							<?php echo $feuser->region; ?>
 						</div>
 					</td>
 				</tr>
@@ -132,7 +134,9 @@
 		<br>
 		<div class="clearfix">
 			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultantNotFound'); ?></span></a>
+			<a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label"></span><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></a>
 		</div>
+		
 	</section>
 	<section id="contact">
 		<a name="contact"></a>
@@ -145,6 +149,7 @@
 				<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('contactHeaderInfo'); ?></h2>
 			</div>
 			<div id="virtualKeyboard" class="virtualKeyboard"></div>
+			
 			<div class='clearfix'></div>
 		</header>
 		
@@ -166,7 +171,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
+								<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
 							</td>
 						</tr>
 					</table>
@@ -247,7 +252,7 @@
 			
 		</div>
 		</form>
-		  
+		  <a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 	</section>
 	<section id="search">
 		<a name="search"></a>
@@ -260,6 +265,7 @@
 				<h2><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('searchHeaderInfo'); ?></h2>
 			</div>
 			<div id="virtualKeyboard2" class="virtualKeyboard"></div>
+			
 			<div class='clearfix'></div>
 			
 		</header>
@@ -282,7 +288,7 @@
 							<td><input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>"></td>
 						</tr>
 						<tr>
-							<td colspan="3" style="vertical-align: top;height:320px">
+							<td colspan="3" style="vertical-align: top;height:30vh;">
 								
 									<div id="searchResults" class="list-group clearfix">
 										
@@ -294,6 +300,11 @@
 					</table>
 			</div>
 		</form>
+		<a href="#start" class="navButton small backToTop"><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 	</section>
 
 		<div id="virtualKeyboardWrapper" ></div>
+		
+		<div id="iframeOverlay" class="overlay">
+			<iframe src="" style="height:100%;width:100%;overflow: scroll" scrolling="auto"></iframe>
+		</div>

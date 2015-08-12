@@ -98,13 +98,13 @@ $di->set(
     'modelsMetadata',
     function () use ($config) {
 
-        if ($config->application->debug) {
+        //if ($config->application->debug) {
             return new MemoryMetaDataAdapter();
-        }
+        //}
 
-        return new MetaDataAdapter(array(
+       /* return new MetaDataAdapter(array(
             'metaDataDir' => APP_PATH . '/app/cache/metaData/'
-        ));
+        ));*/
 
     },
     true
@@ -191,7 +191,7 @@ $di->set(
 		if ($config->application->debug) {
         } else {
             //Cache data for one day by default
-			
+		/*	
             $frontCache = new \Phalcon\Cache\Frontend\Output(array(
                 "lifetime" => 86400 * 30
             ));
@@ -199,7 +199,7 @@ $di->set(
             return new FileCache($frontCache, array(
                 "cacheDir" => APP_PATH . "/app/cache/views/",
                 "prefix"   => "nltool-cache-"
-            ));
+            ));*/
         }
     }
 );

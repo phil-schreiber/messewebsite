@@ -25,6 +25,7 @@ class IndexController extends ControllerBase
 				'conditions' => 'deleted=0 AND usergroup = 2'
 			));
 		
+		
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
 		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
 		$path=$baseUri.'/'.$this->view->language.'/feusers/update/';

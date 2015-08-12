@@ -61,7 +61,7 @@ class SearchController extends ControllerBase
 		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
 		$suggestionQuery=Feusers::find(array(
-					'conditions' => 'name LIKE ?1',
+					'conditions' => 'usergroup=2 AND fullname LIKE ?1',
 					'bind' => array(
 						1 => '%'.$queryStrng.'%'
 					)
@@ -69,18 +69,18 @@ class SearchController extends ControllerBase
 			);
 		foreach($suggestionQuery as $suggestion){
 				$suggestions['suggestions'][]=array(					
-					'value' =>$suggestion->first_name.' '. $suggestion->last_name.' | '.$suggestion->city,
+					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
 					'html' => '<div class="suggestion-item">
 										<table>
 											<tr>
 												<td>
-													<img src="public/media/'.$suggestion->image.'" style="max-height:100px">
+													<img src="'.$this->userImgExists($suggestion->image).'" style="max-height:100px">
 												</td>
 												<td>
 													<div class="">
 														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
-														'.$suggestion->company.',<br>
-														'.$suggestion->city.'
+														'.$suggestion->specialization.',<br>
+														'.$suggestion->region.'
 													</div>
 												</td>
 											</tr>
@@ -95,7 +95,7 @@ class SearchController extends ControllerBase
 	
 	private function SearchCity($queryStrng){
 		/*$queryStrng=$this->request->getPost('query');*/
-		$suggestions=array("suggestions"=>array());
+		
 		$placeholder='%';
 		
 		if(is_numeric($queryStrng)){
@@ -130,50 +130,51 @@ class SearchController extends ControllerBase
 		$placeholder='%';
 		
 		if(is_numeric($queryStrng)){
-			$row='zipcode =';					
-			$placeholder='';
+			
 			if(substr($queryStrng,0,1)=='0'){
 				$queryStrng=substr($queryStrng,1);
 			}
-			$ZipQuery=  City::find(array(
-					'conditions' => $row.'?1',
-					'bind' => array(
-						1 => $queryStrng
-					)
-				)				
-			);
-		}else{
-			$zips=$this->SearchCity($queryStrng);
-			$row='zipcode IN ';
-			$queryStrng='('.implode(',',$zips).')';
-			$ZipQuery=  City::find(array(
-					'conditions' => $row.$queryStrng,
-					
-				)				
-			);
-		}
-		
-		foreach($ZipQuery as $zip){
-			$suggestionQuery[]=$zip->getFeusers();
-		}
-
-		
-		
-		foreach($suggestionQuery as $suggestion){
+			$cityObject=new City();
+			$zipQuery=  $cityObject->getFeusersFromZip(array(1=>$queryStrng));
 			
+		}else{
+			$cityQuery=City::find(array(
+					'conditions' => 'city LIKE ?1',
+					'bind' => array(
+						1 => $queryStrng.'%'
+					)
+				)
+			);
+			
+			$zips=array();
+			foreach($cityQuery as $city){
+				$zips[]=$city->zip;
+			}
+			if(count($zips)>0){
+				$cityObject=new City();
+				$zipQuery=  $cityObject->getFeusersFromZip($zips);
+			}
+		}
+		
+		
+
+		if(isset($zipQuery)){
+		
+		foreach($zipQuery as $suggestion){
+				
 				$suggestions['suggestions'][]=array(					
-					'value' =>$suggestion->first_name.' '. $suggestion->last_name.' | '.$suggestion->city,
+					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
 					'html' => '<div class="suggestion-item">
 										<table>
 											<tr>
 												<td>
-													<img src="public/media/'.$suggestion->image.'" style="max-height:100px">
+													<img src="'.$this->userImgExists($suggestion->image).'" style="max-height:100px">
 												</td>
 												<td>
 													<div class="">
 														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
-														'.$suggestion->company.',<br>
-														'.$suggestion->city.'
+														'.$suggestion->specialization.',<br>
+														'.$suggestion->region.'
 													</div>
 												</td>
 											</tr>
@@ -183,6 +184,7 @@ class SearchController extends ControllerBase
 				);
 
 			}
+		}
 		return $suggestions;
 			
 	}

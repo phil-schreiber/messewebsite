@@ -45,6 +45,10 @@ body{
 	min-height:100%;
 	width:100%;
 	
+	
+}
+body{
+	overflow:hidden;
 }
 ul,li{
 	list-style: none;
@@ -1014,7 +1018,8 @@ border-radius: 4px;
 }
 .container{
 	border-bottom:none;
-	
+	height:100%;
+	overflow:scroll;
 	
 	/*background:#e5e5e5;*/
 	position:relative;
@@ -2001,15 +2006,20 @@ section#start{
 	color:#fff;
 	
 }
-
+ul.list-group{
+	    height: 60%;
+    overflow-y: scroll;
+}
 li.list-group-item img{
-	max-width:200px;
+	max-width: 10vw;
 }
 
 .list-group-item{
 	border:#e3e3e3 1px dotted;
 	float:left;
 	cursor:pointer;
+	    width: 20vw;
+	    margin: 0 1vw 1vw 0;
 	
 }
 .list-group-item-heading{
@@ -2019,6 +2029,11 @@ li.list-group-item img{
 .logo{
 	float:left;
 }
+#searchResults{
+	overflow-y: scroll;
+	max-height:100%;
+}
+	
 #contact{
 	position:relative;
 }
@@ -2112,6 +2127,14 @@ a.navButton{
 a.navButton span{
 	font-size:1.5vw;
 }
+a.navButton.small{
+	float: right;
+    margin-top: 1vw;
+}
+a.navButton.small, a.navButton.small span {
+	font-size:0.8vw;
+	font-weight:bold;
+}
 /*.pt-page-1 {
     background: #0ac2d2;
 }
@@ -2195,6 +2218,10 @@ table.formTable table td{
 .i_right_primary, .button:hover .i_right_invert, .nav_active > a .i_right_invert, .cat > a:hover .i_right {
     background-position: -10em -12em;
 }
+.i_up_primary{
+	background-position: -16em -12em;
+	
+}
 
 .btn_label{
 	display:inline-block;
@@ -2204,7 +2231,7 @@ table.formTable table td{
 
 /*autocomplete suggestions*/
 .autocomplete-suggestions { overflow: auto; }
-.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;}
+.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;    margin: 0.1vw;}
 .autocomplete-selected { background: #F0F0F0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
 .autocomplete-group { padding: 2px 5px; }
@@ -2251,4 +2278,21 @@ table.formTable table td{
 
 form .starRating label{
 	font-size:3vw;
+}
+
+.overlay{
+	width:100%;
+	height:100%;
+	box-shadow: 0px 0px 10px 2px rgba(78,78,78,1);
+	position:absolute;
+	background:#fff;
+	z-index: 199;
+	top:0;
+	left:0;
+	box-sizing: border-box;
+	display:none;
+}
+
+#virtualKeyboardWrapper{
+	display:none;
 }

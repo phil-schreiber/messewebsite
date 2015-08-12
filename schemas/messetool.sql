@@ -27,7 +27,13 @@ CREATE TABLE feusers (
 	usergroup int(11) DEFAULT '0' NOT NULL,
 	superuser tinyint(4) DEFAULT '0' NOT NULL,
 	userlanguage int(11) DEFAULT '0' NOT NULL,
-	name varchar(255) COLLATE utf8_general_ci NOT NULL,
+	gender tinyint(4) DEFAULT '0' NOT NULL,
+	fullname varchar(255) COLLATE utf8_general_ci NOT NULL,
+	region varchar(255) COLLATE utf8_general_ci NOT NULL,
+	jobtitle varchar(255) COLLATE utf8_general_ci NOT NULL,
+	division varchar(255) COLLATE utf8_general_ci NOT NULL,
+	specialization varchar(255) COLLATE utf8_general_ci NOT NULL,
+	image varchar(255) COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (uid),
   KEY email (email)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
@@ -35,7 +41,7 @@ CREATE TABLE feusers (
 
 
 LOCK TABLES feusers WRITE;
-INSERT INTO feusers VALUES (1,0,NOW(),NOW(),0,0,0,'denkfabrik','$2a$10$3d34c49b983bab20eeba8uqotZMs4qmE74REKms2xR8vL0d1/M7k.','','','','schreiber@denkfabrik-group.com','','','',0,'',1,1,1,0);
+INSERT INTO feusers VALUES (1,0,NOW(),NOW(),0,0,0,'denkfabrik','$2a$10$3d34c49b983bab20eeba8uqotZMs4qmE74REKms2xR8vL0d1/M7k.','','','','schreiber@denkfabrik-group.com','','','',0,'',1,1,1,0,0,'Philipp Schreiber','','','','');
 UNLOCK TABLES;
 
 
@@ -66,7 +72,8 @@ INSERT INTO permissions (uid, crdate, profileid, resourceid, resourceaction) VAL
 (2, NOW(), 1, 1, 'create'),
 (3, NOW(), 1, 1, 'retrieve'),
 (4, NOW(), 1, 1, 'update'),
-(5, NOW(), 1, 1, 'delete');
+(5, NOW(), 1, 1, 'delete'),
+(6, NOW(), 1, 1, 'upload');
 UNLOCK TABLES;
 
 
@@ -213,7 +220,7 @@ CREATE TABLE IF NOT EXISTS `success_logins` (
 
 
 
-
+DROP TABLE IF EXISTS `tx_agrarapp_zipcodes`;
 CREATE TABLE IF NOT EXISTS `tx_agrarapp_zipcodes` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
@@ -248,7 +255,7 @@ CREATE TABLE IF NOT EXISTS `tx_agrarapp_zipcodes` (
   FULLTEXT KEY `fulltextsearch` (`city`,`area1`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-
+DROP TABLE IF EXISTS `feuser_zipcodes_lookup`;
 CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(  
 	`uid_local` int(11) NOT NULL DEFAULT '0',
 	`uid_foreign` int(11) NOT NULL DEFAULT '0',
@@ -256,20 +263,8 @@ CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(
     KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-CREATE TABLE IF NOT EXISTS `surveysession` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
-  `pid` int(11) NOT NULL DEFAULT '0',
-  `tstamp` int(11) NOT NULL DEFAULT '0',
-  `crdate` int(11) NOT NULL DEFAULT '0',
-  `cruser_id` int(11) NOT NULL DEFAULT '0',
-  `deleted` tinyint(4) NOT NULL DEFAULT '0',
-  `hidden` tinyint(4) NOT NULL DEFAULT '0',
-  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
-	PRIMARY KEY (`uid`),
-	KEY `questionnumber` (`questionnumber`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
-
+DROP TABLE IF EXISTS `questions`;
 CREATE TABLE IF NOT EXISTS `questions` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
@@ -285,6 +280,7 @@ CREATE TABLE IF NOT EXISTS `questions` (
 	KEY `questionnumber` (`questionnumber`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `questionitems`;
 CREATE TABLE IF NOT EXISTS `questionitems` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
@@ -304,6 +300,8 @@ CREATE TABLE IF NOT EXISTS `questionitems` (
 	KEY `questionnumber` (`questionnumber`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
+
+DROP TABLE IF EXISTS `surveysession`;
 CREATE TABLE IF NOT EXISTS `surveysession` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',

@@ -139,7 +139,21 @@ class ControllerBase extends Controller
 		
 		return $this->dispatcher->getParam($parameter);
 	}
-
+	
+	/**
+     * Check if userimage file exists else return dummy image
+     *
+     * @return string
+     */
+    public static function userImgExists($filename)
+    {
+		if(file_exists('../public/media/'.$filename)){
+			return 'public/media/'.$filename;
+		}else{
+			return 'public/media/dummy-image.jpg';
+		}
+	}
+	
 	/**
      * Translates a string
      *

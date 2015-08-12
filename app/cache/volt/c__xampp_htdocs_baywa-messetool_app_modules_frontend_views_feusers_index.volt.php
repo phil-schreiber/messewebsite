@@ -2,7 +2,7 @@
 
 	<?php echo $this->getContent(); ?>
 	<section>
-<div class="container"><?php if ($this->session->get('auth')) { ?><div class="ceElement large">
+<div class="container backend"><?php if ($this->session->get('auth')) { ?><div class="ceElement large">
 	<h1><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusersIndexTitle'); ?></h1>
 		<div class="dataTables_wrapper">
 			<table  class="display dataTable">

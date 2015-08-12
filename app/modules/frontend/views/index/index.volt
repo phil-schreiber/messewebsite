@@ -1,9 +1,9 @@
-
 	{{ content() }}
 	<section id="start">
+		<a name="start"></a>
 		<div>
 		<h1>{{tr("welcome")}}</h1>
-		<h2>{{tr("welcomeInfo")}}</h2>
+		
 		</div><br>
 		<div id="startImgWrap" class="cbutton cbutton--effect-jagoda cbutton--click">
 			<div  id="startTableWrap" class="cbutton cbutton--effect-jagoda2 cbutton--click">
@@ -93,6 +93,7 @@
 				
 			</div>			
 		</div>
+		<h2>{{tr("welcomeInfo")}}</h2>
 		{{image('images/icon-touch-sm.png',"id":"touchIcon")}}
 	</section>
 	<section id="list">
@@ -105,6 +106,7 @@
 				<h1>{{tr('listHeader')}}</h1>
 				<h2>{{tr('listHeaderInfo')}}</h2>
 			</div>
+			
 			<div class='clearfix'></div>
 		</header>
 		<ul class="list-group clearfix">
@@ -113,13 +115,13 @@
 			<table>
 				<tr>
 					<td>
-						{{image("public/media/"~feuser.image,"class":"userImg")}}
+						{{image(userImgExists(feuser.image),"class":"userImg")}}
 					</td>
 					<td>
 						<div class='list-group-item-heading'>
 							{{feuser.first_name}} {{feuser.last_name}},<br>
-							{{feuser.company}},<br>
-							{{feuser.city}}
+							{{feuser.specialization}},<br>
+							{{feuser.region}}
 						</div>
 					</td>
 				</tr>
@@ -132,7 +134,9 @@
 		<br>
 		<div class="clearfix">
 			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('consultantNotFound')}}</span></a>
+			<a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label"></span>{{tr('backHome')}}</a>
 		</div>
+		
 	</section>
 	<section id="contact">
 		<a name="contact"></a>
@@ -145,6 +149,7 @@
 				<h2>{{tr('contactHeaderInfo')}}</h2>
 			</div>
 			<div id="virtualKeyboard" class="virtualKeyboard"></div>
+			
 			<div class='clearfix'></div>
 		</header>
 		
@@ -166,7 +171,7 @@
 						</tr>
 						<tr>
 							<td>
-								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
+								<a class="pt-trigger" data-animation="32" data-goto="2">Weiter</a>
 							</td>
 						</tr>
 					</table>
@@ -247,7 +252,7 @@
 			
 		</div>
 		</form>
-		  
+		  <a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 	</section>
 	<section id="search">
 		<a name="search"></a>
@@ -260,6 +265,7 @@
 				<h2>{{tr('searchHeaderInfo')}}</h2>
 			</div>
 			<div id="virtualKeyboard2" class="virtualKeyboard"></div>
+			
 			<div class='clearfix'></div>
 			
 		</header>
@@ -282,7 +288,7 @@
 							<td><input type="submit" value="{{tr('search')}}"></td>
 						</tr>
 						<tr>
-							<td colspan="3" style="vertical-align: top;height:320px">
+							<td colspan="3" style="vertical-align: top;height:30vh;">
 								
 									<div id="searchResults" class="list-group clearfix">
 										
@@ -294,6 +300,11 @@
 					</table>
 			</div>
 		</form>
+		<a href="#start" class="navButton small backToTop"><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 	</section>
 
 		<div id="virtualKeyboardWrapper" ></div>
+		
+		<div id="iframeOverlay" class="overlay">
+			<iframe src="" style="height:100%;width:100%;overflow: scroll" scrolling="auto"></iframe>
+		</div>

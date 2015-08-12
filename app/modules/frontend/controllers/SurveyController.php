@@ -72,6 +72,7 @@ class SurveyController extends ControllerBase
 						'session' => $question->session,
 						'questionnumber' => $question->questionnumber,
 						'itemnumber' => $itemData,
+						'checked' => 1,
 						'rating' => 0,
 						'message' => '',
 						'mode' =>0
@@ -93,6 +94,7 @@ class SurveyController extends ControllerBase
 						'session' => $question->session,
 						'questionnumber' => $question->questionnumber,
 						'itemnumber' => $key,
+						'checked' => 1,
 						'rating' => 0,
 						'message' => $itemData,
 						'mode' =>2

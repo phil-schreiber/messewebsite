@@ -407,11 +407,11 @@
 				<div class="pt-page pt-page-10">
 					<br>
 					<h3>{{tr('thankYou')}}</h3><br><br>
-					<a href="http://localhost/baywa-messetool/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+					<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 				</div>
 			</div>
 		</div>
-		
+		<a href="http://baywa-messetool.iq-pi.org/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 	</section>
 		
-	
+<div id="virtualKeyboardWrapper"></div>

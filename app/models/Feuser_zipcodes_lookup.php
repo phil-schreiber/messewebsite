@@ -1,6 +1,7 @@
 <?php
 namespace messetool\Models;
 use Phalcon\Mvc\Model;
+Model::setup(['notNullValidations' => false]);
 
 
 /**
@@ -8,7 +9,7 @@ use Phalcon\Mvc\Model;
  *
  * @author Philipp-PC
  */
-class Feuser_zipcodes_lookup extends Model{
+class Feuser_zipcodes_lookup extends \Phalcon\Mvc\Model{
 	
 	public function initialize(){
 		$this->belongsTo('uid_local', 'messetool\Models\Feusers', 'uid', 

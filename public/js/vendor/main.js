@@ -5,7 +5,7 @@ var runAnim=true;
 var time=0;
 function init(jQuery){
 	
-	/*window.setInterval(function(){		
+	window.setInterval(function(){		
 		if(time==300){
 			window.location.href='http://localhost/baywa-messetool/';
 		}else{
@@ -13,7 +13,7 @@ function init(jQuery){
 		}
 		
 	},1000);
-	*/
+	
    var virtualKeyboard;
 	var goToContact=function(chosenRep){
 		
@@ -201,7 +201,10 @@ function init(jQuery){
 			var chosenRep=jQuery(this).find('input').val();
 			goToContact(chosenRep);
 	});
-	
+	jQuery('#searchResults').on('click','.autocomplete-suggestion',function(){
+		var chosenRep=jQuery(this).attr('data-index');
+			goToContact(chosenRep);
+	});
 	jQuery('#contactForm').submit(function(e){
 		e.preventDefault();
 		var params=jQuery(this).serialize();
@@ -222,14 +225,14 @@ function init(jQuery){
 		jQuery('.virtualKeyboard').each(function(index,el){
 			if(jQuery(el).css('right')==='0px'){
 			 jQuery(el).animate({
-				right:"-42vw"
+				right:"-50vw"
 			 });
 			}
 		});
 		
 	});
 	jQuery('input[type="text"], textarea').on('focus',function(e){
-		/*jQuery('.virtualKeyboard').html('');*/
+		jQuery(virtualKeyboard).show();
 		if(jQuery(jQuery(this).context.form).attr('id') !=='searchForm'){
 			jQuery('#virtualKeyboard').append(jQuery(virtualKeyboard));
 			jQuery('#virtualKeyboard').animate({
@@ -244,7 +247,7 @@ function init(jQuery){
 	});
 	jQuery(':input[type="radio"],:input[type="checkbox"],:input[type="reset"],:input[type="submit"]').on('focus',function(e){
 		jQuery('.virtualKeyboard').animate({
-			right:"-42vw"
+			right:"-50vw"
 		});
 	});
 	

@@ -1,8 +1,8 @@
 <?php
 namespace messetool\Models;
 use Phalcon\Mvc\Model;
-use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
-use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
+//use Phalcon\Mvc\Model\Validator\Email as EmailValidator;
+//use Phalcon\Mvc\Model\Validator\Uniqueness as UniquenessValidator;
 Model::setup(['notNullValidations' => false]);
 
 /**
@@ -15,7 +15,7 @@ class Feusers extends \Phalcon\Mvc\Model{
 	
 	
 		
-   public function validation()
+  /* public function validation()
     {
         $this->validate(new EmailValidator(array(
             'field' => 'email'
@@ -32,7 +32,7 @@ class Feusers extends \Phalcon\Mvc\Model{
         if ($this->validationHasFailed() == true) {
             return false;
         }
-    }
+    }*/
 	
 	public function initialize(){
 		$this->hasOne('profileid', 'messetool\Models\Profiles', 'uid', array(

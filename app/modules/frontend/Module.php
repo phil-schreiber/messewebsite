@@ -85,6 +85,10 @@ $di->set(
 		$volt->getCompiler()->addFunction('tr', function ($key) {
 			return "messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate({$key})";
 		});
+		$volt->getCompiler()->addFunction('userImgExists', function ($filename) {
+			return "messetool\Modules\Modules\Frontend\Controllers\ControllerBase::userImgExists({$filename})";
+		});
+		
 		 $volt->getCompiler()->addFunction(
                     'roundTwo',
                     function ($resolvedArgs, $exprArgs) {

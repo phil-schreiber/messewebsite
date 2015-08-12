@@ -9,7 +9,7 @@
 				<h1><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyHeader'); ?></h1>
 				
 			</div>
-			<div id="virtualKeyboard"></div>
+			<div id="virtualKeyboard" class="virtualKeyboard"></div>
 			<div class='clearfix'></div>
 			
 		</header>
@@ -407,11 +407,11 @@
 				<div class="pt-page pt-page-10">
 					<br>
 					<h3><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('thankYou'); ?></h3><br><br>
-					<a href="http://localhost/baywa-messetool/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
+					<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 				</div>
 			</div>
 		</div>
-		
+		<a href="http://baywa-messetool.iq-pi.org/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 	</section>
 		
-	
+<div id="virtualKeyboardWrapper"></div>
