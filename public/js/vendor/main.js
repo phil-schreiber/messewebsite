@@ -7,7 +7,7 @@ function init(jQuery){
 	
 	window.setInterval(function(){		
 		if(time==300){
-			window.location.href='http://localhost/baywa-messetool/';
+			window.location.href='http://baywa-messetool.iq-pi.org/';
 		}else{
 			time++;
 		}
@@ -250,7 +250,15 @@ function init(jQuery){
 			right:"-50vw"
 		});
 	});
-	
+	jQuery('#q_7_1').change(function() {
+		
+		if(this.checked){
+			jQuery('#q_7_1_b_table').show();
+		}else{
+			jQuery('#q_7_1_b_table').hide();
+		}
+
+	 }); 
 }
 
 

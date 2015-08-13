@@ -98,6 +98,10 @@ input[type="checkbox"], input[type="radio"],input[type="submit"]{
 input[type="checkbox"], input[type="radio"]{
 	height:1.5vw;
 	width:1.5vw;
+	padding:0;
+	border:none;
+	transition:none;
+	background:none;
 }
 
 
@@ -2190,6 +2194,10 @@ table.formTable table td{
 }
 .survey table.formTable td td{
 	width:15vw;
+}
+.survey table#plzTable td{
+	width:auto;
+	padding:1vw;
 }
 .formTable textarea{
 	width: 100%;

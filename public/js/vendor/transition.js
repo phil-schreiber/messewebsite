@@ -456,7 +456,10 @@ var PageTransitions = (function () {
     }
 
     function resetPage($nextPage, $currentPage) {
-        $currentPage.attr('class', $currentPage.data('originalClassList'));
+		
+			$currentPage.attr('class', $currentPage.data('originalClassList'));
+		
+        
         $nextPage.attr('class', $nextPage.data('originalClassList') + ' pt-page-current');
     }
 

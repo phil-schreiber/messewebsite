@@ -264,7 +264,7 @@ jQuery.fn.getSelectionStart = function(){
 
     var pos = input.value.length;
 
-    if (input.createTextRange) {
+    if (input.createTextRange && typeof(document.selection)!=='undefined') {		
         var r = document.selection.createRange().duplicate();
         r.moveEnd('character', input.value.length);
         if (r.text == '')
