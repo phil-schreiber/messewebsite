@@ -6,6 +6,7 @@ var time=0;
 function init(jQuery){
 	
 	window.setInterval(function(){		
+		console.log(time);
 		if(time==300){
 			window.location.href='http://baywa-messetool.iq-pi.org/';
 		}else{

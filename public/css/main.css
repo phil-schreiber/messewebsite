@@ -1939,13 +1939,16 @@ section#start{
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 }
 	/*  UPDATED! flip the pane when hovered */
 	.flip-container.hover .back {
+		-webkit-transform: rotateY(0deg);
 		transform: rotateY(0deg);
 	}
 	.flip-container.hover .front {
+		-webkit-transform: rotateY(180deg);
 	    transform: rotateY(180deg);
 	}
 
@@ -1960,6 +1963,7 @@ section#start{
 /* flip speed goes here */
 .flipper {
 	transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 
 	position: relative;
@@ -1968,7 +1972,8 @@ section#start{
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-	transition: 0.6s;
+	transition:transform 0.6s;
+	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
 
 	position: absolute;
@@ -2032,6 +2037,7 @@ li.list-group-item img{
 }
 .logo{
 	float:left;
+	width:13vw;
 }
 #searchResults{
 	overflow-y: scroll;
@@ -2047,6 +2053,9 @@ li.list-group-item img{
 }
 .form label{
 	font-size:1.3vw;
+}
+.form .fullTable label{
+	font-size:1.1vw;
 }
 .form label input[type=checkbox]{
 	font-size:1.3vw;	
@@ -2253,7 +2262,12 @@ table.formTable table td{
   overflow       : hidden;
   vertical-align : bottom;
 }
-
+.fullTable .starRating label{
+	font-size:1.5vw
+}
+.fullTable .starRating:not(old){
+	height         : 2vw;
+}
 .starRating:not(old) > input{
   margin-right : -100%;
   opacity      : 0;

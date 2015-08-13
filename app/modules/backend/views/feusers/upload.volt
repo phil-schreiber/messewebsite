@@ -39,7 +39,8 @@
 		<div class='listelementContainer'>
 		{{ form('backend/'~language~'/feusers/upload', 'method': 'post') }}
 
-
+		<label>{{ tr('onSpot') }}</label><br>
+		{{ check_field('onspot')}}
 	
 
 		<table id="mapTable">
@@ -49,7 +50,7 @@
 			<td>{{uploadfield}}</td>
 			<td> >> </td>
 			<td>
-				{{ select('adressFieldsMap[]', [ '0':tr('pleaseSelect'),'1' : tr('firstname'), '2' : tr('lastname'), '3' : tr('title'), '4' : tr('salutation'), '5' : tr('email'), '6' : tr('company'), '7' : tr('phone'), '8' : tr('address'), '9' : tr('place'), '10' : tr('zip'), '11' : tr('userlanguage'), '12' : tr('gender'), '13': tr('region'), '14': tr('jobtitle'), '15': tr('division'), '16': tr('specialization')]) }}
+				{{ select('adressFieldsMap[]', [ '0':tr('pleaseSelect'),'1' : tr('firstname'), '2' : tr('lastname'), '3' : tr('title'), '4' : tr('salutation'), '5' : tr('email'), '6' : tr('company'), '7' : tr('phone'), '8' : tr('address'), '9' : tr('place'), '10' : tr('zip'), '11' : tr('userlanguage'), '12' : tr('gender'), '13': tr('region'), '14': tr('jobtitle'), '15': tr('division'), '16': tr('specialization'),'21': tr('personellnumber')]) }}
 			</td>
 
 		</tr>

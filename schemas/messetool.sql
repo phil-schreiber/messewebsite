@@ -33,10 +33,22 @@ CREATE TABLE feusers (
 	jobtitle varchar(255) COLLATE utf8_general_ci NOT NULL,
 	division varchar(255) COLLATE utf8_general_ci NOT NULL,
 	specialization varchar(255) COLLATE utf8_general_ci NOT NULL,
-	image varchar(255) COLLATE utf8_general_ci NOT NULL,
+	image varchar(255) COLLATE utf8_general_ci NOT NULL,	
+	onspot varchar(255) COLLATE utf8_general_ci NOT NULL,
+	personellnumber varchar(255) COLLATE utf8_general_ci NOT NULL,
   PRIMARY KEY (uid),
   KEY email (email)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+DROP TABLE IF EXISTS `feuser_onspotdates_lookup`;
+CREATE TABLE IF NOT EXISTS `feuser_onspotdates_lookup`(  
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+	tstamp int(11) DEFAULT '0' NOT NULL,
+	crdate int(11) DEFAULT '0' NOT NULL,
+	onspotdate int(11) DEFAULT '0' NOT NULL,
+	PRIMARY KEY (uid)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
 
@@ -220,8 +232,8 @@ CREATE TABLE IF NOT EXISTS `success_logins` (
 
 
 
-DROP TABLE IF EXISTS `tx_agrarapp_zipcodes`;
-CREATE TABLE IF NOT EXISTS `tx_agrarapp_zipcodes` (
+DROP TABLE IF EXISTS `zipcodes`;
+CREATE TABLE IF NOT EXISTS `zipcodes` (
   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
   `tstamp` int(11) NOT NULL DEFAULT '0',

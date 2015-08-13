@@ -75,7 +75,7 @@ class FeusersController extends ControllerBase
 				'deleted' => 0,
 				'hidden' => 0,				
 				'username' => $this->request->getPost('username'),
-				'password' => $this->myhash($this->request->getPost('password'), $this->unique_salt()),
+				'password' => $this->auth->encryptPassword($this->request->getPost('password')),
 				'first_name' => $this->request->getPost('first_name'),
 				'last_name' => $this->request->getPost('last_name'),				
 				'title' => $this->request->getPost('title'),
@@ -117,12 +117,7 @@ class FeusersController extends ControllerBase
 		
 	}
 	
-	private function myhash($password, $unique_salt) {
-		return crypt($password, '$2a$10$'.$unique_salt);
-	}
-	private function unique_salt() {
-		return substr(sha1(mt_rand()),0,22);
-	}
+	
 	
 	public function uploadAction(){
 		$time=time();
@@ -214,7 +209,8 @@ class FeusersController extends ControllerBase
 							16 => 'specialization',
 							18 => 'username',
 							19 => 'password',
-							20 => 'image'
+							20 => 'image',
+							21 => 'personellnumber'
 						);
 						
 						$addressesDBFieldTypeMap=array(
@@ -236,7 +232,8 @@ class FeusersController extends ControllerBase
 							16 => 'string',
 							18 => 'string',
 							19 => 'string',
-							20 => 'string'
+							20 => 'string',
+							21 => 'string'
 						);
 						
 						$basevals=array(
@@ -248,7 +245,8 @@ class FeusersController extends ControllerBase
 									'tstamp' => $time,
 									'crdate' => $time,
 									'cruser_id' =>$this->session->get('auth')['uid'],
-									'usergroup' =>2
+									'usergroup' =>2,
+									'onspot' => $this->request->hasPost('onspot') ? 1 :0
 									
 								);
 						

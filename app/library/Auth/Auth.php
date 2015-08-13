@@ -311,6 +311,19 @@ class Auth extends Component
             'profile' => $user->profile->name
         ));
     }
+	
+	public function encryptPassword($password){
+		return $this->myhash($password, $this->unique_salt());
+	}
+	
+	private function myhash($password, $unique_salt) {
+	    return crypt($password, '$2a$10$'.$unique_salt);
+ 
+	}
+	
+	private function unique_salt() {
+		return substr(sha1(mt_rand()),0,22);
+	}
 
     
 }

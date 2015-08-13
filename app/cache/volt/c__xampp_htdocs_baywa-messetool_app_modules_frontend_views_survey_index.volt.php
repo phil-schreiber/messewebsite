@@ -396,7 +396,7 @@
 									</td>									
 								</tr>
 								<tr>
-								<td colspan="3" style="text-align:center">
+								<td colspan="6" style="text-align:center">
 										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
 										<input type="hidden" name="question" value="8">
 										<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="10" class="pt-trigger">
