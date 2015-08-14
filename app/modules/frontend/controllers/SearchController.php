@@ -78,7 +78,7 @@ class SearchController extends ControllerBase
 												</td>
 												<td>
 													<div class="">
-														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
+														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
 														'.$suggestion->region.'
 													</div>
@@ -172,7 +172,7 @@ class SearchController extends ControllerBase
 												</td>
 												<td>
 													<div class="">
-														'.$suggestion->first_name.' '. $suggestion->last_name.',<br>
+														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
 														'.$suggestion->region.'
 													</div>

@@ -272,26 +272,31 @@
 		
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
+				
 					<table class="formTable">
 						<tr>
-							
-							<td>
-								<label for="name"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('name'); ?></label><br>
+							<td style="width:13vw;padding:0;margin:0;">&nbsp;</td>
+							<td class="alignLeft marginLeft">
+								<label for="name"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('name'); ?></label>
+							</td>
+							<td class="alignLeft">								
 								<input type="text" name="name" id="searchName">
 							</td>
-							<td>
-								<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
-								<input type="text" name="city" id="searchCity">
-								
-							</td>
-							
-							<td><input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>"></td>
-						</tr>
+							<td></td>
+						</tr>						
 						<tr>
-							<td colspan="3" style="vertical-align: top;height:30vh;">
-								
-									<div id="searchResults" class="list-group clearfix">
-										
+							<td style="width:13vw;padding:0;margin:0;">&nbsp;</td>
+							<td class="alignLeft marginLeft">
+								<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label>
+							</td>
+							<td class="alignLeft">								
+								<input type="text" name="city" id="searchCity">								
+							</td>
+							<td class="alignLeft"><input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>"></td>
+						</tr>							
+						<tr>
+							<td colspan="4" style="vertical-align: top;height:30vh;">								
+									<div id="searchResults" class="list-group clearfix">										
 									
 									
 									</div>																

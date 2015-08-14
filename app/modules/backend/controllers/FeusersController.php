@@ -19,8 +19,8 @@ class FeusersController extends ControllerBase
 	public $_dataWrap=array('"',"'");
 	public function indexAction(){
 		$this->assets->addCss('css/jquery.dataTables.css');
-		$feusers=Feusers::find(array(
-				'conditions' => 'deleted=0'
+		$usergroups=Usergroups::find(array(
+				'conditions' => 'deleted=0 AND cruser_id <> 0'
 			));
 		
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
@@ -28,7 +28,8 @@ class FeusersController extends ControllerBase
 		$path=$baseUri.'/backend/'.$this->view->language.'/feusers/update/';
 		
 		$this->view->setVar('path',$path);
-		$this->view->setVar('feusers',$feusers);
+		$this->view->setVar('usergroups',$usergroups);
+		
 	}
 	public function updateAction(){
 		if(!$this->request->isPost()){
@@ -127,7 +128,11 @@ class FeusersController extends ControllerBase
 				"bind" => array(1 => $this->session->get('auth')['usergroup']),
 				"order" => "tstamp DESC"
 		));
+		$usergroups=Usergroups::find(array(
+						'conditions' => 'deleted=0 AND cruser_id <> 0'
+					));
 		$this->view->setVar('addressfolders',$addressfoldersRecords);
+		$this->view->setVar('usergroups',$usergroups);
 		$this->view->setVar('filehideshow','');
 		$this->view->setVar('maphideshow','hidden');
 		if($this->request->isPost()){			
@@ -176,12 +181,18 @@ class FeusersController extends ControllerBase
 							die('Failed');
 						}					
 					}
+					$usergroups=Usergroups::find(array(
+						'conditions' => 'deleted=0 AND cruser_id <> 0'
+					));
+					
 					$this->view->setVar('divider',$this->request->getPost('divider'));
 					$this->view->setVar('dataFieldWrap',$this->request->getPost('dataFieldWrap'));
 					$this->view->setVar('tstamp',$time);
 					$this->view->setVar('firstRowFieldNames', ($this->request->hasPost('firstRowFieldNames') ? 1 :0));
 					$this->view->setVar('filename',$file->getName());
 					$this->view->setVar('uploadfields',$fileRowField);
+					
+							
 				}else{
 					$time=time();
 					
@@ -210,7 +221,7 @@ class FeusersController extends ControllerBase
 							18 => 'username',
 							19 => 'password',
 							20 => 'image',
-							21 => 'personellnumber'
+							21 => 'personellnumber'						
 						);
 						
 						$addressesDBFieldTypeMap=array(
@@ -234,6 +245,7 @@ class FeusersController extends ControllerBase
 							19 => 'string',
 							20 => 'string',
 							21 => 'string'
+							
 						);
 						
 						$basevals=array(
@@ -299,6 +311,9 @@ class FeusersController extends ControllerBase
 								$insArray=array_merge($basevals,$ins);
 								$insArray['fullname']=$fullname;
 								$insArray['image']=$imagename;
+								if($this->request->hasPost('onspot')){
+										$insArray['password']=$this->auth->encryptPassword($insArray['personellnumber']);
+									}
 								$feuser->assign=$insArray;								
 								$feuser->save();
 								

@@ -1001,7 +1001,7 @@ header, .container{
 .headerWrap{
 	width:70%;
 	float:left;
-	margin:90px 0 0 100px;
+	margin:4.5vw 0 0 5.2vw;
 	
 }
 
@@ -1111,6 +1111,7 @@ span.deleteListItem{
 	padding:15px 10px;	
 	box-shadow:0px 2px 5px 0px rgba(78,78,78,1);
 	margin-bottom:10px;
+	font-size:1em;
 }
 
 .listelementContainer{
@@ -1196,6 +1197,7 @@ span.deleteListItem{
 .mce-content-body .cElement:hover, .mce-content-body .ui-draggable-handle:hover, .mce-content-body .cElement a:hover{
 	cursor:text !important;
 }
+
 
 
 .ui-state-hover{
@@ -2219,6 +2221,12 @@ table.formTable table td{
 	top:0;*/
 }
 
+#searchForm .formTable td.alignLeft{
+	text-align: left;	
+}
+#searchForm .formTable td.marginLeft{
+	padding-left:5.2vw;
+}
 /*BayWa Icon*/
 .icon, .icon_l{
     background: transparent url("../images/sprite_x2.svg") no-repeat 0 0;

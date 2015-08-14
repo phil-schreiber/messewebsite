@@ -4,7 +4,7 @@
 	<section>
 <div class="container backend">
 	{%- if session.get('auth') -%}
-	{% for usergroup in usergroups %}
+	
 	<div class="ceElement large">
 	<h1>{{usergroup.title}}</h1>
 		<div class="dataTables_wrapper">
@@ -19,8 +19,11 @@
 						
 						<th>{{ tr('feusers.city') }}</th>						
 						<th>{{ tr('feusers.company') }}</th>
-
-
+						{% if usergroup.title == "Standmitarbeiter" %}
+							{% for index,onspotdate in onspotdates %}
+							<th>{{date('d.m.Y',onspotdate.tstamp)}}</th>
+							{% endfor %}
+						{% endif %}
 					</tr>
 				</thead>
 				<tbody>
@@ -41,7 +44,7 @@
 			</table>
 		</div>
 	</div>
-	{% endfor %}
+	
 {%- endif -%}
 
 </div>

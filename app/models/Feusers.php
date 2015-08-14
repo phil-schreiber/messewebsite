@@ -48,6 +48,7 @@ class Feusers extends \Phalcon\Mvc\Model{
 	
 		$this->hasManyToMany("uid", "messetool\Models\Feuser_zipcodes_lookup", "uid_local", "uid_foreign", "messetool\Models\Zipcodes", "zip",array('alias' => 'userzips'));
 	
+		$this->hasManyToMany("uid", "messetool\Models\Feuser_onspotdates_lookup", "uid_local", "uid_foreign", "messetool\Models\Onspotdates", "uid",array('alias' => 'onspotdates'));
 		  
 	}
 }

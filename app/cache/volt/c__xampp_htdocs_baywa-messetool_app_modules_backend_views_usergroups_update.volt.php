@@ -2,8 +2,7 @@
 
 	<?php echo $this->getContent(); ?>
 	<section>
-<div class="container backend"><?php if ($this->session->get('auth')) { ?><?php foreach ($usergroups as $usergroup) { ?>
-	<div class="ceElement large">
+<div class="container backend"><?php if ($this->session->get('auth')) { ?><div class="ceElement large">
 	<h1><?php echo $usergroup->title; ?></h1>
 		<div class="dataTables_wrapper">
 			<table  class="display dataTable">
@@ -17,8 +16,11 @@
 						
 						<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.city'); ?></th>						
 						<th><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('feusers.company'); ?></th>
-
-
+						<?php if ($usergroup->title == 'Standmitarbeiter') { ?>
+							<?php foreach ($onspotdates as $index => $onspotdate) { ?>
+							<th><?php echo date('d.m.Y', $onspotdate->tstamp); ?></th>
+							<?php } ?>
+						<?php } ?>
 					</tr>
 				</thead>
 				<tbody>
@@ -38,6 +40,5 @@
 				</tbody>
 			</table>
 		</div>
-	</div>
-	<?php } ?><?php } ?></div>
+	</div><?php } ?></div>
 	</section>	

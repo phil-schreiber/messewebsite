@@ -10,5 +10,10 @@ use Phalcon\Mvc\Model;
 class Usergroups extends Model
 {
 
+	public function initialize(){
+		$this->hasMany('uid', 'messetool\Models\feusers', 'usergroup', array(
+            'alias' => 'feusers'
+        ));
+	}
   
 }

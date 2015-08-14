@@ -34,22 +34,32 @@ CREATE TABLE feusers (
 	division varchar(255) COLLATE utf8_general_ci NOT NULL,
 	specialization varchar(255) COLLATE utf8_general_ci NOT NULL,
 	image varchar(255) COLLATE utf8_general_ci NOT NULL,	
-	onspot varchar(255) COLLATE utf8_general_ci NOT NULL,
-	personellnumber varchar(255) COLLATE utf8_general_ci NOT NULL,
+	onspot tinyint(4) DEFAULT '0' NOT NULL,
+	personellnumber int(11) DEFAULT '0' NOT NULL,
   PRIMARY KEY (uid),
   KEY email (email)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 DROP TABLE IF EXISTS `feuser_onspotdates_lookup`;
 CREATE TABLE IF NOT EXISTS `feuser_onspotdates_lookup`(  
-	uid int(11) NOT NULL auto_increment,
-	pid int(11) DEFAULT '0' NOT NULL,
-	tstamp int(11) DEFAULT '0' NOT NULL,
-	crdate int(11) DEFAULT '0' NOT NULL,
-	onspotdate int(11) DEFAULT '0' NOT NULL,
-	PRIMARY KEY (uid)
+	`uid_local` int(11) NOT NULL DEFAULT '0',
+	`uid_foreign` int(11) NOT NULL DEFAULT '0',
+	KEY `local` (`uid_local`),
+    KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS onspotdates;
+CREATE TABLE IF NOT EXISTS onspotdates (
+	uid int(11) NOT NULL auto_increment,
+	pid int(11) DEFAULT '0' NOT NULL,
+	tstamp int(11) DEFAULT '0' NOT NULL,	
+  PRIMARY KEY (uid),
+  KEY tstamp (tstamp)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
+
+LOCK TABLES onspotdates WRITE;
+INSERT INTO `onspotdates` (tstamp) VALUES (1446937200),(1447023600),(1447110000),(1447196400),(1447282800),(1447369200),(1447455600)
+UNLOCK TABLES;
 
 
 LOCK TABLES feusers WRITE;
@@ -75,7 +85,7 @@ CREATE TABLE IF NOT EXISTS permissions (
 	resourceaction varchar(55) NOT NULL,
   PRIMARY KEY (uid),
   KEY profilesid (profileid)
-) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 
 LOCK TABLES permissions WRITE;
@@ -85,7 +95,12 @@ INSERT INTO permissions (uid, crdate, profileid, resourceid, resourceaction) VAL
 (3, NOW(), 1, 1, 'retrieve'),
 (4, NOW(), 1, 1, 'update'),
 (5, NOW(), 1, 1, 'delete'),
-(6, NOW(), 1, 1, 'upload');
+(6, NOW(), 1, 1, 'upload'),
+(7, NOW(), 1, 4, 'index'),
+(8, NOW(), 1, 4, 'create'),
+(9, NOW(), 1, 4, 'retrieve'),
+(10, NOW(), 1, 4, 'update'),
+(11, NOW(), 1, 4, 'delete');
 UNLOCK TABLES;
 
 
@@ -104,14 +119,15 @@ CREATE TABLE IF NOT EXISTS resources(
 	hidden tinyint(4) DEFAULT '0' NOT NULL,
 	title varchar(255) NOT NULL,
 	PRIMARY KEY (uid)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 
 LOCK TABLES resources WRITE;
 INSERT INTO resources (uid, crdate, title) VALUES
 (1, NOW(),'feusers'),
 (2, NOW(),'languages'),
-(3, NOW(),'permissions');
+(3, NOW(),'permissions'),
+(4, NOW(),'usergroups');
 UNLOCK TABLES;
 -- --------------------------------------------------------
 
@@ -154,13 +170,14 @@ CREATE TABLE IF NOT EXISTS usergroups (
 	lang int(11) DEFAULT '0' NOT NULL,
   PRIMARY KEY (uid),
   KEY hidden (hidden)
-) ENGINE=InnoDB  AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 
 LOCK TABLES usergroups WRITE;
 INSERT INTO usergroups (uid, crdate, title, lang) VALUES
 (1,NOW(),'Global',2),
-(2,NOW(),'Homebase',1);
+(2,NOW(),'Berater',1),
+(3,NOW(),'Standmitarbeiter',1);
 UNLOCK TABLES;
 
 --

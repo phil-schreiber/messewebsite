@@ -36,7 +36,7 @@ class SessionController extends ControllerBase
 
 				));
 				
-                $this->response->redirect("backend/de/feusers"); 
+                $this->response->redirect("backend/de/index/overview"); 
 				$this->view->disable();                            
 			} catch (AuthException $e) {
 				$this->flash->error($e->getMessage());

@@ -39,6 +39,9 @@
 		<div class='listelementContainer'>
 		{{ form('backend/'~language~'/feusers/upload', 'method': 'post') }}
 
+		<label>{{tr('usergroup')}}</label><br>
+		{{ select("usergroup", usergroups, 'using': ['uid', 'title']) }}
+		<br>
 		<label>{{ tr('onSpot') }}</label><br>
 		{{ check_field('onspot')}}
 	

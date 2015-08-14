@@ -37,6 +37,9 @@
 		<div class='listelementContainer'>
 		<?php echo $this->tag->form(array('backend/' . $language . '/feusers/upload', 'method' => 'post')); ?>
 
+		<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('usergroup'); ?></label><br>
+		<?php echo $this->tag->select(array('usergroup', $usergroups, 'using' => array('uid', 'title'))); ?>
+		<br>
 		<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('onSpot'); ?></label><br>
 		<?php echo $this->tag->checkField(array('onspot')); ?>
 	
