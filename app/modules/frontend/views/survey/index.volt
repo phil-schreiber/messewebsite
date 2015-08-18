@@ -22,9 +22,13 @@
 					</div>
 				</div>
 				<div class="pt-page pt-page-2">
-					<h3>{{tr('question_1')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:12.5%">
+						</div>
+						<h3>{{tr('question_1')}}</h3>
+					</div>					
 					<form autocomplete="off" class="survey" name="question_1">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								<td>
 									<label for="q_1_1"><input type="checkbox" id="q_1_1" name="item[]" value="1"> {{tr('q_1_1')}}</label>
@@ -70,9 +74,13 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-3">
-					<h3>{{tr('question_2')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:25%">
+						</div>
+						<h3>{{tr('question_2')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_2">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								<td>
 									<input type="checkbox" id="q_2_1" name="item[]" value="1"> <label for="q_2_1">{{tr('q_2_1')}}</label>
@@ -127,9 +135,13 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-4">
-					<h3>{{tr('question_3')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:37.5%">
+						</div>
+						<h3>{{tr('question_3')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_3">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								<td>
 									<label for="q_3_1">{{tr('q_3_1')}}</label>
@@ -205,9 +217,13 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-5">
-					<h3>{{tr('question_4')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:50%">
+						</div>
+						<h3>{{tr('question_4')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_4">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								
 								<td>
@@ -239,11 +255,15 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-6">
-					<h3>{{tr('question_5')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:62.5%">
+						</div>
+						<h3>{{tr('question_5')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_5">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
-								<td colspan="2">
+								<td colspan="2"><br>
 									<textarea name="message"></textarea>
 								</td>
 							</tr>
@@ -267,9 +287,13 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-7">
-					<h3>{{tr('question_6')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:75%">
+						</div>
+						<h3>{{tr('question_6')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_6">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								<td>
 									<input type="radio" id="q_6_1" name="item" value="1"> <label for="q_6_1">{{tr('q_6_1')}}</label>
@@ -310,9 +334,13 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-8">
-					<h3>{{tr('question_7')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:87.5%">
+						</div>
+						<h3>{{tr('question_7')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_7">
-						<table class="formTable">
+						<table class="formTable">							
 							<tr>
 								<td colspan="3">
 									<input type="checkbox" id="q_7_1" name="item[]" value="1"> <label for="q_7_1">{{tr('q_7_1_a')}}</label>
@@ -371,7 +399,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-9">
-					<h3>{{tr('question_8')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:100%">
+						</div>
+						<h3>{{tr('question_8')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_8">
 						<table class="formTable" id="plzTable">
 							
@@ -394,9 +426,29 @@
 									<td>
 										<input type="radio" id="q_8_6" name="item" value="5"> <label for="q_8_6">{{tr('q_8_6')}}</label>
 									</td>									
+									<td>
+										<input type="radio" id="q_8_7" name="item" value="6"> <label for="q_8_7">{{tr('q_8_7')}}</label>
+									</td>
+									<td>
+										<input type="radio" id="q_8_8" name="item" value="7"> <label for="q_8_8">{{tr('q_8_8')}}</label>
+									</td>
+									<td>
+										<input type="radio" id="q_8_9" name="item" value="8"> <label for="q_8_9">{{tr('q_8_9')}}</label>
+									</td>
+									<td>
+										<input type="radio" id="q_8_10" name="item" value="9"> <label for="q_8_10">{{tr('q_8_10')}}</label>
+									</td>
+								</tr>
+								<tr>									
+									<td colspan="5">
+										<input type="radio" id="q_8_11" name="item" value="10"> <label for="q_8_11">{{tr('q_8_11')}}</label>
+									</td>
+									<td colspan="5">
+										<input type="radio" id="q_8_12" name="item" value="11"> <label for="q_8_12">{{tr('q_8_12')}}</label>
+									</td>	
 								</tr>
 								<tr>
-								<td colspan="6" style="text-align:center">
+								<td colspan="10" style="text-align:center">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="8">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="10" class="pt-trigger">

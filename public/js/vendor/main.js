@@ -1,12 +1,13 @@
 var viewportW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 var viewportH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 var baseurl;
+var module='';
 var runAnim=true;
 var time=0;
 function init(jQuery){
 	
 	window.setInterval(function(){		
-		console.log(time);
+		
 		if(time==300){
 			window.location.href='http://baywa-messetool.iq-pi.org/';
 		}else{
@@ -24,12 +25,18 @@ function init(jQuery){
 			},'slow');				
 			
 			jQuery('#consultantSelect option').each(function(index,element){
-	
+				jQuery(element).removeAttr('selected');
 				if(jQuery(element).val()==chosenRep){
 					jQuery(element).attr('selected','selected');
+					jQuery('.choice').html(jQuery(element).html());
 				}
 			});
+			
 	};
+	jQuery('#consultantSelect').change(function(e){
+				
+				jQuery('.choice').html(jQuery('#consultantSelect option:selected').text());
+			});
 	/*var initAutocomplete=function(){
 		jQuery('#searchName').devbridgeAutocomplete({
 				serviceUrl: 'search/index/name/',
@@ -104,7 +111,8 @@ function init(jQuery){
 	jQuery('a.pt-trigger').click(function(e){
 		e.preventDefault();
 	});
-	baseurl=document.getElementById('baseurl').value;
+	baseurl=document.getElementById('baseurl').value;	
+	module=document.getElementById('module') ? document.getElementById('module').value :'';
 	jQuery('body').append('<div id="loadingimg"><h3>Einen Moment bitte</h3><div><img src="'+baseurl+'public/images/ajax-loader.gif"></div></<div>');
 	/*jQuery('a[href^=#]').on('click', function(e){
 		e.preventDefault();
@@ -260,6 +268,14 @@ function init(jQuery){
 		}
 
 	 }); 
+	 
+	 jQuery('.updateDate').change(function(e){
+			
+			var params='onspotdate='+jQuery(this).val()+'&checked='+this.checked;
+			ajaxIt("feusers","update",params,dummyEmpty);
+	 });
+	 
+	 
 }
 
 
@@ -288,7 +304,7 @@ var ajaxIt=function(controller,action,formdata,successhandler, parameters){
 	}
 
 	jQuery.ajax({
-		url: baseurl+controller+'/'+action+parameters,
+		url: baseurl+module+controller+'/'+action+parameters,
 		cache: false,
 		async: true,
 		data: formdata,   

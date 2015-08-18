@@ -51,5 +51,22 @@ class Feusers extends \Phalcon\Mvc\Model{
 		$this->hasManyToMany("uid", "messetool\Models\Feuser_onspotdates_lookup", "uid_local", "uid_foreign", "messetool\Models\Onspotdates", "uid",array('alias' => 'onspotdates'));
 		  
 	}
+	
+	public function hasOnspotdate($OnspotdateUid){
+		$modelsManager=$this->getDi()->getShared('modelsManager');		
+		
+		
+		
+		$queryStrng="SELECT COUNT(uid) AS uidcount FROM messetool\Models\Feuser_onspotdates_lookup WHERE messetool\Models\Feuser_onspotdates_lookup.uid_local=?1 AND messetool\Models\Feuser_onspotdates_lookup.uid_foreign=?2";	
+		
+		$sQuery=$modelsManager->createQuery($queryStrng);								
+		
+		$rResults = $sQuery->execute(array(
+			1=> $this->uid,
+			2=>$OnspotdateUid
+		));		
+		
+		return $rResults[0]->uidcount;
+	}
 }
 

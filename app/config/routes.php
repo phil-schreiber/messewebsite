@@ -126,6 +126,7 @@ $router->add(
 		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
 	)
 );
+
 $router->add(
 	'/backend/{language:[a-z]{2}}/:controller/:action[/]{0,1}', 
 	array(
@@ -136,6 +137,16 @@ $router->add(
 		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
 	)
 );
+$router->add(
+	'/backend/feusers/update[/]{0,1}', 
+	array(		
+		'controller' => 'feusers',
+		'action' => 'update',		
+		'module'=>'backend',
+		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
+	)
+);
+
 
 $router->add(
 	'/backend/{language:[a-z]{2}}/:controller/:action/:int[/]{0,1}', 

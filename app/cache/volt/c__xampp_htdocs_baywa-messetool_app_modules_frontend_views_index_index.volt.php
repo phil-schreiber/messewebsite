@@ -175,60 +175,70 @@
 							</td>
 						</tr>
 					</table>
+					
 				</div>
 				<div class="pt-page pt-page-2">
-					<table class="formTable">
+					<a href="#search" class="navButton small" style="float:left"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('messageTo'); ?>: <span class="choice"></span></a>
+					<table class="formTable" style="min-height:90%;">
 						<tr>
+							
 							<td>
+								<div class="alignLeft">
 								<label for="firstname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('firstname'); ?></label><br>
 								<input type="text" name="firstname"><br><br>
+								</div>
+
+							</td>
+							<td>
+								<div class="alignLeft">
 								<label for="lastname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('lastname'); ?></label><br>
 								<input type="text" name="lastname"><br><br>
+								</div>
+							</td>
+							
+						</tr>
+						<tr>							
+							<td>
+								<div class="alignLeft">
+								<label for="phone"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('phone'); ?></label><br>
+								<input type="text" name="phone"><br><br>
+								</div>
+							</td>
+							<td>
+								<div class="alignLeft">
+								<label for="zip"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('zip'); ?></label><br>
+								<input type="text" name="zip"><br><br>
+								</div>
+							</td>
+
+						</tr>
+						<tr>
+							<td>
+								<div class="alignLeft">
+								<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
+								<input type="text" name="city"><br><br>
+								</div>
+							</td>
+							<td>
+								<div class="alignLeft">
 								<label for="farmer"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('farmer'); ?></label><br>
+								<span style="padding:0.5em;    width: 12.5vw; display:inline-block;">
 								<input type="radio" name="farmer" value="1" checked><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('yes'); ?> / 
-								<input type="radio" name="farmer" value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('no'); ?><br><br>
-							</td>
-							<td>
-								
-							</td>
+								<input type="radio" name="farmer" value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('no'); ?>
+								</span>
+								</div>
+							</td>										
 						</tr>
 						<tr>
-							<td >
+							<td colspan="2" style="text-align: center;">
 								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="3">Weiter</a>
+								<br><br>
 							</td>
 						</tr>
 					</table>
-				</div>
+				</div>				
 				<div class="pt-page pt-page-3">
-					<table class="formTable">
-						<tr>
-							<td>
-								<table>
-									<tr>
-										<td>
-											<label for="email"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('email'); ?></label><br>
-											<input type="text" name="email"><br><br>
-											<label for="phone"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('phone'); ?></label><br>
-											<input type="text" name="phone"><br><br>
-										</td>
-										<td>
-											<label for="zip"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('zip'); ?></label><br>
-											<input type="text" name="zip"><br><br>
-											<label for="city"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('city'); ?></label><br>
-											<input type="text" name="city"><br><br>
-										</td>
-									</tr>
-								</table>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="4">Weiter</a>
-							</td>
-						</tr>
-					</table>
-				</div>
-				<div class="pt-page pt-page-4">
+					<a href="#search" class="navButton small" style="float:left"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('messageTo'); ?>: <span class="choice"></span></a>
 					<table class="formTable">
 						<tr>
 							<td>
@@ -252,6 +262,7 @@
 			
 		</div>
 		</form>
+		<a href="#search" class="navButton small" style="float:left;"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('goToSearch'); ?></span></a>
 		  <a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 	</section>
 	<section id="search">
@@ -305,6 +316,7 @@
 					</table>
 			</div>
 		</form>
+		
 		<a href="#start" class="navButton small backToTop"><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
 	</section>
 

@@ -33,7 +33,13 @@
 				<td><?php echo $feuser->phone; ?></td>				
 				<td><?php echo $feuser->city; ?></td>				
 				<td><?php echo $feuser->company; ?></td>	
-				<td><a href='<?php echo $path; ?><?php echo $feuser->uid; ?>'>>> <?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('update'); ?></a></td>
+				<?php if ($usergroup->title == 'Standmitarbeiter') { ?>
+					<?php foreach ($onspotdates as $index => $onspotdate) { ?>
+					
+					<td><input type="checkbox" class="updateDate" value="<?php echo $feuser->uid; ?>_<?php echo $onspotdate->uid; ?>" <?php echo ($feuser->hasOnspotdate($onspotdate->uid) ? 'checked' : ''); ?>></td>
+					<?php } ?>
+				<?php } ?>
+				<td><a href='<?php echo $baseurl; ?>backend/de/feusers/update/<?php echo $feuser->uid; ?>'>>> <?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('update'); ?></a></td>
 
 				</tr>
 				<?php } ?>

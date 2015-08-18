@@ -42,5 +42,6 @@
 	   <input id="controller" value="<?php echo $controller; ?>" type="hidden">
 	   <input id="lang" value="<?php echo $language; ?>" type="hidden">				
 		<input id="baseurl" value="<?php echo $baseurl; ?>" type="hidden">
+		<input id="module" value="<?php echo $module; ?>" type="hidden">
     </body>
 </html>

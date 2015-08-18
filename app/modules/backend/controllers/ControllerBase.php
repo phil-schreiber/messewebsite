@@ -63,6 +63,7 @@ class ControllerBase extends Controller
 		$this->view->setVar('controller', $controllerName);
 		$this->view->setVar('language', $lang);
 		$this->view->setVar('baseurl', $baseUrl);
+		$this->view->setVar('module', 'backend/');
 		$this->view->setVar('languages_available', $languagesAvailable);
 		
 		

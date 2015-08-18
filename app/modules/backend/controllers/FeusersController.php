@@ -5,6 +5,7 @@ use messetool\Models\Feusers,
 	messetool\Models\Languages,
 	messetool\Models\Usergroups,
 	messetool\Models\Feuser_zipcodes_lookup,
+	messetool\Models\Feuser_onspotdates_lookup,
 	messetool\Forms\FeusersForm;
 /**
  * Class FeusersController
@@ -36,29 +37,56 @@ class FeusersController extends ControllerBase
 			$feuserUid = $this->dispatcher->getParam("uid");
 			$feuserRecord = Feusers::findFirstByUid($feuserUid);
 		}else{
-			$feuserUid = $this->request->getPost("uid");
-			$feuserRecord = Feusers::findFirstByUid($feuserUid);
-			
-			$feuserRecord->assign(array(
-				'tstamp' => time(),				
-				'cruser_id' => $this->session->get('auth')['uid'],								
-				'username' => $this->request->getPost('username'),
-				'password' => $this->myhash($this->request->getPost('password'), $this->unique_salt()),
-				'first_name' => $this->request->getPost('first_name'),
-				'last_name' => $this->request->getPost('last_name'),				
-				'title' => $this->request->getPost('title'),
-				'email' => $this->request->getPost('email'),
-				'phone' => $this->request->getPost('phone'),
-				'address' => $this->request->getPost('address'),
-				'city' => $this->request->getPost('city'),
-				'zip' => $this->request->getPost('zip'),
-				'company' => $this->request->getPost('company'),
-				'profileid' => $this->request->getPost('profileuid'),
-				'usergroup' => $this->request->getPost('usergroup'),
-				'superuser' => $this->request->getPost('superuser'),
-				'userlanguage' => $this->request->getPost('userlanguage')
-			));
-			$feuserRecord->update();
+			if(!$this->request->hasPost('onspotdate')){
+				$feuserUid = $this->request->getPost("uid");
+				$feuserRecord = Feusers::findFirstByUid($feuserUid);
+
+				$feuserRecord->assign(array(
+					'tstamp' => time(),				
+					'cruser_id' => $this->session->get('auth')['uid'],								
+					'username' => $this->request->getPost('username'),
+					'password' => $this->myhash($this->request->getPost('password'), $this->unique_salt()),
+					'first_name' => $this->request->getPost('first_name'),
+					'last_name' => $this->request->getPost('last_name'),				
+					'title' => $this->request->getPost('title'),
+					'email' => $this->request->getPost('email'),
+					'phone' => $this->request->getPost('phone'),
+					'address' => $this->request->getPost('address'),
+					'city' => $this->request->getPost('city'),
+					'zip' => $this->request->getPost('zip'),
+					'company' => $this->request->getPost('company'),
+					'profileid' => $this->request->getPost('profileuid'),
+					'usergroup' => $this->request->getPost('usergroup'),
+					'superuser' => $this->request->getPost('superuser'),
+					'userlanguage' => $this->request->getPost('userlanguage')
+				));
+				$feuserRecord->update();
+			}else{
+				$onspotArr=explode('_',$this->request->getPost('onspotdate'));
+				if($this->request->getPost('checked')=='true'){
+					$userOnspotdate=new Feuser_onspotdates_lookup();
+					$userOnspotdate->assign(array(
+						'uid_local' =>$onspotArr[0],
+						'uid_foreign' =>$onspotArr[1]
+					));
+					$userOnspotdate->save();
+				}else{
+					$userOnspotdates=Feuser_onspotdates_lookup::find(array(
+						'conditions' => 'uid_local = ?1 AND uid_foreign = ?2',
+						'bind' =>array(
+							1 => $onspotArr[0],
+							2 => $onspotArr[1]
+						)
+					));
+					foreach($userOnspotdates as $userOnspotdate ){
+						$userOnspotdate->delete();
+					}
+				}
+				
+						
+				$this->view->disable();
+				die();
+			}
 		}
 		$this->view->form = new FeusersForm($feuserRecord, array(
             'edit' => true
@@ -181,9 +209,7 @@ class FeusersController extends ControllerBase
 							die('Failed');
 						}					
 					}
-					$usergroups=Usergroups::find(array(
-						'conditions' => 'deleted=0 AND cruser_id <> 0'
-					));
+					
 					
 					$this->view->setVar('divider',$this->request->getPost('divider'));
 					$this->view->setVar('dataFieldWrap',$this->request->getPost('dataFieldWrap'));
@@ -257,7 +283,7 @@ class FeusersController extends ControllerBase
 									'tstamp' => $time,
 									'crdate' => $time,
 									'cruser_id' =>$this->session->get('auth')['uid'],
-									'usergroup' =>2,
+									'usergroup' =>$this->request->hasPost('usergroup') ? $this->request->getPost('usergroup'):0,
 									'onspot' => $this->request->hasPost('onspot') ? 1 :0
 									
 								);

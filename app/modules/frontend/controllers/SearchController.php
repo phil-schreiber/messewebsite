@@ -61,16 +61,30 @@ class SearchController extends ControllerBase
 		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
 		$suggestionQuery=Feusers::find(array(
-					'conditions' => 'usergroup=2 AND fullname LIKE ?1',
+					'conditions' => 'usergroup=2 AND fullname LIKE ?1 ORDER BY usergroup DESC',
 					'bind' => array(
 						1 => '%'.$queryStrng.'%'
 					)
 				)
 			);
 		foreach($suggestionQuery as $suggestion){
+				$onspot='';
+				$onspotTitle='';
+				if($suggestion->onspot){
+					$onspotDates=$suggestion->getOnspotdates();
+					foreach($onspotDates as $onspotdate){
+						if(date('d.m.')==date('d.m.',$onspotdate)){
+							$onspot='<span class="onspot active">HUHU</span>';
+							$onspotTitle=' title="Heute für Sie am Stand"';
+						}else{
+							$onspot='<span class="onspot inactive">HUHU</span>';
+							$onspotTitle=' title="Heute nicht vor Ort"';
+						}
+					}
+				}
 				$suggestions['suggestions'][]=array(					
 					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
-					'html' => '<div class="suggestion-item">
+					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'
 										<table>
 											<tr>
 												<td>
@@ -80,7 +94,7 @@ class SearchController extends ControllerBase
 													<div class="">
 														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
-														'.$suggestion->region.'
+														'.$suggestion->region.'<br><span class="contactButton small">Kontakt</span>
 													</div>
 												</td>
 											</tr>
@@ -108,7 +122,7 @@ class SearchController extends ControllerBase
 			$row='city';
 		}				
 		$suggestionQuery=City::find(array(
-					'conditions' => $row.' LIKE ?1',
+					'conditions' => $row.' LIKE ?1 ORDER BY usergroup DESC',
 					'bind' => array(
 						1 => $queryStrng.'%'
 					)
@@ -174,7 +188,7 @@ class SearchController extends ControllerBase
 													<div class="">
 														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
-														'.$suggestion->region.'
+														'.$suggestion->region.'<br><span class="contactButton small">Kontakt</span>
 													</div>
 												</td>
 											</tr>

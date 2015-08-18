@@ -19,9 +19,8 @@ $messages = array(
 	"feusers.usergroup" =>"Nutzergruppe",
 	"feusers.superuser" =>"Superuser",
 	"feusers.userlanguage" =>"Nutzersprache",
-	"feusers.profile" =>"Profil",
-	
-	"feusersIndexTitle" => "Nutzer",
+	"feusers.profile" =>"Profil",	
+	"feusersIndexTitle" => "Nutzer",	
 	"welcome" => "Herzlich willkommen am BayWa Info-Counter.",
 	"welcomeInfo" => "Bitte berühren.",
 	"button1" => "Heute für mich<br>am Stand",
@@ -100,14 +99,14 @@ $messages = array(
 	"survey" =>"Befragung",
 	"surveyHeader" => "Meine Messebewertung",
 	"surveyHeaderInfo" => "<p>Vielen Dank, dass Sie uns auf der Agritechnica in Hannover besuchen! </p>
-		<p>Wir freuen uns, wenn Sie uns dabei unterstützen, unsere Messeauftritte zu verbessern und sich einige Minuten Zeit nehmen, den Fragebogen auszufüllen.</p>
+		<p>Wir freuen uns, wenn Sie uns dabei unterstützen, unsere Messeauftritte zu verbessern und sich einige Minuten Zeit nehmen, unsere Fragen zu beantworten.</p>
 		<p>Sämtliche von Ihnen im Fragebogen gemachten Angaben werden vertraulich und unter Einhaltung der Datenschutzbestimmungen behandelt. Die Daten werden nicht an Dritte weitergegeben und dienen ausschließlich zur Bewertung der Auftritte der BayWa AG.</p>",
 	"surveyButtonStart" => "Umfrage starten",
 	"surveyButtonGoon" => "Weiter",
 	"question_1"=>"Aus welchem Grund sind Sie heute hier?",
 	"q_1_1" => "Informationsbesuch",
 	"q_1_2" => "Ausflug",
-	"q_1_3" => "Kontakt knüpfen",
+	"q_1_3" => "Kontakte knüpfen",
 	"q_1_4" => "Geschäfte abschließen",
 	"q_1_5" => "Bekannte treffen",
 	"q_1_6" => "Arbeit",
@@ -214,7 +213,9 @@ $messages = array(
 	"q_11_b_add" => "Was können/sollten wir zukünftig auch an unserem Stand umsetzen?",
 	"thankYouB" =>"Herzlichen Dank für Ihre Unterstützung!",
 	"onSpot" => "Liste enthält Standmitarbeiter",
-	"personellnumber" => "Personalnummer"
+	"personellnumber" => "Personalnummer",
+	"messageTo" => "Nachricht an",
+	"goToSearch" => "Zur Beratersuche"
 	
 	
 );

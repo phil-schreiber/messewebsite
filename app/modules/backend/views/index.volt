@@ -42,5 +42,6 @@
 	   <input id="controller" value="{{controller}}" type="hidden">
 	   <input id="lang" value="{{language}}" type="hidden">				
 		<input id="baseurl" value="{{baseurl}}" type="hidden">
+		<input id="module" value="{{module}}" type="hidden">
     </body>
 </html>

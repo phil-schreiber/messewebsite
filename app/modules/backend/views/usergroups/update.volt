@@ -36,7 +36,13 @@
 				<td>{{feuser.phone}}</td>				
 				<td>{{feuser.city}}</td>				
 				<td>{{feuser.company}}</td>	
-				<td><a href='{{ path }}{{ feuser.uid }}'>>> {{tr('update')}}</a></td>
+				{% if usergroup.title == "Standmitarbeiter" %}
+					{% for index,onspotdate in onspotdates %}
+					
+					<td><input type="checkbox" class="updateDate" value="{{feuser.uid}}_{{onspotdate.uid}}" {{ feuser.hasOnspotdate(onspotdate.uid) ? 'checked' : '' }}></td>
+					{% endfor %}
+				{% endif %}
+				<td><a href='{{baseurl}}backend/de/feusers/update/{{ feuser.uid }}'>>> {{tr('update')}}</a></td>
 
 				</tr>
 				{% endfor %}

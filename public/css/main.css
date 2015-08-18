@@ -1081,6 +1081,7 @@ nav ul li a{
 }
 .ceElement.large{
 	width:90%;
+	overflow-x: scroll;
 }
 .ceElementsWrapper{
 	max-height:800px;
@@ -1566,6 +1567,7 @@ section#start{
 	width:500px;
 	margin-left:auto;
 	margin-right:auto;
+	margin-top:4.5vh;
 	cursor:pointer;
 	
 }
@@ -2076,6 +2078,11 @@ li.list-group-item img{
 	margin-right:auto;
 }
 
+#surveyFormWrapper h3{
+	position:relative;
+	z-index:10;
+}
+
 /*Form transition base styles*/
 .pt-wrapper {
     position: relative;
@@ -2220,9 +2227,13 @@ table.formTable table td{
 	z-index: 199;
 	top:0;*/
 }
-
+.alignLeft{
+	text-align: left;    
+    display: inline-block;
+}
 #searchForm .formTable td.alignLeft{
 	text-align: left;	
+	display: table-cell;
 }
 #searchForm .formTable td.marginLeft{
 	padding-left:5.2vw;
@@ -2326,3 +2337,30 @@ form .starRating label{
 #virtualKeyboardWrapper{
 	display:none;
 }
+
+.suggestion-item{
+	text-align:left;
+	cursor:pointer;
+}
+
+.contactButton.small{
+	background:#01994e;
+	padding:0.1vw 0.5vw;
+	color:#fff;
+	
+}
+
+.statusbar.outer{
+		
+	width:100%;
+	position:relative;
+	display:block;
+}
+
+.statusbar.inner{
+	display:block;
+	background:#01994e;
+	height:100%;
+	position:absolute;
+}
+

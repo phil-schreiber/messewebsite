@@ -40,10 +40,16 @@ CREATE TABLE feusers (
   KEY email (email)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+LOCK TABLES feusers WRITE;
+INSERT INTO feusers VALUES (1,0,NOW(),NOW(),0,0,0,'denkfabrik','$2a$10$3d34c49b983bab20eeba8uqotZMs4qmE74REKms2xR8vL0d1/M7k.','','','','schreiber@denkfabrik-group.com','','','',0,'',1,1,1,0,0,'Philipp Schreiber','','','','','',0,0);
+UNLOCK TABLES;
+
 DROP TABLE IF EXISTS `feuser_onspotdates_lookup`;
 CREATE TABLE IF NOT EXISTS `feuser_onspotdates_lookup`(  
+	uid int(11) NOT NULL auto_increment,
 	`uid_local` int(11) NOT NULL DEFAULT '0',
 	`uid_foreign` int(11) NOT NULL DEFAULT '0',
+	PRIMARY KEY (uid),	
 	KEY `local` (`uid_local`),
     KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -58,13 +64,11 @@ CREATE TABLE IF NOT EXISTS onspotdates (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8;
 
 LOCK TABLES onspotdates WRITE;
-INSERT INTO `onspotdates` (tstamp) VALUES (1446937200),(1447023600),(1447110000),(1447196400),(1447282800),(1447369200),(1447455600)
+INSERT INTO `onspotdates` (tstamp) VALUES (1446937200),(1447023600),(1447110000),(1447196400),(1447282800),(1447369200),(1447455600);
 UNLOCK TABLES;
 
 
-LOCK TABLES feusers WRITE;
-INSERT INTO feusers VALUES (1,0,NOW(),NOW(),0,0,0,'denkfabrik','$2a$10$3d34c49b983bab20eeba8uqotZMs4qmE74REKms2xR8vL0d1/M7k.','','','','schreiber@denkfabrik-group.com','','','',0,'',1,1,1,0,0,'Philipp Schreiber','','','','');
-UNLOCK TABLES;
+
 
 
 --
@@ -251,43 +255,47 @@ CREATE TABLE IF NOT EXISTS `success_logins` (
 
 DROP TABLE IF EXISTS `zipcodes`;
 CREATE TABLE IF NOT EXISTS `zipcodes` (
-  `uid` int(11) NOT NULL AUTO_INCREMENT,
+   `uid` int(11) NOT NULL AUTO_INCREMENT,
   `pid` int(11) NOT NULL DEFAULT '0',
   `tstamp` int(11) NOT NULL DEFAULT '0',
   `crdate` int(11) NOT NULL DEFAULT '0',
   `cruser_id` int(11) NOT NULL DEFAULT '0',
   `deleted` tinyint(4) NOT NULL DEFAULT '0',
   `hidden` tinyint(4) NOT NULL DEFAULT '0',
-  `country` tinytext,
-  `language` tinytext,
-  `iso2` tinytext,
-  `region1` tinytext,
-  `region2` tinytext,
-  `region3` tinytext,
-  `region4` tinytext,
+  `country` tinytext CHARACTER SET utf8,
+  `language` tinytext CHARACTER SET utf8,
+  `iso2` tinytext CHARACTER SET utf8,
+  `region1` tinytext CHARACTER SET utf8,
+  `region2` tinytext CHARACTER SET utf8,
+  `region3` tinytext CHARACTER SET utf8,
+  `region4` tinytext CHARACTER SET utf8,
   `zip` int(11) NOT NULL DEFAULT '0',
-  `city` tinytext,
-  `area1` tinytext,
-  `area2` tinytext,
-  `latitude` tinytext,
-  `longitude` tinytext,
-  `tz` tinytext,
-  `utc` tinytext,
-  `dst` tinytext,
+  `city` tinytext CHARACTER SET utf8,
+  `area1` tinytext CHARACTER SET utf8,
+  `area2` tinytext CHARACTER SET utf8,
+  `latitude` tinytext CHARACTER SET utf8,
+  `longitude` tinytext CHARACTER SET utf8,
+  `tz` tinytext CHARACTER SET utf8,
+  `utc` tinytext CHARACTER SET utf8,
+  `dst` tinytext CHARACTER SET utf8,
   `baywaid` int(11) NOT NULL DEFAULT '0',
   `id` int(11) NOT NULL DEFAULT '0',
-  `kfz` varchar(256) NOT NULL,
+  `kfz` varchar(256) CHARACTER SET utf8 NOT NULL,
+  `zipcode` varchar(6) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`uid`),
   KEY `parent` (`pid`),
   KEY `baywaid` (`baywaid`),
   KEY `zip` (`zip`),
-  FULLTEXT KEY `fulltextsearch` (`city`,`area1`)
+  KEY `zipcode` (`zipcode`),
+  KEY `city` (`city`(100))
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
 
 DROP TABLE IF EXISTS `feuser_zipcodes_lookup`;
 CREATE TABLE IF NOT EXISTS `feuser_zipcodes_lookup`(  
+	`uid` int(11) NOT NULL AUTO_INCREMENT,
 	`uid_local` int(11) NOT NULL DEFAULT '0',
 	`uid_foreign` int(11) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`uid`),
 	KEY `local` (`uid_local`),
     KEY `foreign` (`uid_foreign`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

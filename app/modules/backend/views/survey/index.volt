@@ -22,7 +22,11 @@
 					</div>
 				</div>
 				<div class="pt-page pt-page-2">
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:9.1%">
+						</div>
 					<h3>{{tr('question_1_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_101">
 						<table class="formTable">
 							<tr>
@@ -63,7 +67,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-3">
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:18.2%">
+						</div>
 					<h3>{{tr('question_2_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_102">
 							<table class="formTable fullTable" >
 							<tr>
@@ -267,7 +275,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-4">
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:27.3%">
+						</div>
 					<h3>{{tr('question_3_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_103">
 						<table class="formTable">
 							<tr>
@@ -325,7 +337,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-5">
-					<h3>{{tr('question_4_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:36.4%">
+						</div>
+						<h3>{{tr('question_4_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_104">
 						<table class="formTable">
 							<tr>
@@ -349,7 +365,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-6">
-					<h3>{{tr('question_5_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:45.5%">
+						</div>
+						<h3>{{tr('question_5_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_105">
 						<table class="formTable">
 							<tr>
@@ -380,7 +400,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-7">
-					<h3>{{tr('question_6_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:54.6%">
+						</div>
+						<h3>{{tr('question_6_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_106">
 						<table class="formTable">
 							<tr>
@@ -401,7 +425,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-8">
-					<h3>{{tr('question_7_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:63.7%">
+						</div>
+						<h3>{{tr('question_7_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_107">
 						<table class="formTable">
 							<tr>
@@ -557,7 +585,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-9">
-					<h3>{{tr('question_8_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:72.8%">
+						</div>
+						<h3>{{tr('question_8_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_108">
 						<table class="formTable" id="plzTable">
 							
@@ -591,7 +623,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-10">
-					<h3>{{tr('question_9_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:81.9%">
+						</div>
+						<h3>{{tr('question_9_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_109">
 						<table class="formTable" id="plzTable">
 							
@@ -631,7 +667,11 @@
 					</form>
 				</div>				
 				<div class="pt-page pt-page-11">
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:91%">
+						</div>
 					<h3>{{tr('question_10_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_110">
 						<table class="formTable" id="plzTable">
 							
@@ -669,7 +709,11 @@
 					</form>
 				</div>
 				<div class="pt-page pt-page-12">
-					<h3>{{tr('question_11_b')}}</h3>
+					<div class="statusbar outer">
+						<div class="statusbar inner" style="width:100%">
+						</div>
+						<h3>{{tr('question_11_b')}}</h3>
+					</div>
 					<form autocomplete="off" class="survey" name="question_111">
 						<table class="formTable" id="plzTable">
 							
