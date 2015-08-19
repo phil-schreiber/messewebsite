@@ -178,10 +178,10 @@ CREATE TABLE IF NOT EXISTS usergroups (
 
 
 LOCK TABLES usergroups WRITE;
-INSERT INTO usergroups (uid, crdate, title, lang) VALUES
-(1,NOW(),'Global',2),
-(2,NOW(),'Berater',1),
-(3,NOW(),'Standmitarbeiter',1);
+INSERT INTO usergroups (uid, crdate, cruser_id, title, lang) VALUES
+(1,NOW(),0,'Global',2),
+(2,NOW(),1,'Berater',1),
+(3,NOW(),1,'Standmitarbeiter',1);
 UNLOCK TABLES;
 
 --

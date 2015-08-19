@@ -25,8 +25,8 @@ class FeusersController extends ControllerBase
 			));
 		
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
-		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
-		$path=$baseUri.'/backend/'.$this->view->language.'/feusers/update/';
+		$baseUri=$this->config['application'][$environment]['staticBaseUri'] == '/' ? '' : substr($this->config['application'][$environment]['staticBaseUri'],0,-1);
+		$path='http://'.$_SERVER['SERVER_NAME'].$baseUri.'/backend/'.$this->view->language.'/feusers/update/';
 		
 		$this->view->setVar('path',$path);
 		$this->view->setVar('usergroups',$usergroups);

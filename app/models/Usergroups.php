@@ -11,7 +11,7 @@ class Usergroups extends Model
 {
 
 	public function initialize(){
-		$this->hasMany('uid', 'messetool\Models\feusers', 'usergroup', array(
+		$this->hasMany('uid', 'messetool\Models\Feusers', 'usergroup', array(
             'alias' => 'feusers'
         ));
 	}

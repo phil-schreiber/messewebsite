@@ -26,7 +26,7 @@ class UsergroupsController extends ControllerBase
 		
 		
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
-		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
+		$baseUri=$this->config['application'][$environment]['staticBaseUri'] == '/' ? '' : $this->config['application'][$environment]['staticBaseUri'];
 		$path=$baseUri.'/backend/'.$this->view->language.'/usergroups/update/';
 		
 		$this->view->setVar('path',$path);

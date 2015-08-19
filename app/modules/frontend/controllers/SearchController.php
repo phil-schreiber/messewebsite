@@ -61,7 +61,7 @@ class SearchController extends ControllerBase
 		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
 		$suggestionQuery=Feusers::find(array(
-					'conditions' => 'usergroup=2 AND fullname LIKE ?1 ORDER BY usergroup DESC',
+					'conditions' => 'usergroup > 1 AND fullname LIKE ?1 ORDER BY usergroup DESC',
 					'bind' => array(
 						1 => '%'.$queryStrng.'%'
 					)
@@ -72,13 +72,12 @@ class SearchController extends ControllerBase
 				$onspotTitle='';
 				if($suggestion->onspot){
 					$onspotDates=$suggestion->getOnspotdates();
+					$onspot='<span class="onspot inactive"></span>';
+					$onspotTitle=' title="Heute nicht vor Ort"';
 					foreach($onspotDates as $onspotdate){
-						if(date('d.m.')==date('d.m.',$onspotdate)){
-							$onspot='<span class="onspot active">HUHU</span>';
+						if(date('d.m.')==date('d.m.',$onspotdate->tstamp)){
+							$onspot='<span class="onspot active"></span>';
 							$onspotTitle=' title="Heute für Sie am Stand"';
-						}else{
-							$onspot='<span class="onspot inactive">HUHU</span>';
-							$onspotTitle=' title="Heute nicht vor Ort"';
 						}
 					}
 				}

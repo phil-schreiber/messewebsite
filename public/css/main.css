@@ -2341,6 +2341,7 @@ form .starRating label{
 .suggestion-item{
 	text-align:left;
 	cursor:pointer;
+	position:relative;
 }
 
 .contactButton.small{
@@ -2364,3 +2365,22 @@ form .starRating label{
 	position:absolute;
 }
 
+.onspot{
+	position: absolute;
+    top: -0.1em;
+    left: -0.3em;
+    width: 1.5em;
+    height: 1.5em;
+	display:block;
+    background: url("../images/sprite_x2.svg") no-repeat 0 0;    
+	background-size: 36em;
+	font-size: 150%;
+}
+
+.onspot.inactive{
+	        background-position: -4.3em -18.4em;
+}
+
+.onspot.active{
+	background-position: -4.3em -16.3em;
+}
