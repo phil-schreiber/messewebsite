@@ -120,8 +120,8 @@
 					<td>
 						<div class='list-group-item-heading'>
 							<?php echo $feuser->first_name; ?> <?php echo $feuser->last_name; ?>,<br>
-							<?php echo $feuser->specialization; ?>,<br>
-							<?php echo $feuser->region; ?>
+							<?php echo $feuser->jobtitle; ?>,<br>
+							<?php echo $feuser->city; ?>
 						</div>
 					</td>
 				</tr>

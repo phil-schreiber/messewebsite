@@ -22,7 +22,10 @@ class IndexController extends ControllerBase
 		
 		
 		$feusers=Feusers::find(array(
-				'conditions' => 'deleted=0 AND usergroup = 2'
+				'conditions' => 'deleted=0 AND usergroup = ?1',
+				'bind' => array(
+					1 => $this->config['onspotusergroup']
+				)
 			));
 		
 		

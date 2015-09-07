@@ -120,8 +120,8 @@
 					<td>
 						<div class='list-group-item-heading'>
 							{{feuser.first_name}} {{feuser.last_name}},<br>
-							{{feuser.specialization}},<br>
-							{{feuser.region}}
+							{{feuser.jobtitle}},<br>
+							{{feuser.city}}
 						</div>
 					</td>
 				</tr>
