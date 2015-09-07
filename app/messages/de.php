@@ -19,19 +19,19 @@ $messages = array(
 	"feusers.usergroup" =>"Nutzergruppe",
 	"feusers.superuser" =>"Superuser",
 	"feusers.userlanguage" =>"Nutzersprache",
-	"feusers.profile" =>"Profil",	
-	"feusersIndexTitle" => "Nutzer",	
+	"feusers.profile" =>"Profil",
+	"feusersIndexTitle" => "Nutzer",
 	"welcome" => "Herzlich willkommen am BayWa Info-Counter.",
 	"welcomeInfo" => "Bitte berühren.",
 	"button1" => "Heute für mich<br>am Stand",
 	"button2" => "Kontakt zu<br> meinem<br> Berater",
 	"button3" => "Meine<br>Messe-<br>Bewertung",
 	"button4" => "Meine<br>baywa.de",
-	"listHeader" => "Heute für Sie am Stand.",
+	"listHeader" => "Heute für mich am Stand.",
 	"listHeaderInfo" => "Übersicht aller Standdienstmitarbeiter.",
 	"contactHeader" => "Kontakt zu meinem Berater.",
 	"contactHeaderInfo" => "Schicken Sie Ihrem Berater direkt eine SMS aufs Handy.",
-	"searchHeader" => "Beratersuche.",
+	"searchHeader" => "Kontakt zu meinem Berater.",
 	"searchHeaderInfo" => "Suchen Sie Ihren Berater und schicken Sie ihm direkt eine SMS aufs Handy.",
 	"consultant" => "Ihre Beraterauswahl",
 	"firstname" => "Vorname",
@@ -42,7 +42,7 @@ $messages = array(
 	"addressesCreateTitle" => "Adressen anlegen",
 	"addressSegmentSelectLabel" => "Adressverteiler zuordnen",
 	"addressSegmentNewLabel" => "neuen Adressverteiler erstellen",
-	"overwritesPreviousSelection" => "überschreibt vorherige Auswahl",	
+	"overwritesPreviousSelection" => "überschreibt vorherige Auswahl",
 	"firstRowContainsFieldName" => "Erste Zeile enthält Feldnamen",
 	"dateFieldsWrapped" => "Felder sind umgeben von",
 	"divider" => "Trenner",
@@ -69,7 +69,7 @@ $messages = array(
 	"yes" => "Ja",
 	"no" => "Nein",
 	"zip" => "PLZ",
-	"city" => "PLZ/Ortsname",
+	"city" => "Postleitzahl",
 	"email" => "Mailadresse",
 	"phone" => "Telefonnummer",
 	"message" => "Ihr SMS-Text",
@@ -77,7 +77,7 @@ $messages = array(
 	"salutation" => "Anrede",
 	"company" => "Unternehmen",
 	"place" => "Ort",
-	"state" => "Bundesland",	
+	"state" => "Bundesland",
 	"address"=> "Adresse",
 	"phone" => "Telefon",
 	"userlanguage" => "Nutzersprache",
@@ -97,10 +97,10 @@ $messages = array(
 	"search" => "Suchen",
 	"name" => "Vorname/Name",
 	"survey" =>"Befragung",
-	"surveyHeader" => "Meine Messebewertung",
+	"surveyHeader" => "Meine Messebewertung.",
 	"surveyHeaderInfo" => "<p>Vielen Dank, dass Sie uns auf der Agritechnica in Hannover besuchen! </p>
 		<p>Wir freuen uns, wenn Sie uns dabei unterstützen, unsere Messeauftritte zu verbessern und sich einige Minuten Zeit nehmen, unsere Fragen zu beantworten.</p>
-		<p>Sämtliche von Ihnen im Fragebogen gemachten Angaben werden vertraulich und unter Einhaltung der Datenschutzbestimmungen behandelt. Die Daten werden nicht an Dritte weitergegeben und dienen ausschließlich zur Bewertung der Auftritte der BayWa AG.</p>",
+		<p>Sämtliche von Ihnen in der Umfrage gemachten Angaben werden vertraulich und unter Einhaltung der Datenschutzbestimmungen behandelt. Die Daten werden nicht an Dritte weitergegeben und dienen ausschließlich zur Bewertung der Auftritte der BayWa AG.</p>",
 	"surveyButtonStart" => "Umfrage starten",
 	"surveyButtonGoon" => "Weiter",
 	"question_1"=>"Aus welchem Grund sind Sie heute hier?",
@@ -166,7 +166,7 @@ $messages = array(
 	"q_8_11" => "europäisches Ausland",
 	"q_8_12" => "außerhalb Europas",
 	"staff" => "Standmitarbeiter",
-	"thankYou" => "Herlichen Dank für Ihre Unterstützung",
+	"thankYou" => "Herzlichen Dank für Ihre Unterstützung",
 	"backHome" => "Zurück zur Übersicht",
 	"surveyHeaderB" => "Feedbackbogen zur Agritechnica 2015",
 	"surveyHeaderInfoB" => "<p>Herzlichen Dank für die Unterstützung auf der Agritechnica! </p><p>Bitte bewerten Sie unseren gemeinsamen Auftritt. Ihre Anregungen, Kritik und Ideen sind wichtig für künftige Messeauftritte.</p>",
@@ -216,7 +216,7 @@ $messages = array(
 	"personellnumber" => "Personalnummer",
 	"messageTo" => "Nachricht an",
 	"goToSearch" => "Zur Beratersuche"
-	
-	
+
+
 );
 ?>

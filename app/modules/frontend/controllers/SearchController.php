@@ -13,25 +13,25 @@ class SearchController extends ControllerBase
 
 {
 
-	
-	
+
+
 
     /**
      * @return \Phalcon\Http\ResponseInterface
      */
     public function indexAction()
-    {		
-		
-		
+    {
+
+
 		if($this->request->isPost()){
-			$suggestions=array(); 			
-			/*$table=substr($this->dispatcher->getParam('table'),1);						
-			
+			$suggestions=array();
+			/*$table=substr($this->dispatcher->getParam('table'),1);
+
 			switch($table){
 				case 'name':
 					$suggestions=$this->SearchName();
 				break;
-				case 'city':						
+				case 'city':
 					$suggestions = $this->SearchCity();
 				break;
 				case 'zip':
@@ -42,21 +42,21 @@ class SearchController extends ControllerBase
 				$suggestions=$this->SearchName($this->request->getPost('name'));
 			}else if(strlen($this->request->getPost('city'))>0){
 				$suggestions=$this->SearchNameFromZip($this->request->getPost('city'));
-				
+
 			}
 
-			
 
-			
+
+
 
 			die(json_encode($suggestions));
-			$this->view->disable();          
+			$this->view->disable();
 		}
-		
-        
-        
+
+
+
     }
-	
+
 	private function SearchName($queryStrng){
 		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
@@ -81,7 +81,7 @@ class SearchController extends ControllerBase
 						}
 					}
 				}
-				$suggestions['suggestions'][]=array(					
+				$suggestions['suggestions'][]=array(
 					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
 					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'
 										<table>
@@ -93,33 +93,33 @@ class SearchController extends ControllerBase
 													<div class="">
 														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
-														'.$suggestion->region.'<br><span class="contactButton small">Kontakt</span>
+														'.$suggestion->region.'<br><span class="contactButton small">SMS senden</span>
 													</div>
 												</td>
 											</tr>
-										</table>										
-									</div>',					
+										</table>
+									</div>',
 					'data' => $suggestion->uid
 				);
 
 			}
 			return $suggestions;
 	}
-	
+
 	private function SearchCity($queryStrng){
 		/*$queryStrng=$this->request->getPost('query');*/
-		
+
 		$placeholder='%';
-		
+
 		if(is_numeric($queryStrng)){
-			$row='zipcode';					
+			$row='zipcode';
 			$placeholder='';
 			if(substr($queryStrng,0,1)=='0'){
 				$queryStrng=substr($queryStrng,1);
 			}
 		}else{
 			$row='city';
-		}				
+		}
 		$suggestionQuery=City::find(array(
 					'conditions' => $row.' LIKE ?1 ORDER BY usergroup DESC',
 					'bind' => array(
@@ -130,26 +130,26 @@ class SearchController extends ControllerBase
 		$zips=array();
 		foreach($suggestionQuery as $suggestion){
 			$zips[]=$suggestion->zipcode;
-				
+
 
 		}
 		return $zips;
 	}
-	
+
 	private function SearchNameFromZip($queryStrng){
 		/*$queryStrng=$this->request->getPost('query');*/
-		
+
 		$suggestions=array("suggestions"=>array());
 		$placeholder='%';
-		
+
 		if(is_numeric($queryStrng)){
-			
+
 			if(substr($queryStrng,0,1)=='0'){
 				$queryStrng=substr($queryStrng,1);
 			}
 			$cityObject=new City();
 			$zipQuery=  $cityObject->getFeusersFromZip(array(1=>$queryStrng));
-			
+
 		}else{
 			$cityQuery=City::find(array(
 					'conditions' => 'city LIKE ?1',
@@ -158,7 +158,7 @@ class SearchController extends ControllerBase
 					)
 				)
 			);
-			
+
 			$zips=array();
 			foreach($cityQuery as $city){
 				$zips[]=$city->zip;
@@ -168,14 +168,14 @@ class SearchController extends ControllerBase
 				$zipQuery=  $cityObject->getFeusersFromZip($zips);
 			}
 		}
-		
-		
+
+
 
 		if(isset($zipQuery)){
-		
+
 		foreach($zipQuery as $suggestion){
-				
-				$suggestions['suggestions'][]=array(					
+
+				$suggestions['suggestions'][]=array(
 					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
 					'html' => '<div class="suggestion-item">
 										<table>
@@ -187,18 +187,18 @@ class SearchController extends ControllerBase
 													<div class="">
 														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
 														'.$suggestion->specialization.',<br>
-														'.$suggestion->region.'<br><span class="contactButton small">Kontakt</span>
+														'.$suggestion->region.'<br><span class="contactButton small">SMS senden</span>
 													</div>
 												</td>
 											</tr>
-										</table>										
-									</div>',					
+										</table>
+									</div>',
 					'data' => $suggestion->uid
 				);
 
 			}
 		}
 		return $suggestions;
-			
+
 	}
 }

@@ -16,8 +16,8 @@
      -moz-box-sizing: border-box;
           box-sizing: border-box;
 }
-  
-  
+
+
 *{
 	margin:0;
 	padding:0;
@@ -44,8 +44,8 @@ body{
 	height:100%;
 	min-height:100%;
 	width:100%;
-	
-	
+
+
 }
 body{
 	overflow:hidden;
@@ -54,7 +54,7 @@ ul,li{
 	list-style: none;
 }
 table{
-	
+
 	border-collapse: collapse;
     border-spacing: 0;
 }
@@ -73,11 +73,11 @@ textarea{
 	-ms-transition: all 0.2s ease-in-out;
 	-o-transition: all 0.2s ease-in-out;
 	transition: all 0.2s ease-in-out;
-	
+
 	padding:0.5em;
 	background: #f5f5f5;
-	border: 1px solid #ccc;		
-	line-height: 1.6;	
+	border: 1px solid #ccc;
+	line-height: 1.6;
 }
 
 input:hover,input:focus,
@@ -107,9 +107,9 @@ input[type="checkbox"], input[type="radio"]{
 
 html {
     font-size: 1em;
-    line-height: 1.4;     
+    line-height: 1.4;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	
+
 }
 
 /*
@@ -193,7 +193,7 @@ textarea {
 a {
     text-decoration:none;
     color:#01994e;
-    
+
     -webkit-transition: color 0.15s ease-in;
     -moz-transition: color 0.15s ease-in;
     -o-transition: color 0.15s ease-in;
@@ -334,7 +334,7 @@ a:active {
   font-style: normal;
   font-weight: normal;
   line-height: 1;
-  color:#4e4e4e;	
+  color:#4e4e4e;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -947,11 +947,11 @@ a:active {
   font-style: normal !important;
   font-weight: normal !important;
   line-height: 1 !important;
-	color:#01994e !important;	
-	
+	color:#01994e !important;
+
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale !important;
-	
+
 }
 .mce-i-glyphicon-repeat:before{
 	content: "\e030" !important;
@@ -966,14 +966,14 @@ a:active {
 
 
 #wrapper{
-	width:100%;	
+	width:100%;
 }
 
 
 nav ul{
 	margin:0px;
 	padding:0px;
-	
+
 }
 .sercive-nav.navbar-right{
 	margin-top:35px;
@@ -984,25 +984,25 @@ nav ul{
 	margin-top:20px;
 	margin-bottom:0px;
 	padding-left:40px;
-	
-	
+
+
 }
 header{
 	margin-bottom:2em;
 	overflow-x:hidden;
 	width:100%;
-	
+
 }
-header, .container{	
-	
-	
+header, .container{
+
+
 	/*margin:10px 20px;*/
 }
 .headerWrap{
 	width:70%;
 	float:left;
 	margin:4.5vw 0 0 5.2vw;
-	
+
 }
 
 #messages{
@@ -1024,7 +1024,7 @@ border-radius: 4px;
 	border-bottom:none;
 	height:100%;
 	overflow:scroll;
-	
+
 	/*background:#e5e5e5;*/
 	position:relative;
 }
@@ -1047,12 +1047,12 @@ nav ul li a{
 	right:0px;
 	background:url(../images/icon-dragdrop.png) no-repeat 10px 150px;
 }
-#contentElements{	
+#contentElements{
 	background:#e3e3e3;
 	top:0px;
 	right:0px;
-	
-	width:450px;		
+
+	width:450px;
 	box-shadow: 0px 0px 10px 2px rgba(78,78,78,1);
 	position:absolute;
 }
@@ -1090,7 +1090,7 @@ nav ul li a{
 }
 
 .ceElement a{
-	font-size: 14px;	
+	font-size: 14px;
 	/*display:block;*/
 }
 span.deleteListItem{
@@ -1102,14 +1102,14 @@ span.deleteListItem{
 .listelementContainer span.deleteListItem{
 	position:absolute;
 	top:2px;
-	right:2px;	
+	right:2px;
 }
 .ceElement h1{
 	background:#009149;
 	margin:0px;
 	color:#fff;
 	text-align: center;
-	padding:15px 10px;	
+	padding:15px 10px;
 	box-shadow:0px 2px 5px 0px rgba(78,78,78,1);
 	margin-bottom:10px;
 	font-size:1em;
@@ -1117,8 +1117,8 @@ span.deleteListItem{
 
 .listelementContainer{
 	margin-left: auto;
-	margin-right: auto;	
-	margin-bottom: 20px;	
+	margin-right: auto;
+	margin-bottom: 20px;
 	position:relative;
 	background: #e5e5e5;
 	padding: 10px;
@@ -1151,21 +1151,21 @@ span.deleteListItem{
 	background:#fff;
 	padding-top:20px;
 	max-height:800px;
-	
+
 }
 #campaignCreateElements h3{
 	margin-top:0px;
 	padding-top:0px;
-	
+
 }
 
 #campaignCreateElements .window{
-	
+
 	margin:0px auto 15px auto;
 	position:relative;
 }
 .cElementThumbWrapper{
-	
+
 	margin-left:auto;
 	margin-right:auto;
 	overflow: hidden;
@@ -1178,7 +1178,7 @@ span.deleteListItem{
 	box-shadow: 0px 0px 5px 0px rgba(78,78,78,1);
 }
 #templatedCElements{
-	
+
 }
 #templatedCElements .cElement{
 	/*zoom: 0.3;*/
@@ -1219,11 +1219,11 @@ span.deleteListItem{
 	border:#01994e 1px solid;
 	box-shadow: 0px 0px 10px #000;
 	display:none;
-	color:#fff;	
+	color:#fff;
 }
 .allPurposeLayer{
 	width:500px;
-	
+
 	display:block;
 	margin-left:-250px;
 	margin-top:-100px;
@@ -1238,7 +1238,7 @@ span.deleteListItem{
 }
 #conditionsModelerSelect table{
 	width: 100%;
-	
+
 }
 
 table.maintable{
@@ -1251,11 +1251,11 @@ table.maintable td,table.maintable th{
 table.maintable tr.even td{
 	background:#f9f9f9;
 	border-top:1px solid #dddddd;
-	
+
 }
 table.maintable tr.odd td{
 	background:#fff;
-		
+
 }
 #splitModelerSelect.allPurposeLayer{
 	width:700px;
@@ -1293,29 +1293,29 @@ table.maintable tr.odd td{
 
 .listviewList li{
 	border-bottom:1px solid #baeada;
-	
-	padding:5px;	
-	
+
+	padding:5px;
+
 }
 .listviewList li a{
 	font-size:1.3em;
-	
+
 }
 
 
 #menuWrapper{
-	
+
 	margin-bottom:10px;
 }
 
-	
 
-#fileToolBar{			
+
+#fileToolBar{
 	position:absolute;
 	top:5px;
 	right:10px;
 	color:#fff;
-	
+
 }
 #fileToolBar div{
 	font-size:1.5em;
@@ -1326,7 +1326,7 @@ table.maintable tr.odd td{
 #fileToolBar > div{
 	cursor:pointer;
 	margin-left:20px;
-	
+
 }
 
 #campaignSave{
@@ -1352,7 +1352,7 @@ table.maintable tr.odd td{
 	overflow-y: scroll;
 	margin-right:40px;
 	cursor:pointer;
-	
+
 }
 #templateCarousel li div.listelementContainer{
 	margin-top:5px;
@@ -1362,7 +1362,7 @@ table.maintable tr.odd td{
 }
 
 #templateCarousel li h5{
-	
+
 }
 #desktop{
 	position:relative;
@@ -1374,14 +1374,14 @@ table.maintable tr.odd td{
 }
 #editFrame{
 	overflow: scroll;
-	
+
 }
 .editable{
 	width:auto;
 }
 
 .editable:hover{
-	/*border: 1px dotted;	
+	/*border: 1px dotted;
 	padding: 10px;*/
 }
 
@@ -1389,20 +1389,20 @@ table.maintable tr.odd td{
 	width:100%;
 	box-shadow: 0px 2px 5px 0px rgba(0,0,0,1);
 	display:inline-block;
-	
+
 	position: relative;
 	background:#01994e;
 	height:50px;
 }
-.modes{	
+.modes{
 	width:100%;
-	color:#e5e5e5;	
-	padding-top:13px;	
+	color:#e5e5e5;
+	padding-top:13px;
 }
 
 .modes span{
 	font-size: 1.2em;
-	
+
 }
 .modes span:hover{
  cursor:pointer;
@@ -1471,7 +1471,7 @@ table#mapTable{
 }
 
 #deviceSelectBar{
-	
+
 	width:100%;
 }
 #deviceSelectBar ul {
@@ -1491,11 +1491,11 @@ table#mapTable{
 }
 
 #reviewConfiguration{
-	
+
 	padding:10px 10px 30px 10px;
 	font-size:1.3em;
 	font-weight:bold;
-	
+
 }
 #reviewConfigurationInfo{
 	float:left;
@@ -1506,7 +1506,7 @@ table#mapTable{
 	box-shadow: 0px 0px 10px 2px rgba(78,78,78,1);
 	color:#01994e;
 	padding:10px;
-		
+
 }
 #reviewConfiguration label{
 	margin-right:10px;
@@ -1518,9 +1518,9 @@ table#mapTable{
 }
 
 #reviewControls{
-	display:block;	
-	
-	
+	display:block;
+
+
 }
 #reviewControls label{
 	color: #01994e;
@@ -1529,7 +1529,7 @@ table#mapTable{
 	width:100px;
 }
 #reviewControls input{
-	
+
   padding: 10px;
   margin-left:10px;
   color:#01994e;
@@ -1554,12 +1554,12 @@ section{
 }
 
 section#start{
-	
+
 	margin-bottom:10%;
 	text-align: center;
 	position:relative;
 }
-#startImgWrap img{	
+#startImgWrap img{
 	height:500px;
 }
 #startImgWrap{
@@ -1569,7 +1569,7 @@ section#start{
 	margin-right:auto;
 	margin-top:4.5vh;
 	cursor:pointer;
-	
+
 }
 #touchIcon{
 	position:absolute;
@@ -1584,8 +1584,8 @@ section#start{
 }
 
 .cbutton--effect-jagoda::before {
-	position: absolute;	
-	margin: -25px 0 0 -25px;	
+	position: absolute;
+	margin: -25px 0 0 -25px;
 	border-radius: 100%;
 	content: '';
 	opacity: 0;
@@ -1595,8 +1595,8 @@ section#start{
 	left:0px;
 }
 .cbutton--effect-jagoda2::before {
-	position: absolute;	
-	margin: -25px 0 0 -25px;	
+	position: absolute;
+	margin: -25px 0 0 -25px;
 	border-radius: 100%;
 	content: '';
 	opacity: 0;
@@ -1604,7 +1604,7 @@ section#start{
 	width:500px;
 	height:500px;
 	right:0px;
-	
+
 }
 
 
@@ -1676,35 +1676,35 @@ section#start{
 
 
 @media (min-width: 768px) {
-	
+
 }
 
 @media (min-width: 992px) {
 	#logo{
-		
+
 	}
 	#headerLeft{
-		
+
 		/*background:#009149;*/
 		float:left;
 		/*box-shadow: 2px -2px 3px 0px rgba(78,78,78,0.5);*/
 	}
 	#logo,#pageTitle{
-		
+
 	}
 	#pageTitle h1{
 		margin:15px 0px 0px 150px;
 		padding:0;
 		font-weight: normal;
-		
+
 	}
 	nav{
-		
+
 		width:100%;
 		height:100%;
 		/*border-bottom:40px solid #009149;*/
 		box-shadow: inset 2px -2px 2px 0px rgba(78,78,78,0.5);
-		
+
 	}
 	.navbar-nav{
 		float:none !important;
@@ -1712,13 +1712,13 @@ section#start{
 		margin-top:50px;
 	}
 	.container{
-			
+
 	}
 	header{
-		
+
 	}
 	.dropdown-menu {
-		position: absolute;		
+		position: absolute;
 		left:0;
 		right:0;
 		width:120px;
@@ -1727,7 +1727,7 @@ section#start{
 		background:#009149;
 
 		z-index: 99;
-		display: none;  
+		display: none;
 		text-align: center;
 		padding: 5px 0;
 		font-size: 14px;
@@ -1743,9 +1743,9 @@ section#start{
 }
 
 @media (min-width: 1200px) {
-	
-	
-	
+
+
+
 	/*nav ul.navbar-nav > li:after,nav ul.navbar-nav > li:before{
 		left: 100%;
 	top: 50%;
@@ -1768,19 +1768,19 @@ section#start{
 	border-width: 36px;
 	margin-top: -36px;
 	}*/
-	
+
 	 nav ul.sercive-nav li{
 		border:none;
 		width:auto;
 		font-size:1em;
 		padding:5px;
-		
+
 	}
 	nav ul.sercive-nav li a{
 		padding:0;
 		font-size:1em;
 	}
-	
+
 	nav ul li a{
 		color:#4e4e4e;
 		/*height:100%;
@@ -1793,7 +1793,7 @@ section#start{
 		/*background-color:#eee;*/
 		background: url(../images/icon-menu.png) no-repeat 50% 31px;
 	}
-	
+
 	.dropdown:hover .dropdown-menu,.dropdown.active .dropdown-menu {
 		display: block;
 	}
@@ -1801,14 +1801,14 @@ section#start{
 		background:none;
 	}
 	ul.submenu{
-	 border:none;	
+	 border:none;
 	 height:auto;
 	}
-	nav ul.submenu li a{	
+	nav ul.submenu li a{
 		font-size:1.3em;
 		color:#fff;
 	}
-	
+
 	.module_el{
 		background:#f5f5f5;
 		padding:15px;
@@ -1834,13 +1834,13 @@ section#start{
 	.module_el ul li{
 		margin-bottom:10px;
 	}
-	
+
 	.automationWorkspace{
 		background:#fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAE0lEQVQIW2NkQAOMpAk8fvz4PwAJ6AOtsmMOwwAAAABJRU5ErkJggg==) repeat;
-		
+
 
 	}
-	
+
 }
 
 
@@ -1865,7 +1865,7 @@ section#start{
     }
 
     a,
-    
+
 
     a[href]:after {
         content: " (" attr(href) ")";
@@ -1996,8 +1996,8 @@ section#start{
 	transform: rotateY(-180deg);
 }
 
-/* 
-	Some vertical flip updates 
+/*
+	Some vertical flip updates
 */
 .vertical.flip-container {
 	position: relative;
@@ -2017,7 +2017,7 @@ section#start{
 .flipper p{
 	font-weight:bold;
 	color:#fff;
-	
+
 }
 ul.list-group{
 	    height: 60%;
@@ -2033,10 +2033,10 @@ li.list-group-item img{
 	cursor:pointer;
 	    width: 20vw;
 	    margin: 0 1vw 1vw 0;
-	
+
 }
 .list-group-item-heading{
-	
+
 	margin-left:10px;
 }
 .logo{
@@ -2047,7 +2047,7 @@ li.list-group-item img{
 	overflow-y: scroll;
 	max-height:100%;
 }
-	
+
 #contact{
 	position:relative;
 }
@@ -2062,19 +2062,19 @@ li.list-group-item img{
 	font-size:1.1vw;
 }
 .form label input[type=checkbox]{
-	font-size:1.3vw;	
-    vertical-align: top;	    
+	font-size:1.3vw;
+    vertical-align: top;
 }
 .form label input[type=text]{
-	font-size:1.3vw;	
-    vertical-align: middle;	    
+	font-size:1.3vw;
+    vertical-align: middle;
 }
 
 #surveyFormWrapper p{
 	padding:10px;
 	font-size:1.3vw;
 	max-width:800px;
-	margin-left:auto;
+	margin-left:30px;
 	margin-right:auto;
 }
 
@@ -2082,6 +2082,7 @@ li.list-group-item img{
 	position:relative;
 	z-index:10;
 }
+
 
 /*Form transition base styles*/
 .pt-wrapper {
@@ -2102,7 +2103,7 @@ li.list-group-item img{
     left: 0;
     visibility: hidden;
     overflow: hidden;
-	text-align: center;
+	text-align: left;
 	font-size:2em;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -2135,6 +2136,7 @@ a.pt-trigger,a.navButton{
     line-height: 1.6;
 	cursor:pointer;
 	display:inline-block;
+	margin-left:30px;
 }
 a.pt-trigger:hover,a.navButton:hover{
 	text-decoration: none;
@@ -2143,7 +2145,7 @@ a.pt-trigger:hover,a.navButton:hover{
     outline: none;
 }
 a.navButton{
-	width:auto;	
+	width:auto;
 	position: relative;
 }
 a.navButton span{
@@ -2186,7 +2188,7 @@ table.formTable{
 	min-height:100%;
 	vertical-align: middle;
 	text-align:center;
-	
+
 }
 table.formTable td{
 
@@ -2200,11 +2202,12 @@ table.formTable table td{
 }
 .survey{
 	height:100%;
+	margin-left:30px;
 }
 .survey table.formTable{
 	text-align: left;
 	width:auto;
-	margin-left:auto;
+	margin-left:0;
 	margin-right:auto;
 }
 .survey table.formTable td{
@@ -2228,11 +2231,11 @@ table.formTable table td{
 	top:0;*/
 }
 .alignLeft{
-	text-align: left;    
+	text-align: left;
     display: inline-block;
 }
 #searchForm .formTable td.alignLeft{
-	text-align: left;	
+	text-align: left;
 	display: table-cell;
 }
 #searchForm .formTable td.marginLeft{
@@ -2242,11 +2245,11 @@ table.formTable table td{
 .icon, .icon_l{
     background: transparent url("../images/sprite_x2.svg") no-repeat 0 0;
     -webkit-background-size: 36em auto;
-    background-size: 36em auto;    
+    background-size: 36em auto;
     height: 2em;
     position:absolute;
     text-indent: 100%;
-    width: 2em;	
+    width: 2em;
 	left:0px;
 	top:0.3em;
 }
@@ -2256,13 +2259,13 @@ table.formTable table td{
 }
 .i_up_primary{
 	background-position: -16em -12em;
-	
+
 }
 
 .btn_label{
 	display:inline-block;
 	margin-left:20px;
-	
+
 }
 
 /*autocomplete suggestions*/
@@ -2276,7 +2279,7 @@ table.formTable table td{
 
 .starRating:not(old){
   display        : inline-block;
-  
+
   height         : 4.5vw;
   overflow       : hidden;
   vertical-align : bottom;
@@ -2348,11 +2351,11 @@ form .starRating label{
 	background:#01994e;
 	padding:0.1vw 0.5vw;
 	color:#fff;
-	
+
 }
 
 .statusbar.outer{
-		
+
 	width:100%;
 	position:relative;
 	display:block;
@@ -2361,8 +2364,9 @@ form .starRating label{
 .statusbar.inner{
 	display:block;
 	background:#01994e;
-	height:100%;
+	height:15px;
 	position:absolute;
+	top:-25px;
 }
 
 .onspot{
@@ -2372,7 +2376,7 @@ form .starRating label{
     width: 1.5em;
     height: 1.5em;
 	display:block;
-    background: url("../images/sprite_x2.svg") no-repeat 0 0;    
+    background: url("../images/sprite_x2.svg") no-repeat 0 0;
 	background-size: 36em;
 	font-size: 150%;
 }
@@ -2383,4 +2387,9 @@ form .starRating label{
 
 .onspot.active{
 	background-position: -4.3em -16.3em;
+}
+
+.statusbar.outer h3 {
+	margin-top:25px;
+	margin-left:30px;
 }

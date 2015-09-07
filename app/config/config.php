@@ -32,7 +32,7 @@ return new \Phalcon\Config(array(
 		'version' => '0.1 alpha'
     ),    
     
-	
+	'onspotusergroup' => 3,
 	'languages'=>array(
 		'de' => 'Deutsch',
 		'en' => 'English'
