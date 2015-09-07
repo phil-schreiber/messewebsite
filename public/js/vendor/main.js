@@ -26,6 +26,7 @@ function init(jQuery){
 			
 			jQuery('#consultantSelect option').each(function(index,element){
 				jQuery(element).removeAttr('selected');
+				console.log(jQuery(element).html());
 				if(jQuery(element).val()==chosenRep){
 					jQuery(element).attr('selected','selected');
 					jQuery('.choice').html(jQuery(element).html());
@@ -159,7 +160,7 @@ function init(jQuery){
 	
 	
 	
-	jQuery('a[href^=#].navButton').on('click', function(e){
+	jQuery('a[href^=#].navButton,a[href^=#].navLink').on('click', function(e){
 			e.preventDefault();			
 			var href = jQuery(this).attr('href');		
 			jQuery('html, body').animate({
@@ -275,9 +276,22 @@ function init(jQuery){
 			ajaxIt("feusers","update",params,dummyEmpty);
 	 });
 	 
-	 
+	 /*var dd = new DropDown( jQuery('#searchResults') );*/
 }
+function DropDown(el) {
+				this.dd = el;
+				this.initEvents();
+			}
+			DropDown.prototype = {
+				initEvents : function() {
+					var obj = this;
 
+					obj.dd.on('click', function(event){
+						jQuery(this).toggleClass('active');
+						event.stopPropagation();
+					});	
+				}
+			}
 
 function showResults(data){
 	jQuery('#searchResults').html('');
@@ -285,11 +299,12 @@ function showResults(data){
 	var suggestionsStrng='';
 	for(var i=0; i<suggestions.length;i++){
 		suggestionsStrng+='<div class="autocomplete-suggestion" data-index="' + suggestions[i].data + '">' + suggestions[i].html + '</div>';
-		
+		/*suggestionsStrng+=suggestions[i].html;*/
 		
 	}
 	jQuery('#searchResults').append('<div class="autocomplete-suggestions">'+suggestionsStrng+'</div>' );
 	
+	/*jQuery('#searchResults').html('<ul id="resultList" class="dropdown">'+suggestionsStrng+'</ul>');*/
 }
 
 
@@ -334,4 +349,16 @@ function letsRoll(){
 	}else{	
 		window.setTimeout(letsRoll,10);
 	}
+}
+
+function formIsValid(){
+	var fields =['firstname','lastname','phone','zip','city'];
+	var fieldLength=fields.length;
+	for(var i=0;i<fieldLength;i++){
+		var x = document.forms["contactForm"][fields[i]].value;
+		if (x == null || x == "") {			
+			return false;
+		}
+	}
+	return true;
 }

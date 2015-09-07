@@ -3,7 +3,7 @@
 		<a name="survey"></a>
 		<header>
 			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
+				<a href="http://baywa-messetool.iq-pi.org/">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('surveyHeader')}}</h1>

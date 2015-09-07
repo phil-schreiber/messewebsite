@@ -52,6 +52,30 @@ class Feusers extends \Phalcon\Mvc\Model{
 		  
 	}
 	
+	public function searchUsers($params=array()){
+		$modelsManager=$this->getDi()->getShared('modelsManager');		
+		$whereStrn=array();
+		$bind=array();
+		$counter=1;
+		foreach($params as $field => $value){			
+			if($field=='zip'){
+				$fieldName='messetool\Models\Feuser_zipcodes_lookup.uid_foreign';
+			}else{
+				$fieldName=$field;
+			}
+			$whereStrn[]=$fieldName.' '.$value['operator'].' ?'.$counter;
+			$bind[$counter]=$value['value'];
+			$counter++;
+		}
+		
+		$queryStrng="SELECT F.* FROM messetool\Models\Feusers AS F LEFT JOIN messetool\Models\Feuser_zipcodes_lookup ON F.uid = messetool\Models\Feuser_zipcodes_lookup.uid_local  WHERE F.deleted=0 AND F.hidden=0 AND (".implode(' AND ',$whereStrn).") GROUP BY F.uid ORDER BY F.usergroup DESC";	
+		$sQuery=$modelsManager->createQuery($queryStrng);								
+		
+		$rResults = $sQuery->execute($bind);		
+		
+		return $rResults;
+	}
+	
 	public function hasOnspotdate($OnspotdateUid){
 		$modelsManager=$this->getDi()->getShared('modelsManager');		
 		

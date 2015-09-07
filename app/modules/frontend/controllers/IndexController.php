@@ -27,14 +27,26 @@ class IndexController extends ControllerBase
 					1 => $this->config['onspotusergroup']
 				)
 			));
-		
-		
+		$users=array();
+		foreach($feusers as $feuser){
+			$feuser->available='<span class="onspot inactive"></span>';
+			$onspotDates=$feuser->getOnspotdates();
+					$onspot='<span class="onspot inactive"></span>';
+					$onspotTitle=' title="Heute nicht vor Ort"';
+					foreach($onspotDates as $onspotdate){
+						if(date('d.m.')==date('d.m.',$onspotdate->tstamp)){
+							$feuser->available='<span class="onspot active"></span>';
+							
+						}
+					}
+				$users[]=$feuser;
+		}
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
 		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
 		$path=$baseUri.'/'.$this->view->language.'/feusers/update/';
 		
 		$this->view->setVar('path',$path);
-		$this->view->setVar('feusers',$feusers);
+		$this->view->setVar('feusers',$users);
         
         
     }

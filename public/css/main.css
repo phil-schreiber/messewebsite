@@ -988,7 +988,7 @@ nav ul{
 
 }
 header{
-	margin-bottom:2em;
+	margin-bottom:1.5em;
 	overflow-x:hidden;
 	width:100%;
 
@@ -2033,7 +2033,7 @@ li.list-group-item img{
 	cursor:pointer;
 	    width: 20vw;
 	    margin: 0 1vw 1vw 0;
-
+position:relative;
 }
 .list-group-item-heading{
 
@@ -2042,10 +2042,6 @@ li.list-group-item img{
 .logo{
 	float:left;
 	width:13vw;
-}
-#searchResults{
-	overflow-y: scroll;
-	max-height:100%;
 }
 
 #contact{
@@ -2388,8 +2384,41 @@ form .starRating label{
 .onspot.active{
 	background-position: -4.3em -16.3em;
 }
+.list-group-item .onspot{
+	top:0;
+	left:0;
+}
+.legend{
+	margin-top:-1vh;
+	text-align: right;
+}
+
+.legend .onspot{
+	    
+    width: 1.5em;
+    height: 1em;
+	display:inline-block;
+    background: url("../images/sprite_x2.svg") no-repeat 0 0;
+	background-size: 30em;
+	font-size: 150%;
+}
+.legend .onspot.active{
+	background-position: -3.6em -13.7em;
+}
+.legend .onspot.inactive{
+	background-position: -3.6em -15.35em;
+}
 
 .statusbar.outer h3 {
 	margin-top:25px;
 	margin-left:30px;
 }
+
+
+/* RESULT DROPDOWN*/
+#searchResults{
+	overflow-y: scroll;
+	max-height:100%;
+}
+
+

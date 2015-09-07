@@ -100,7 +100,7 @@
 		<a name="list"></a>
 		<header>
 			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
+				<a href="#start" class="navLink">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('listHeader')}}</h1>
@@ -108,10 +108,16 @@
 			</div>
 			
 			<div class='clearfix'></div>
+			<div class="legend">
+					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Heute für Sie am Stand</span>&nbsp;&nbsp;
+					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Heute nicht vor Ort</span>
+				</div>
 		</header>
+		
 		<ul class="list-group clearfix">
 		{% for index,feuser in feusers %}
 		<li class='list-group-item'>
+			{{feuser.available}}
 			<table>
 				<tr>
 					<td>
@@ -142,7 +148,7 @@
 		<a name="contact"></a>
 		<header>
 			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
+				<a href="#start" class="navLink">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('contactHeader')}}</h1>
@@ -156,8 +162,8 @@
 		<form id="contactForm" autocomplete="off" class="form">
 		<div id="contactFormWrapper" class="pt-wrapper">
 			
-				<div class="pt-page pt-page-1 pt-page-current">
-					<table class="formTable">
+				
+					<table class="formTable" style="display:none">
 						<tr>
 							<td>
 								<label for="consultant">{{tr('consultant')}}</label><br>
@@ -176,22 +182,32 @@
 						</tr>
 					</table>
 					
-				</div>
-				<div class="pt-page pt-page-2">
+				
+				<div class="pt-page pt-page-1 pt-page-current">
 					<a href="#search" class="navButton small" style="float:left">{{tr('messageTo')}}: <span class="choice"></span></a>
+					<div class="legend" style="margin-top:0;">* {{tr('mandatory')}}</div>
+					
 					<table class="formTable" style="min-height:90%;">
+						<tr>
+							<td colspan="2">
+								<div class="alignLeft">
+								<h4 style="font-size:1.3vw;">{{tr('contactInfo')}}:</h4>
+								</div>
+							</td>
+							
+						</tr>
 						<tr>
 							
 							<td>
 								<div class="alignLeft">
-								<label for="firstname">{{tr('firstname')}}</label><br>
+								<label for="firstname">{{tr('firstname')}}*</label><br>
 								<input type="text" name="firstname"><br><br>
 								</div>
 
 							</td>
 							<td>
 								<div class="alignLeft">
-								<label for="lastname">{{tr('lastname')}}</label><br>
+								<label for="lastname">{{tr('lastname')}}*</label><br>
 								<input type="text" name="lastname"><br><br>
 								</div>
 							</td>
@@ -200,13 +216,13 @@
 						<tr>							
 							<td>
 								<div class="alignLeft">
-								<label for="phone">{{tr('phone')}}</label><br>
+								<label for="phone">{{tr('phone')}}*</label><br>
 								<input type="text" name="phone"><br><br>
 								</div>
 							</td>
 							<td>
 								<div class="alignLeft">
-								<label for="zip">{{tr('zip')}}</label><br>
+								<label for="zip">{{tr('zip')}}*</label><br>
 								<input type="text" name="zip"><br><br>
 								</div>
 							</td>
@@ -215,14 +231,14 @@
 						<tr>
 							<td>
 								<div class="alignLeft">
-								<label for="city">{{tr('city')}}</label><br>
+								<label for="city">{{tr('city')}}*</label><br>
 								<input type="text" name="city"><br><br>
 								</div>
 							</td>
 							<td>
 								<div class="alignLeft">
 								<label for="farmer">{{tr('farmer')}}</label><br>
-								<span style="padding:0.5em;    width: 12.5vw; display:inline-block;">
+								<span style="padding:0.5em;width: 12.5vw; display:inline-block;">
 								<input type="radio" name="farmer" value="1" checked>{{tr('yes')}} / 
 								<input type="radio" name="farmer" value="0">{{tr('no')}}
 								</span>
@@ -231,13 +247,13 @@
 						</tr>
 						<tr>
 							<td colspan="2" style="text-align: center;">
-								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a class="pt-trigger" data-animation="32" data-goto="3">Weiter</a>
+								<a class="pt-trigger" data-animation="32" data-goto="2" id="formTrigger">Weiter</a>
 								<br><br>
 							</td>
 						</tr>
 					</table>
 				</div>				
-				<div class="pt-page pt-page-3">
+				<div class="pt-page pt-page-2">
 					<a href="#search" class="navButton small" style="float:left">{{tr('messageTo')}}: <span class="choice"></span></a>
 					<table class="formTable">
 						<tr>
@@ -269,7 +285,7 @@
 		<a name="search"></a>
 		<header>
 			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
+				<a href="#start" class="navLink">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('searchHeader')}}</h1>
@@ -280,40 +296,49 @@
 			<div class='clearfix'></div>
 			
 		</header>
-		
+		<div class="legend">
+					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Standpersonal: Heute für Sie am Stand</span>&nbsp;|&nbsp;
+					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Standpersonal: Heute nicht vor Ort</span>
+				</div>
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
 				
 					<table class="formTable">
-						<tr>
-							<td style="width:13vw;padding:0;margin:0;">&nbsp;</td>
+						<tr>							
 							<td class="alignLeft marginLeft">
-								<label for="name">{{tr('name')}}</label>
+								<label for="firstname">{{tr('firstname')}}</label><br>
+							
+								<input type="text" name="firstname">
 							</td>
-							<td class="alignLeft">								
-								<input type="text" name="name" id="searchName">
+							<td class="alignLeft marginLeft">
+								<label for="lastname">{{tr('lastname')}}</label><br>
+							
+								<input type="text" name="lastname">
 							</td>
-							<td></td>
+							<td class="alignLeft marginLeft">
+								<label for="city">{{tr('city')}}</label>	<br>						
+								<input type="text" name="city">								
+							</td>
 						</tr>						
 						<tr>
-							<td style="width:13vw;padding:0;margin:0;">&nbsp;</td>
-							<td class="alignLeft marginLeft">
-								<label for="city">{{tr('city')}}</label>
-							</td>
-							<td class="alignLeft">								
-								<input type="text" name="city" id="searchCity">								
-							</td>
-							<td class="alignLeft"><input type="submit" value="{{tr('search')}}"></td>
+							<td></td>
+							
+							<td  class="alignLeft marginLeft"><input type="submit" value="{{tr('search')}}"></td>
+							<td></td>
 						</tr>							
 						<tr>
-							<td colspan="4" style="vertical-align: top;height:30vh;">								
-									<div id="searchResults" class="list-group clearfix">										
-									
+							<td colspan="3" style="vertical-align: top;height:30vh;">								
+								
+									<div id="searchResults">										
+										
 									
 									</div>																
+								
+								
 							</td>
 						</tr>
 					</table>
+				
 			</div>
 		</form>
 		

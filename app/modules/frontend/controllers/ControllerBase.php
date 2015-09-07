@@ -154,6 +154,8 @@ class ControllerBase extends Controller
 		}
 	}
 	
+	
+	
 	/**
      * Translates a string
      *

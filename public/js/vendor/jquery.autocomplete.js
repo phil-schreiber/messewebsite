@@ -664,6 +664,7 @@
 
             // Build suggestions inner HTML:
             $.each(that.suggestions, function (i, suggestion) {
+				
                 if (groupBy){
                     html += formatGroup(suggestion, value, i);
                 }
@@ -672,6 +673,7 @@
 				}else{
 					html += '<div class="' + className + '" data-index="' + i + '">' + formatResult(suggestion, value)  + '</div>';
 				}
+				
             });
 
             this.adjustContainerWidth();

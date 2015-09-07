@@ -38,13 +38,13 @@ class SearchController extends ControllerBase
 					$suggestions=$this->SearchNameFromZip();
 				break;
 			}*/
-			if(strlen($this->request->getPost('name'))>0){
+			/*if(strlen($this->request->getPost('name'))>0){
 				$suggestions=$this->SearchName($this->request->getPost('name'));
 			}else if(strlen($this->request->getPost('city'))>0){
 				$suggestions=$this->SearchNameFromZip($this->request->getPost('city'));
 
-			}
-
+			}*/
+			$suggestions=$this->Search();
 
 
 
@@ -57,6 +57,71 @@ class SearchController extends ControllerBase
 
     }
 
+	private function Search(){
+		$suggestions=array();
+		if(strlen($this->request->getPost('city'))>0 || strlen($this->request->getPost('firstname')) > 0 || strlen($this->request->getPost('lastname')) >0){
+			$params=array();
+			if(strlen($this->request->getPost('city'))>0 && is_numeric($this->request->getPost('city'))){
+				$params['zip']['value']=$this->request->getPost('city').'%';
+				$params['zip']['operator']='LIKE';
+			}
+			
+			if(strlen($this->request->getPost('firstname'))){
+				$params['first_name']['value']='%'.$this->request->getPost('firstname').'%';
+				$params['first_name']['operator']='LIKE';
+			}
+			
+			if(strlen($this->request->getPost('lastname'))){
+				$params['last_name']['value']='%'.$this->request->getPost('lastname').'%';
+				$params['last_name']['operator']='LIKE';
+			}			
+			$Userobject=new Feusers();
+			$suggestionQuery= $Userobject->searchUsers($params);
+			foreach($suggestionQuery as $suggestion){
+				
+				$onspot='';
+				$onspotTitle='';
+				if($suggestion->onspot){
+					$onspotDates=$suggestion->getOnspotdates();
+					$onspot='<span class="onspot inactive"></span>';
+					$onspotTitle=' title="Heute nicht vor Ort"';
+					foreach($onspotDates as $onspotdate){
+						if(date('d.m.')==date('d.m.',$onspotdate->tstamp)){
+							$onspot='<span class="onspot active"></span>';
+							$onspotTitle=' title="Heute für Sie am Stand"';
+						}
+					}
+				}
+				$info1=$suggestion->onspot ? $suggestion->jobtitle : $suggestion->specialization;
+				$info2=$suggestion->onspot ? $suggestion->city : $suggestion->region;
+				$suggestions['suggestions'][]=array(
+					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
+					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'
+										<table>
+											<tr>
+												<td>
+													<img src="'.$this->userImgExists($suggestion->image).'" style="max-height:100px">
+												</td>
+												<td>
+													<div class="">
+														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
+														'.$info1.',<br>
+														'.$info2.'<br><span class="contactButton small">SMS senden</span>
+													</div>
+												</td>
+											</tr>
+										</table>
+									</div>',
+					/*'html' => '<li><input type="hidden" value="'.$suggestion->uid.'">'.$suggestion->first_name.' '. $suggestion->last_name.' | '.$info1.' | '.$info2.' '.$onspot.' </li>',*/
+					'data' => $suggestion->uid
+				);
+
+			}
+			
+		}
+		return $suggestions;
+	}
+	
 	private function SearchName($queryStrng){
 		/*$queryStrng=$this->request->getPost('query');*/
 		$suggestions=array("suggestions"=>array());
@@ -81,6 +146,8 @@ class SearchController extends ControllerBase
 						}
 					}
 				}
+				$info1=$suggestion->onspot ? $suggestion->jobtitle : $suggestion->specialization;
+				$info2=$suggestion->onspot ? $suggestion->city : $suggestion->region;
 				$suggestions['suggestions'][]=array(
 					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
 					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'
@@ -92,13 +159,14 @@ class SearchController extends ControllerBase
 												<td>
 													<div class="">
 														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
-														'.$suggestion->specialization.',<br>
-														'.$suggestion->region.'<br><span class="contactButton small">SMS senden</span>
+														'.$info1.',<br>
+														'.$info2.'<br><span class="contactButton small">SMS senden</span>
 													</div>
 												</td>
 											</tr>
 										</table>
 									</div>',
+					/*'html' => '<li><input type="hidden" value="'.$suggestion->uid.'">'.$suggestion->first_name.' '. $suggestion->last_name.' | '.$info1.' | '.$info2.' '.$onspot.' </li>',*/
 					'data' => $suggestion->uid
 				);
 
