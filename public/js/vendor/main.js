@@ -218,7 +218,11 @@ function init(jQuery){
 	jQuery('#contactForm').submit(function(e){
 		e.preventDefault();
 		var params=jQuery(this).serialize();
-		ajaxIt("message","create",params,dummyEmpty);
+		if(termsAgreed()){
+			ajaxIt("message","create",params,dummyEmpty);
+		}else{
+			alert("Sie müssen der Datenverarbeitung zustimmen.")
+		}
 	});
 	
 	jQuery('#searchForm').submit(function(e){
@@ -360,5 +364,13 @@ function formIsValid(){
 			return false;
 		}
 	}
+	return true;
+}
+
+function termsAgreed(){
+	var x = document.forms["contactForm"]["terms"].checked;
+	if (!x) {			
+			return false;
+		}
 	return true;
 }

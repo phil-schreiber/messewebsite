@@ -216,7 +216,9 @@ $messages = array(
 	"onSpot" => "Liste enthält Standmitarbeiter",
 	"personellnumber" => "Personalnummer",
 	"messageTo" => "Nachricht an",
-	"goToSearch" => "Zur Beratersuche"
+	"goToSearch" => "Zur Beratersuche",
+	"terms" => "Hiermit stimme zu, dass meine Daten ausschließlich zum Zweck der gezielten Kontaktaufnahme<br> durch die BayWa AG bzw. eine zu diesem Zweck beauftragte Drittfirma gespeichert und verarbeitet werden.",
+	"messageSent" => "Vielen Dank. Ihre Nachricht wurde versandt. Wir werden uns sobald wie möglich mit Ihnen in Kontakt setzen."
 
 
 );

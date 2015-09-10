@@ -461,7 +461,7 @@
 				<div class="pt-page pt-page-10">
 					<br>
 					<div class="statusbar outer">
-					<h3 style="margin-l>{{tr('thankYou')}}</h3>
+					<h3 style="margin-left">{{tr('thankYou')}}</h3>
 					</div>
 					<br><br>
 					<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>

@@ -47,6 +47,21 @@ var PageTransitions = (function () {
 				}else{
 					alert('Bitte füllen Sie die vorgegebenen Felder aus');
 				}
+			}
+			else if($(this).attr('id')=='formTrigger2'){
+				if(formIsValid()){
+					$pageTrigger = $(this);
+					var params=jQuery('#contactForm').serialize();
+					if(termsAgreed()){
+						ajaxIt("message","create",params,dummyEmpty);
+						Animate($pageTrigger);
+					}else{
+						alert("Sie müssen der Datenverarbeitung zustimmen.")
+					}
+					
+				}else{
+					alert('Bitte füllen Sie die vorgegebenen Felder aus');
+				}
 			}else{
 				$pageTrigger = $(this);
 				Animate($pageTrigger);

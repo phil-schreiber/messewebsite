@@ -159,7 +159,7 @@
 			<div class='clearfix'></div>
 		</header>
 		
-		<form id="contactForm" autocomplete="off" class="form">
+		<form id="contactForm" autocomplete="off" class="form" style="height:64%">
 		<div id="contactFormWrapper" class="pt-wrapper">
 			
 				
@@ -245,6 +245,7 @@
 								</div>
 							</td>										
 						</tr>
+						
 						<tr>
 							<td colspan="2" style="text-align: center;">
 								<a class="pt-trigger" data-animation="32" data-goto="2" id="formTrigger">Weiter</a>
@@ -269,11 +270,31 @@
 						</tr>
 						<tr>
 							<td>
-								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('submitSMS'); ?>">
+								<div class="alignLeft">
+								<input type="checkbox" name="terms" value="1"> <label><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('terms'); ?></label>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a data-animation="32" data-goto="3" class="pt-trigger" id="formTrigger2"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('submitSMS'); ?></a>
 							</td>
 						</tr>
 					</table>					
 				</div>
+				<div class="pt-page pt-page-3">
+						<a href="#search" class="navButton small" style="float:left"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('messageTo'); ?>: <span class="choice"></span></a>
+						<table class="formTable">
+							<tr>
+								<td>
+									<h3 style="margin-left"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('messageSent'); ?></h3>						
+						<br><br>
+						<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
+								</td>
+							</tr>						
+							
+						</table>					
+					</div>
 				 
 			
 		</div>
