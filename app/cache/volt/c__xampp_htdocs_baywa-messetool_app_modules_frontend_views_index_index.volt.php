@@ -76,12 +76,13 @@
 									</div>
 									<div class="back tile3">
 										<!-- back content -->
+										<a href='<?php echo $language; ?>/baywa'>
 										<table style="width:100%;height:100%">
 											<tr>											
 												<td style="vertical-align:middle"><p><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('button4'); ?></p></td>											  
 											</tr>
 										  </table>	
-										
+										</a>
 									</div>
 								</div>
 							</div>
@@ -169,7 +170,7 @@
 								<label for="consultant"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('consultant'); ?></label><br>
 								<select id="consultantSelect" name="consultant">
 									<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('pleaseSelect'); ?></option>
-								<?php foreach ($feusers as $index => $feuser) { ?>
+								<?php foreach ($allusers as $index => $feuser) { ?>
 									<option value="<?php echo $feuser->uid; ?>"><?php echo $feuser->first_name; ?> <?php echo $feuser->last_name; ?></option>					
 								<?php } ?>
 								</select>
@@ -183,7 +184,7 @@
 					</table>
 					
 				
-				<div class="pt-page pt-page-1 pt-page-current">
+				<div class="pt-page pt-page-1 pt-page-current" id="formPage">
 					<a href="#search" class="navButton small" style="float:left"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('messageTo'); ?>: <span class="choice"></span></a>
 					<div class="legend" style="margin-top:0;">* <?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('mandatory'); ?></div>
 					
@@ -259,24 +260,24 @@
 					<table class="formTable">
 						<tr>
 							<td>
-								<label for="message"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message'); ?></label><br>					
-								<select name="consultant">
-									<option value="0"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message1'); ?></option>
-									<option value="2"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message2'); ?></option>
-									<option value="3"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message3'); ?></option>
-									<option value="4"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message4'); ?></option>
-								</select><br>
+								<label><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('premessage'); ?></label><br>					
+								<ul id="smsTextsSelect">			
+									
+								</ul>
+								
+							</td>
+							<td>
+								<br><label for="message"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('message'); ?></label><br>					
+								<textarea name="message" id="smsTexts"></textarea>
+							</td>
+						</tr>						
+						<tr>
+							<td colspan="2">								
+								<input type="checkbox" name="terms" value="1"> <label><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('terms'); ?></label>								
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<div class="alignLeft">
-								<input type="checkbox" name="terms" value="1"> <label><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('terms'); ?></label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
+							<td colspan="2">
 								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a data-animation="32" data-goto="3" class="pt-trigger" id="formTrigger2"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('submitSMS'); ?></a>
 							</td>
 						</tr>

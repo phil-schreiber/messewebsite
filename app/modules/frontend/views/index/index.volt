@@ -76,12 +76,13 @@
 									</div>
 									<div class="back tile3">
 										<!-- back content -->
+										<a href='{{language}}/baywa'>
 										<table style="width:100%;height:100%">
 											<tr>											
 												<td style="vertical-align:middle"><p>{{tr('button4')}}</p></td>											  
 											</tr>
 										  </table>	
-										
+										</a>
 									</div>
 								</div>
 							</div>
@@ -169,7 +170,7 @@
 								<label for="consultant">{{tr('consultant')}}</label><br>
 								<select id="consultantSelect" name="consultant">
 									<option value="0">{{tr('pleaseSelect')}}</option>
-								{% for index,feuser in feusers %}
+								{% for index,feuser in allusers %}
 									<option value="{{feuser.uid}}">{{feuser.first_name}} {{feuser.last_name}}</option>					
 								{% endfor %}
 								</select>
@@ -183,7 +184,7 @@
 					</table>
 					
 				
-				<div class="pt-page pt-page-1 pt-page-current">
+				<div class="pt-page pt-page-1 pt-page-current" id="formPage">
 					<a href="#search" class="navButton small" style="float:left">{{tr('messageTo')}}: <span class="choice"></span></a>
 					<div class="legend" style="margin-top:0;">* {{tr('mandatory')}}</div>
 					
@@ -259,24 +260,24 @@
 					<table class="formTable">
 						<tr>
 							<td>
-								<label for="message">{{tr('message')}}</label><br>					
-								<select name="consultant">
-									<option value="0">{{tr('message1')}}</option>
-									<option value="2">{{tr('message2')}}</option>
-									<option value="3">{{tr('message3')}}</option>
-									<option value="4">{{tr('message4')}}</option>
-								</select><br>
+								<label>{{tr('premessage')}}</label><br>					
+								<ul id="smsTextsSelect">			
+									
+								</ul>
+								
+							</td>
+							<td>
+								<br><label for="message">{{tr('message')}}</label><br>					
+								<textarea name="message" id="smsTexts"></textarea>
+							</td>
+						</tr>						
+						<tr>
+							<td colspan="2">								
+								<input type="checkbox" name="terms" id="terms" value="1"> <label for="terms">{{tr('terms')}}</label>								
 							</td>
 						</tr>
 						<tr>
-							<td>
-								<div class="alignLeft">
-								<input type="checkbox" name="terms" value="1"> <label>{{tr('terms')}}</label>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td>
+							<td colspan="2">
 								<a class="pt-trigger" data-animation="32" data-goto="-2">Zurück</a>&nbsp;<a data-animation="32" data-goto="3" class="pt-trigger" id="formTrigger2">{{tr('submitSMS')}}</a>
 							</td>
 						</tr>

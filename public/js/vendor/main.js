@@ -16,6 +16,64 @@ function init(jQuery){
 		
 	},1000);
 	
+	(function ($, smsTexte, undefined) {
+		smsTexte.berater = function(uid,name){
+			this.uid = uid;
+			this.name = name;
+		};
+		
+		smsTexte.kunde = function(firstname,lastname,phone){
+			this.firstname = firstname;
+			this.lastname = lastname;
+			this.phone = phone;
+		};
+		
+		var selectBox=jQuery('#smsTextsSelect');
+		var marker=function(berater,kunde){
+			this.replaceObj={
+				"#Berater#" :berater.name,
+				"#KundeVorname#":kunde.firstname,
+				"#KundeNachname#":kunde.lastname,
+				"#TelefonnummerKunde#":kunde.phone
+			};
+		};
+		var texte={
+			0:"Hallo #Berater#, viele Grüße von der agritechnica sendet #KundeVorname# #KundeNachname#.",
+			1:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Sind Sie/bist Du heute auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
+			2:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Sind Sie/bist Du heute oder morgen auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
+			3:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Bitte melden Sie sich/melde Dich doch zeitnah nach der agritechnica bezüglich eines Termins bei mir. Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#."			
+		};
+		
+		var insertSelectbox = function(labels) {
+			jQuery(selectBox).empty();
+			for(var label in labels){				
+				var entry = document.createElement('li');
+				entry.appendChild(document.createTextNode(labels[label]));
+				jQuery(selectBox).append(entry);
+			}
+		};
+					
+		smsTexte.create=function(){	
+		};
+		
+		smsTexte.createBox = function(berater,kunde) {
+			var finalTexts=[];
+			var strings=new marker(berater,kunde);
+			
+			for(var text in texte){			
+				var finalStrng=texte[text];
+				for(var key in strings.replaceObj) {										
+					finalStrng=finalStrng.replace(key,strings.replaceObj[key]);					
+				}
+				finalTexts.push(finalStrng);
+			}
+			insertSelectbox(finalTexts);
+		};
+		
+	  }(jQuery, window.smsTexte = window.smsTexte || {}));
+	  
+	  
+	  
    var virtualKeyboard;
 	var goToContact=function(chosenRep){
 		
@@ -25,8 +83,7 @@ function init(jQuery){
 			},'slow');				
 			
 			jQuery('#consultantSelect option').each(function(index,element){
-				jQuery(element).removeAttr('selected');
-				console.log(jQuery(element).html());
+				jQuery(element).removeAttr('selected');				
 				if(jQuery(element).val()==chosenRep){
 					jQuery(element).attr('selected','selected');
 					jQuery('.choice').html(jQuery(element).html());
@@ -34,10 +91,16 @@ function init(jQuery){
 			});
 			
 	};
-	jQuery('#consultantSelect').change(function(e){
-				
-				jQuery('.choice').html(jQuery('#consultantSelect option:selected').text());
-			});
+	
+	
+	jQuery('#consultantSelect').change(function(e){				
+		jQuery('.choice').html(jQuery('#consultantSelect option:selected').text());
+	});
+	jQuery('#smsTextsSelect').on('click','li',function(e){
+		console.log(jQuery(this));
+		jQuery('#smsTexts').html(jQuery(this).text());
+		
+	});
 	/*var initAutocomplete=function(){
 		jQuery('#searchName').devbridgeAutocomplete({
 				serviceUrl: 'search/index/name/',
@@ -212,6 +275,9 @@ function init(jQuery){
 			goToContact(chosenRep);
 	});
 	jQuery('#searchResults').on('click','.autocomplete-suggestion',function(){
+		jQuery('.pt-page').removeClass('pt-page-current');
+		jQuery('#formPage').addClass('pt-page-current');
+		PageTransitions.init();
 		var chosenRep=jQuery(this).attr('data-index');
 			goToContact(chosenRep);
 	});
@@ -280,8 +346,20 @@ function init(jQuery){
 			ajaxIt("feusers","update",params,dummyEmpty);
 	 });
 	 
+	 
+	 
 	 /*var dd = new DropDown( jQuery('#searchResults') );*/
+	 
 }
+
+function smstextBox(){			
+	var berater=new window.smsTexte.berater(jQuery('#consultantSelect option:selected').val(),jQuery('#consultantSelect option:selected').text());
+	var kunde=new window.smsTexte.kunde(jQuery('input[name="firstname"]').val(),jQuery('input[name="lastname"]').val(),jQuery('input[name="phone"]').val());
+	new smsTexte.createBox(berater,kunde);
+	
+}
+
+
 function DropDown(el) {
 				this.dd = el;
 				this.initEvents();

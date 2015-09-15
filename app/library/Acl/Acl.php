@@ -84,6 +84,9 @@ class Acl extends Component
 			'retrieve',
 			'update',
 			'delete'
+		),
+		'baywa' => array(
+			'index'			
 		)
 		
 	);

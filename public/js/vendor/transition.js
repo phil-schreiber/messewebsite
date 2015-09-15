@@ -42,6 +42,7 @@ var PageTransitions = (function () {
         $('.pt-trigger').click(function() {
 			if($(this).attr('id')=='formTrigger'){
 				if(formIsValid()){
+					smstextBox();
 					$pageTrigger = $(this);
 					Animate($pageTrigger);
 				}else{
@@ -490,7 +491,8 @@ var PageTransitions = (function () {
     }
 
     return {
-        init : init,
+		
+        init : init
     };
 
 })();

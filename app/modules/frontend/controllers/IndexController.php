@@ -27,6 +27,12 @@ class IndexController extends ControllerBase
 					1 => $this->config['onspotusergroup']
 				)
 			));
+		$allUsers=Feusers::find(array(
+				'conditions' => 'deleted=0 AND usergroup > 1',
+				'bind' => array(
+					1 => $this->config['onspotusergroup']
+				)
+			));
 		$users=array();
 		foreach($feusers as $feuser){
 			$feuser->available='<span class="onspot inactive"></span>';
@@ -47,6 +53,7 @@ class IndexController extends ControllerBase
 		
 		$this->view->setVar('path',$path);
 		$this->view->setVar('feusers',$users);
+		$this->view->setVar('allusers',$allUsers);
         
         
     }
