@@ -94,6 +94,9 @@ input[type="checkbox"], input[type="radio"],input[type="submit"]{
 	width:auto;
 	font-size:1.5vw;
 }
+input[type="submit"]{
+	color:#01994e;
+}
 
 input[type="checkbox"], input[type="radio"]{
 	height:1.5vw;
@@ -1001,7 +1004,8 @@ header, .container{
 .headerWrap{
 	width:70%;
 	float:left;
-	margin:4.5vw 0 0 5.2vw;
+	/*margin:4.5vw 0 0 5.2vw;*/
+	margin:4.5vw 0 0 0;
 
 }
 
@@ -2040,7 +2044,7 @@ position:relative;
 	margin-left:10px;
 }
 .logo{
-	float:left;
+	float:right;
 	width:13vw;
 }
 
@@ -2132,7 +2136,7 @@ a.pt-trigger,a.navButton{
     line-height: 1.6;
 	cursor:pointer;
 	display:inline-block;
-	margin-left:30px;
+	
 }
 a.pt-trigger:hover,a.navButton:hover{
 	text-decoration: none;
@@ -2140,6 +2144,10 @@ a.pt-trigger:hover,a.navButton:hover{
     border: 1px solid #01994e;
     outline: none;
 }
+#surveyFormWrapper a.pt-trigger{
+	margin-left:30px;
+}
+
 a.navButton{
 	width:auto;
 	position: relative;
@@ -2181,11 +2189,15 @@ a.navButton.small, a.navButton.small span {
 
 table.formTable{
 	width:100%;
-	min-height:100%;
+	height:100%;
 	vertical-align: middle;
 	text-align:center;
 
 }
+#contactFormWrapper table.formTable{
+	height:90%;
+}
+
 table.formTable td{
 
 }
@@ -2197,7 +2209,7 @@ table.formTable table td{
 	padding:5px;
 }
 .survey{
-	height:100%;
+	height:90%;
 	margin-left:30px;
 }
 .survey table.formTable{
@@ -2390,9 +2402,11 @@ form .starRating label{
 }
 .legend{
 	margin-top:-1vh;
+	text-align: left;
+}
+#formPage .legend{
 	text-align: right;
 }
-
 .legend .onspot{
 	    
     width: 1.5em;

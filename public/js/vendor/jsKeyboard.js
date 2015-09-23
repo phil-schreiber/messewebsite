@@ -187,7 +187,7 @@ var jsKeyboard = {
         smallLetter: [
         // 1st row
                 { value: 113 },{ value: 119 },{ value: 101 },{ value: 114 },{ value: 116 },
-                { value: 121 },{ value: 117 },{ value: 105 },{ value: 111 },{ value: 112 },{value:252},{value:223},
+                { value: 122 },{ value: 117 },{ value: 105 },{ value: 111 },{ value: 112 },{value:252},{value:223},
                 { value: "Löschen", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button button_del", keyClass: "key key_del" },
         // 2nd row
                 { value: 97, buttonClass: "button button_a" },{ value: 115 },{ value: 100 },{ value: 102 },
@@ -195,7 +195,7 @@ var jsKeyboard = {
                 
         // 3rd row
 				{ value: "ABC", isChar: "false", buttonClass: "button button_numberleft", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterleft" },
-                { value: 122 },{ value: 120 },{ value: 99 },{ value: 118 },{ value: 98 },
+                { value: 121 },{ value: 120 },{ value: 99 },{ value: 118 },{ value: 98 },
                 { value: 110 },{ value: 109 },{ value: 44 },{ value: 46 },{ value: 64 },
         // 4th row
                 { value: "123", isChar: "false", buttonClass: "button button_numberleft", onclick: "jsKeyboard.changeToNumber();", keyClass: "key key_number" },

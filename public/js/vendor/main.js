@@ -269,8 +269,10 @@ function init(jQuery){
 	
 	
 	jQuery('.list-group-item').on('click',function(e){						
-	
 			e.preventDefault();
+			jQuery('.pt-page').removeClass('pt-page-current');
+			jQuery('#formPage').addClass('pt-page-current');
+			PageTransitions.init();
 			var chosenRep=jQuery(this).find('input').val();
 			goToContact(chosenRep);
 	});

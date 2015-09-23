@@ -110,7 +110,7 @@
 			
 			<div class='clearfix'></div>
 			<div class="legend">
-					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Heute für Sie am Stand</span>&nbsp;&nbsp;
+					<span class="onspot active" style="position:static;display: inline-block"> </span><span>{{tr('listHeader')}}</span>&nbsp;&nbsp;
 					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Heute nicht vor Ort</span>
 				</div>
 		</header>
@@ -140,7 +140,7 @@
 		
 		<br>
 		<div class="clearfix">
-			<a href="#search" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('consultantNotFound')}}</span></a>
+			<a href="#search" class="navButton small"  id="consultantNotFound" style="float:left;"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('consultantNotFound')}}</span></a>
 			<a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label"></span>{{tr('backHome')}}</a>
 		</div>
 		
@@ -184,7 +184,7 @@
 					</table>
 					
 				
-				<div class="pt-page pt-page-1 pt-page-current" id="formPage">
+				<div class="pt-page pt-page-1" id="formPage" style="display:block;">
 					<a href="#search" class="navButton small" style="float:left">{{tr('messageTo')}}: <span class="choice"></span></a>
 					<div class="legend" style="margin-top:0;">* {{tr('mandatory')}}</div>
 					
@@ -300,8 +300,21 @@
 			
 		</div>
 		</form>
-		<a href="#search" class="navButton small" style="float:left;"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('goToSearch')}}</span></a>
-		  <a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+		<table style="width:100%;">
+			<tr>
+				<td>
+					<a href="#search" class="navButton small" style="float:left;"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('goToSearch')}}</span></a>
+				</td>
+				<td style="text-align: center;">
+					<a href="#list" class="navButton small" style="float:none;margin-left:9vw;"><span class="icon i_up_primary"></span><span class="btn_label">{{tr('onspot')}}</span></a>
+				</td>
+				<td>
+					<a href="#start" class="navButton small"><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+				</td>
+			</tr>
+		</table>
+		
+		  
 	</section>
 	<section id="search">
 		<a name="search"></a>
@@ -319,7 +332,7 @@
 			
 		</header>
 		<div class="legend">
-					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Standpersonal: Heute für Sie am Stand</span>&nbsp;|&nbsp;
+					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Standpersonal: {{tr('listHeader')}}</span>&nbsp;|&nbsp;
 					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Standpersonal: Heute nicht vor Ort</span>
 				</div>
 		<form id="searchForm" autocomplete="off" class="form">
@@ -338,15 +351,14 @@
 								<input type="text" name="lastname">
 							</td>
 							<td class="alignLeft marginLeft">
-								<label for="city">{{tr('city')}}</label>	<br>						
+								<label for="city">{{tr('zip')}}</label>	<br>						
 								<input type="text" name="city">								
 							</td>
 						</tr>						
-						<tr>
-							<td></td>
+						<tr>							
 							
-							<td  class="alignLeft marginLeft"><input type="submit" value="{{tr('search')}}"></td>
-							<td></td>
+							<td colspan="3" style="text-align: center"><input type="submit" value="{{tr('search')}}"></td>
+							
 						</tr>							
 						<tr>
 							<td colspan="3" style="vertical-align: top;height:30vh;">								

@@ -15,7 +15,7 @@
 		</header>
 		<div id="surveyForm" class="form">
 			<div id="surveyFormWrapper" class="pt-wrapper">
-				<div class="pt-page pt-page-1 pt-page-current">
+				<div class="pt-page pt-page-1" style="display:block;z-index: 99">
 					{{tr('surveyHeaderInfo')}}
 					<div style="position:relative;">
 						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span>{{tr('surveyButtonStart')}}</span></a>
@@ -464,7 +464,7 @@
 					<h3 style="margin-left">{{tr('thankYou')}}</h3>
 					</div>
 					<br><br>
-					<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+					<a href="http://baywa-messetool.iq-pi.org/" class="navButton small"  id="consultantNotFound" style="margin-left:30px;float:left"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 				</div>
 			</div>
 		</div>
