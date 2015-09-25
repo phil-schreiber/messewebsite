@@ -55,6 +55,8 @@ var PageTransitions = (function () {
 					var params=jQuery('#contactForm').serialize();
 					if(termsAgreed()){
 						ajaxIt("message","create",params,dummyEmpty);
+						document.getElementById("contactForm").reset();
+						jQuery('#contactForm textarea').html('');
 						Animate($pageTrigger);
 					}else{
 						alert("Sie müssen der Datenverarbeitung zustimmen.")

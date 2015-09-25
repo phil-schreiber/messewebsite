@@ -329,6 +329,14 @@ class FeusersController extends ControllerBase
 										$fullname.=' '.$data[$index];
 										$imagename.='_'.strtolower($data[$index]).'.jpg';
 										$ins[$indexKey]=$data[$index];
+									}elseif($indexKey=='phone'){
+										$phone= str_replace(array(' ','+49','(',')','/'), array('','','','',''),$data[$index]);
+										if(substr($phone, 0,1)=='0'){
+											$phone='0049'.substr($phone,1);
+										}else{
+											$phone='0049'.$phone;
+										}
+										$ins[$indexKey]=$phone;
 									}else{
 										$ins[$indexKey]=$data[$index];
 									}

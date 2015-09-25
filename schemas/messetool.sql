@@ -350,3 +350,26 @@ CREATE TABLE IF NOT EXISTS `surveysession` (
   `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
 	PRIMARY KEY (`uid`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `messages`;
+CREATE TABLE IF NOT EXISTS `messages` (
+  `uid` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL DEFAULT '0',
+  `tstamp` int(11) NOT NULL DEFAULT '0',
+  `crdate` int(11) NOT NULL DEFAULT '0',
+  `cruser_id` int(11) NOT NULL DEFAULT '0',
+  `deleted` tinyint(4) NOT NULL DEFAULT '0',
+  `hidden` tinyint(4) NOT NULL DEFAULT '0',
+  `session` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+  `feuserid` int(11) NOT NULL DEFAULT '0',
+  `message` text,
+  `firstname` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+  `lastname` varchar(255) COLLATE utf8_general_ci NOT NULL,  
+  `phone` varchar(255) COLLATE utf8_general_ci NOT NULL, 
+  `zip` varchar(255) COLLATE utf8_general_ci NOT NULL, 
+  `city` varchar(255) COLLATE utf8_general_ci NOT NULL, 
+  `farmer` tinyint(4) NOT NULL DEFAULT '0',
+  `termsagreed` tinyint(4) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`uid`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8;

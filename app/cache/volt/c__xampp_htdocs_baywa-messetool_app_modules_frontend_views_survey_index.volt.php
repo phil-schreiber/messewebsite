@@ -15,7 +15,7 @@
 		</header>
 		<div id="surveyForm" class="form">
 			<div id="surveyFormWrapper" class="pt-wrapper">
-				<div class="pt-page pt-page-1" style="display:block;z-index: 99">
+				<div class="pt-page pt-page-1" style="display:block;">
 					<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyHeaderInfo'); ?>
 					<div style="position:relative;">
 						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('surveyButtonStart'); ?></span></a>

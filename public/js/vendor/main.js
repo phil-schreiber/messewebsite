@@ -267,31 +267,36 @@ function init(jQuery){
 	
 	addStartImgEvents();
 	
+	function resetContactForm(){
+		jQuery('.pt-page').removeClass('pt-page-current');
+		jQuery('#formPage').addClass('pt-page-current');
+		jQuery('.pt-trigger').off('click');
+		jQuery('#contactForm textarea').html('');
+		PageTransitions.init();
+	}
+	
 	
 	jQuery('.list-group-item').on('click',function(e){						
 			e.preventDefault();
-			jQuery('.pt-page').removeClass('pt-page-current');
-			jQuery('#formPage').addClass('pt-page-current');
-			PageTransitions.init();
+			resetContactForm();
 			var chosenRep=jQuery(this).find('input').val();
 			goToContact(chosenRep);
 	});
 	jQuery('#searchResults').on('click','.autocomplete-suggestion',function(){
-		jQuery('.pt-page').removeClass('pt-page-current');
-		jQuery('#formPage').addClass('pt-page-current');
-		PageTransitions.init();
+			resetContactForm();
 		var chosenRep=jQuery(this).attr('data-index');
 			goToContact(chosenRep);
 	});
-	jQuery('#contactForm').submit(function(e){
-		e.preventDefault();
+	/*jQuery('#contactForm').submit(function(e){
+		e.preventDefault();		
 		var params=jQuery(this).serialize();
+		console.log(params);
 		if(termsAgreed()){
 			ajaxIt("message","create",params,dummyEmpty);
 		}else{
-			alert("Sie müssen der Datenverarbeitung zustimmen.")
+			alert("Sie müssen der Datenverarbeitung zustimmen.");
 		}
-	});
+	});*/
 	
 	jQuery('#searchForm').submit(function(e){
 		e.preventDefault();
