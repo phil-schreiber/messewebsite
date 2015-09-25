@@ -114,6 +114,7 @@ class SurveyController extends ControllerBase
 						'cruser_id' => 0,
 						'deleted' => 0,
 						'hidden' => 0,
+						'checked' => 0,
 						'session' => $question->session,
 						'questionnumber' => $question->questionnumber,
 						'itemnumber' => $itemData,
