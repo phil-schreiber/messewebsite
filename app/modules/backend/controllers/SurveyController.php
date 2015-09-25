@@ -60,7 +60,7 @@ class SurveyController extends ControllerBase
 			$question->save();
 			
 			if($this->request->hasPost('item')){
-				foreach($this->request->getPost('item') as $key => $itemData){
+				//foreach($this->request->getPost('item') as $key => $itemData){
 					$item=new Questionitem();
 					$item->assign(array(
 						'pid' => $question->uid,
@@ -71,7 +71,7 @@ class SurveyController extends ControllerBase
 						'hidden' => 0,
 						'session' => $question->session,
 						'questionnumber' => $question->questionnumber,
-						'itemnumber' => $itemData,
+						'itemnumber' => $this->request->getPost('item'),
 						'checked' => 1,
 						'rating' => 0,
 						'message' => '',
@@ -79,7 +79,7 @@ class SurveyController extends ControllerBase
 						
 					));
 					$item->save();
-				}
+				//}
 			}
 			if($this->request->hasPost('openitem')){
 				foreach($this->request->getPost('openitem') as $key => $itemData){
