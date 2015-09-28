@@ -366,21 +366,21 @@
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_7_6" name="item[]" value="6"> <label for="q_7_6">{{tr('q_7_6')}}</label>
+									<input type="checkbox" id="q_7_6" name="item[]" value="5"> <label for="q_7_6">{{tr('q_7_6')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_7" name="item[]" value="7"> <label for="q_7_7">{{tr('q_7_7')}}</label>
+									<input type="checkbox" id="q_7_7" name="item[]" value="6"> <label for="q_7_7">{{tr('q_7_7')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_8" name="item[]" value="8"> <label for="q_7_8">{{tr('q_7_8')}}</label>
+									<input type="checkbox" id="q_7_8" name="item[]" value="7"> <label for="q_7_8">{{tr('q_7_8')}}</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_7_9" name="item[]" value="9"> <label for="q_7_9">{{tr('q_7_9')}}</label>
+									<input type="checkbox" id="q_7_9" name="item[]" value="8"> <label for="q_7_9">{{tr('q_7_9')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_10" name="item[]" value="10"> <label for="q_7_10">{{tr('q_7_10')}}</label>
+									<input type="checkbox" id="q_7_10" name="item[]" value="9"> <label for="q_7_10">{{tr('q_7_10')}}</label>
 								</td>
 								<td>
 									<label for="q_7_11">{{tr('q_7_11')}}</label> <input type="text" id="q_7_11" name="openitem[]">

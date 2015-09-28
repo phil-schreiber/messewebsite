@@ -60,10 +60,35 @@ class SurveyController extends ControllerBase
 			$question->save();
 			
 			if($this->request->hasPost('item')){
-				var_dump($this->request->getPost('item'));
-				//foreach($this->request->getPost('item') as $key => $itemData){
-					$item=new Questionitem();
-					$item->assign(array(
+				if(is_array($this->request->getPost('item'))){
+					foreach($this->request->getPost('item') as $key => $itemData){
+						
+						$checkitem=new Questionitem();
+						$checkitem->assign(array(
+							'pid' => $question->uid,
+							'tstamp' => $time,
+							'crdate' => $time,
+							'cruser_id' => 0,
+							'deleted' => 0,
+							'hidden' => 0,
+							'session' => $question->session,
+							'questionnumber' => $question->questionnumber,
+							'itemnumber' => $itemData,
+							'checked' => 1,
+							'rating' => 0,
+							'message' => '',
+							'mode' =>0
+
+						));
+						
+						if (!$checkitem->save()) {
+							$this->flash->error($checkitem->getMessages());
+						} 
+					
+					}
+				}else{
+					$radioitem=new Questionitem();
+					$radioitem->assign(array(
 						'pid' => $question->uid,
 						'tstamp' => $time,
 						'crdate' => $time,
@@ -76,16 +101,16 @@ class SurveyController extends ControllerBase
 						'checked' => 1,
 						'rating' => 0,
 						'message' => '',
-						'mode' =>0
+						'mode' =>1
 						
 					));
-					$item->save();
-				//}
+					$radioitem->save();
+				}
 			}
 			if($this->request->hasPost('openitem')){
 				foreach($this->request->getPost('openitem') as $key => $itemData){
-					$item=new Questionitem();
-					$item->assign(array(
+					$openitem=new Questionitem();
+					$openitem->assign(array(
 						'pid' => $question->uid,
 						'tstamp' => $time,
 						'crdate' => $time,
@@ -98,17 +123,17 @@ class SurveyController extends ControllerBase
 						'checked' => 1,
 						'rating' => 0,
 						'message' => $itemData,
-						'mode' =>2
+						'mode' =>3
 						
 					));
-					$item->save();
+					$openitem->save();
 				}
 			}
 			if($this->request->hasPost('rating')){
 				foreach($this->request->getPost('rating') as $key => $itemData){
 					$ratingName='rating_'.$itemData;
-					$item=new Questionitem();
-					$item->assign(array(
+					$ratingitem=new Questionitem();
+					$ratingitem->assign(array(
 						'pid' => $question->uid,
 						'tstamp' => $time,
 						'crdate' => $time,
@@ -121,10 +146,10 @@ class SurveyController extends ControllerBase
 						'itemnumber' => $itemData,
 						'rating' => $this->request->hasPost($ratingName) ? $this->request->getPost($ratingName) : 0,
 						'message' => '',
-						'mode' =>1
+						'mode' =>2
 						
 					));
-					$item->save();
+					$ratingitem->save();
 				}
 			}
 			die();

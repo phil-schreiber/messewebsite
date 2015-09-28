@@ -147,6 +147,16 @@ $router->add(
 	)
 );
 
+$router->add(
+	'/backend/survey/create[/]{0,1}', 
+	array(		
+		'controller' => 'survey',
+		'action' => 'create',		
+		'module'=>'backend',
+		'namespace'  => 'messetool\Modules\Modules\Backend\Controllers',
+	)
+);
+
 
 $router->add(
 	'/backend/{language:[a-z]{2}}/:controller/:action/:int[/]{0,1}', 
