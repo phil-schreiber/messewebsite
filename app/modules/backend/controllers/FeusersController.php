@@ -247,7 +247,8 @@ class FeusersController extends ControllerBase
 							18 => 'username',
 							19 => 'password',
 							20 => 'image',
-							21 => 'personellnumber'						
+							21 => 'personellnumber'							
+							
 						);
 						
 						$addressesDBFieldTypeMap=array(
@@ -270,7 +271,7 @@ class FeusersController extends ControllerBase
 							18 => 'string',
 							19 => 'string',
 							20 => 'string',
-							21 => 'string'
+							21 => 'string'						
 							
 						);
 						
@@ -315,7 +316,7 @@ class FeusersController extends ControllerBase
 							while(($data = fgetcsv($handle, 1000, $this->_divider[$this->request->getPost('divider')],$this->_dataWrap[$this->request->getPost('dataFieldWrap')])) !== FALSE){
 								$feuser=new \messetool\Models\Feusers();
 								$fullname='';
-								$imagename='';
+								//$imagename='';
 								$zipArrStrng='';
 								foreach($indexArray as $index => $indexKey){
 									if($indexKey=='zip'){
@@ -323,11 +324,11 @@ class FeusersController extends ControllerBase
 										$zipArrStrng=$data[$index];
 									}elseif($indexKey=='first_name'){
 										$fullname=$data[$index];
-										$imagename=  strtolower($data[$index]);
+										//$imagename=  strtolower($data[$index]);
 										$ins[$indexKey]=$data[$index];
 									}elseif($indexKey=='last_name'){
 										$fullname.=' '.$data[$index];
-										$imagename.='_'.strtolower($data[$index]).'.jpg';
+										//$imagename.='_'.strtolower($data[$index]).'.jpg';
 										$ins[$indexKey]=$data[$index];
 									}elseif($indexKey=='phone'){
 										$phone= str_replace(array(' ','+49','(',')','/'), array('','','','',''),$data[$index]);
@@ -337,6 +338,8 @@ class FeusersController extends ControllerBase
 											$phone='0049'.$phone;
 										}
 										$ins[$indexKey]=$phone;
+									}elseif($indexKey=='image'){
+										$imagename='pic_'.$data[$index].'.jpg';
 									}else{
 										$ins[$indexKey]=$data[$index];
 									}

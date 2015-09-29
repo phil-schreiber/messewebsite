@@ -217,6 +217,7 @@ $messages = array(
 	"thankYouB" =>"Herzlichen Dank für Ihre Unterstützung!",
 	"onSpot" => "Liste enthält Standmitarbeiter",
 	"personellnumber" => "Personalnummer",
+	"bildnummer" => "Bildnummer",
 	"messageTo" => "Nachricht an",
 	"goToSearch" => "Zur Beratersuche",
 	"terms" => "Hiermit stimme ich zu, dass meine Daten ausschließlich zum Zweck der gezielten Kontaktaufnahme<br> durch die BayWa AG bzw. eine zu diesem Zweck beauftragte Drittfirma gespeichert und verarbeitet werden.<br> Eine anderweitige Nutzung, z.B. für Werbezwecke, findet nicht statt.",
