@@ -2299,8 +2299,7 @@ table.formTable table td{
 	height         : 2vw;
 }
 .starRating:not(old) > input{
-  margin-right : -100%;
-  opacity      : 0;
+  display:none;
 }
 
 .starRating:not(old) > label{

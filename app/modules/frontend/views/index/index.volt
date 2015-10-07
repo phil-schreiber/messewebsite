@@ -223,7 +223,7 @@
 							</td>
 							<td>
 								<div class="alignLeft">
-								<label for="zip">{{tr('zip')}}*</label><br>
+								<label for="zip">{{tr('yourzip')}}*</label><br>
 								<input type="text" name="zip"><br><br>
 								</div>
 							</td>
@@ -232,7 +232,7 @@
 						<tr>
 							<td>
 								<div class="alignLeft">
-								<label for="city">{{tr('city')}}*</label><br>
+								<label for="city">{{tr('yourcity')}}*</label><br>
 								<input type="text" name="city"><br><br>
 								</div>
 							</td>
@@ -259,21 +259,21 @@
 					<a href="#search" class="navButton small" style="float:left">{{tr('messageTo')}}: <span class="choice"></span></a>
 					<table class="formTable">
 						<tr>
-							<td>
-								<label>{{tr('premessage')}}</label><br>					
+							<td style="text-align: left;">
+								<label style="display: block; margin-left: auto;margin-right: auto;width: 40vw;">{{tr('premessage')}}</label><br>					
 								<ul id="smsTextsSelect">			
 									
 								</ul>
 								
 							</td>
-							<td>
-								<br><label for="message">{{tr('message')}}</label><br>					
+							<td style="text-align: left;">
+								<br><label for="message" style="display: block; width: 40vw;">{{tr('message')}}</label><br>					
 								<textarea name="message" id="smsTexts"></textarea>
 							</td>
 						</tr>						
 						<tr>
 							<td colspan="2">								
-								<input type="checkbox" name="terms" id="terms" value="1"> <label for="terms">{{tr('terms')}}</label>								
+								<input type="hidden" name="terms" id="terms" value="1"> <label for="terms">{{tr('terms')}}</label>								
 							</td>
 						</tr>
 						<tr>

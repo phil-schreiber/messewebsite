@@ -12,5 +12,8 @@
         <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/frontend/controllers/SurveyController.php</file>
         <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/backend/controllers/SurveyController.php</file>
         <file>file:/C:/xampp/htdocs/baywa-messetool/app/config/routes.php</file>
+        <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/backend/views/feusers/upload.volt</file>
+        <file>file:/C:/xampp/htdocs/baywa-messetool/app/messages/de.php</file>
+        <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/frontend/views/index/index.volt</file>
     </open-files>
 </project-private>
