@@ -106,7 +106,10 @@ input[type="checkbox"], input[type="radio"]{
 	transition:none;
 	background:none;
 }
-
+input[type="radio"]{
+	position: relative;
+    top: 0.2vh;
+}
 
 html {
     font-size: 1em;
@@ -2029,15 +2032,21 @@ ul.list-group{
 }
 li.list-group-item img{
 	max-width: 10vw;
+	max-height:22vh;
 }
 
 .list-group-item{
 	border:#e3e3e3 1px dotted;
 	float:left;
+	
+	width: 20vw;
+	margin: 0 1vw 1vw 0;
+	position:relative;
+	height:22.5vh;
+	overflow:hidden;
+}
+.contactable{
 	cursor:pointer;
-	    width: 20vw;
-	    margin: 0 1vw 1vw 0;
-position:relative;
 }
 .list-group-item-heading{
 
@@ -2221,8 +2230,11 @@ table.formTable table td{
 .survey table.formTable td{
 	width:26vw;
 }
+.survey table#dayTable td{
+	width:auto;
+}
 .survey table.formTable td td{
-	width:15vw;
+	//width:15vw;
 }
 .survey table#plzTable td{
 	width:auto;
@@ -2277,14 +2289,16 @@ table.formTable table td{
 }
 
 /*autocomplete suggestions*/
-.autocomplete-suggestions { overflow: auto; }
-.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;    margin: 0.1vw;}
+.autocomplete-suggestions { overflow: auto;}
+.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;    margin: 0.1vw;min-height:16vh;width:18vw;}
 .autocomplete-selected { background: #F0F0F0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
 .autocomplete-group { padding: 2px 5px; }
 .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
 
-
+.suggestion-item table{
+	width:100%;
+}
 .starRating:not(old){
   display        : inline-block;
 
@@ -2353,7 +2367,9 @@ form .starRating label{
 	cursor:pointer;
 	position:relative;
 }
-
+.suggestion-item td{
+	vertical-align:top;
+}
 .contactButton.small{
 	background:#01994e;
 	padding:0.1vw 0.5vw;
@@ -2431,7 +2447,7 @@ form .starRating label{
 /* RESULT DROPDOWN*/
 #searchResults{
 	overflow-y: scroll;
-	max-height:100%;
+	max-height:30vh;
 }
 
 #smsTextsSelect{
@@ -2469,4 +2485,10 @@ form .starRating label{
 	background: #fff;
 	border: 1px solid #01994e;
 	outline: none;
+}
+
+
+table#report td, table#report th{
+	padding:5px;
+	border:1px solid;
 }

@@ -9,5 +9,16 @@ Model::setup(['notNullValidations' => false]);
  * @author Philipp Schreiber
  */
 class Questions extends \Phalcon\Mvc\Model{
-	
+	 public function initialize()
+    {
+       
+
+        $this->hasOne('session', 'messetool\Models\Surveysession','session', array(
+            'alias' => 'Surveysession'
+        ));
+		
+		 $this->hasMany('uid', 'messetool\Models\Questionitems','pid', array(
+            'alias' => 'Questionitems'
+        ));
+    }
 }

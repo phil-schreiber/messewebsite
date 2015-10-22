@@ -111,13 +111,14 @@
 			<div class='clearfix'></div>
 			<div class="legend">
 					<span class="onspot active" style="position:static;display: inline-block"> </span><span>{{tr('listHeader')}}</span>&nbsp;&nbsp;
-					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Heute nicht vor Ort</span>
+					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Heute nicht am Stand.</span>
 				</div>
 		</header>
 		
 		<ul class="list-group clearfix">
 		{% for index,feuser in feusers %}
-		<li class='list-group-item'>
+		
+		<li class='list-group-item {% if feuser.profileid==1 %}	contactable {% endif %}'>
 			{{feuser.available}}
 			<table>
 				<tr>
@@ -126,9 +127,16 @@
 					</td>
 					<td>
 						<div class='list-group-item-heading'>
-							{{feuser.first_name}} {{feuser.last_name}},<br>
-							{{feuser.jobtitle}},<br>
-							{{feuser.city}}
+							{{feuser.title}} {{feuser.first_name}} {{feuser.last_name}}<br>
+							{% if feuser.jobtitle %}							
+							{{feuser.jobtitle}}<br>							
+							{% endif %}
+							{% if feuser.division %}
+							{{feuser.division}}
+							{% endif %}
+							{% if feuser.profileid==1 %}
+							<br><span class="contactButton small">SMS senden</span>
+							{% endif %}
 						</div>
 					</td>
 				</tr>
@@ -190,10 +198,10 @@
 					
 					<table class="formTable" style="min-height:90%;">
 						<tr>
-							<td colspan="2">
-								<div class="alignLeft">
+							<td colspan="2" style="text-align:left;padding-left: 16.9vw">
+								
 								<h4 style="font-size:1.3vw;">{{tr('contactInfo')}}:</h4>
-								</div>
+								
 							</td>
 							
 						</tr>
@@ -201,14 +209,14 @@
 							
 							<td>
 								<div class="alignLeft">
-								<label for="firstname">{{tr('firstname')}}*</label><br>
+								<label for="firstname">{{tr('yourFirstname')}}*</label><br>
 								<input type="text" name="firstname"><br><br>
 								</div>
 
 							</td>
 							<td>
 								<div class="alignLeft">
-								<label for="lastname">{{tr('lastname')}}*</label><br>
+								<label for="lastname">{{tr('yourLastname')}}*</label><br>
 								<input type="text" name="lastname"><br><br>
 								</div>
 							</td>
@@ -223,7 +231,7 @@
 							</td>
 							<td>
 								<div class="alignLeft">
-								<label for="zip">{{tr('yourzip')}}*</label><br>
+								<label for="zip">{{tr('yourzip')}}</label><br>
 								<input type="text" name="zip"><br><br>
 								</div>
 							</td>
@@ -232,7 +240,7 @@
 						<tr>
 							<td>
 								<div class="alignLeft">
-								<label for="city">{{tr('yourcity')}}*</label><br>
+								<label for="city">{{tr('yourcity')}}</label><br>
 								<input type="text" name="city"><br><br>
 								</div>
 							</td>
@@ -272,8 +280,8 @@
 							</td>
 						</tr>						
 						<tr>
-							<td colspan="2">								
-								<input type="hidden" name="terms" id="terms" value="1"> <label for="terms">{{tr('terms')}}</label>								
+							<td colspan="2" style="text-align: left; padding-left:3.5vw;">								
+								<input type="hidden" name="terms" id="terms" value="1" checked> <label for="terms">{{tr('terms')}}</label>								
 							</td>
 						</tr>
 						<tr>
@@ -332,8 +340,8 @@
 			
 		</header>
 		<div class="legend">
-					<span class="onspot active" style="position:static;display: inline-block"> </span><span>Standpersonal: {{tr('listHeader')}}</span>&nbsp;|&nbsp;
-					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Standpersonal: Heute nicht vor Ort</span>
+					<span class="onspot active" style="position:static;display: inline-block"> </span><span>{{tr('listHeader')}}</span>&nbsp;|&nbsp;
+					<span class="onspot inactive" style="position:static;display: inline-block"> </span><span>Heute nicht am Stand.</span>
 				</div>
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
@@ -351,8 +359,8 @@
 								<input type="text" name="lastname">
 							</td>
 							<td class="alignLeft marginLeft">
-								<label for="city">{{tr('zip')}}</label>	<br>						
-								<input type="text" name="city">								
+								<label for="zip">{{tr('zip')}}</label>	<br>						
+								<input type="text" name="zip">								
 							</td>
 						</tr>						
 						<tr>							

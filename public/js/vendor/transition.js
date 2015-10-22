@@ -478,10 +478,12 @@ var PageTransitions = (function () {
     function onEndAnimation($pageWrapper, $nextPage, $currentPage) {
         resetPage($nextPage, $currentPage);
         $pageWrapper.data('isAnimating', false);
-		$('.pt-page-current input').first().focus();
+		//$('.pt-page-current input').first().focus();
 		
-         jsKeyboard.currentElement = $('.pt-page-current input').first();
-         jsKeyboard.currentElementCursorPosition = 0;
+         /*jsKeyboard.currentElement = $('.pt-page-current input').first();
+         jsKeyboard.currentElementCursorPosition = 0;*/
+		 
+		 jsKeyboard.hide();
     }
 
     function resetPage($nextPage, $currentPage) {

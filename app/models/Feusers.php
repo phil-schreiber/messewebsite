@@ -68,7 +68,7 @@ class Feusers extends \Phalcon\Mvc\Model{
 			$counter++;
 		}
 		
-		$queryStrng="SELECT F.* FROM messetool\Models\Feusers AS F LEFT JOIN messetool\Models\Feuser_zipcodes_lookup ON F.uid = messetool\Models\Feuser_zipcodes_lookup.uid_local  WHERE F.deleted=0 AND F.hidden=0 AND (".implode(' AND ',$whereStrn).") GROUP BY F.uid ORDER BY F.usergroup DESC";	
+		$queryStrng="SELECT F.* FROM messetool\Models\Feusers AS F LEFT JOIN messetool\Models\Feuser_zipcodes_lookup ON F.uid = messetool\Models\Feuser_zipcodes_lookup.uid_local  WHERE F.deleted=0 AND F.hidden=0 AND (".implode(' AND ',$whereStrn).") GROUP BY F.uid ORDER BY F.onspot DESC,F.usergroup DESC,F.last_name ASC";	
 		$sQuery=$modelsManager->createQuery($queryStrng);								
 		
 		$rResults = $sQuery->execute($bind);		

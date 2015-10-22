@@ -3,7 +3,7 @@
 		<a name="survey"></a>
 		<header>
 			<div class="logo">
-				{{image('images/baywa-logo.png', "class":"logo")}}
+				<a href="http://agritechnica2015.denkfabrik-group.com/">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('surveyHeaderB')}}</h1>
@@ -22,9 +22,9 @@
 						
 						<tr>
 							<td>
-								<div style="position:relative;float:right;margin-right:1vw;">
+								
 						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span>{{tr('surveyButtonStart')}}</span></a>
-					</div>
+					
 							</td>
 						</tr>
 					
@@ -66,7 +66,7 @@
 								</td>
 							</tr>
 								<tr>
-								<td  style="text-align:right">
+								<td>
 									
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="3" class="pt-trigger" style="margin-right:1vw;">
 									
@@ -87,6 +87,7 @@
 							<table class="formTable fullTable" >
 							<tr>
 								<td>
+									<label>{{tr('q_2_1_b_title')}}</label><br>
 									<label for="q_2_1">{{tr('q_2_1_b')}}</label>
 								</td>
 								<td>
@@ -106,21 +107,61 @@
 									  </span>
 								</td>							
 								<td>
+									<label for="q_2_6">{{tr('q_2_6_b')}}</label>
+								</td>
+								<td>
+									<span class="starRating">
+										<input type="hidden" name="rating[]" value="6">
+										<input id="rating_3_5" type="radio" name="rating_6" value="5">
+										<label for="rating_3_5">5</label>
+										<input id="rating_3_4" type="radio" name="rating_6" value="4">
+										<label for="rating_3_4">4</label>
+										<input id="rating_3_3" type="radio" name="rating_6" value="3">
+										<label for="rating_3_3">3</label>
+										<input id="rating_3_2" type="radio" name="rating_6" value="2">
+										<label for="rating_3_2">2</label>
+										<input id="rating_3_1" type="radio" name="rating_6" value="1">
+										<label for="rating_3_1">1</label>
+										
+									  </span>
+								</td>
+							</tr>
+							<tr>
+								<td>
 									<label for="q_2_2">{{tr('q_2_2_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="2">
-										<input id="rating_3_5" type="radio" name="rating_2" value="5">
-										<label for="rating_3_5">5</label>
-										<input id="rating_3_4" type="radio" name="rating_2" value="4">
-										<label for="rating_3_4">4</label>
-										<input id="rating_3_3" type="radio" name="rating_2" value="3">
-										<label for="rating_3_3">3</label>
-										<input id="rating_3_2" type="radio" name="rating_2" value="2">
-										<label for="rating_3_2">2</label>
-										<input id="rating_3_1" type="radio" name="rating_2" value="1">
-										<label for="rating_3_1">1</label>
+										<input id="rating_4_5" type="radio" name="rating_2" value="5">
+										<label for="rating_4_5">5</label>
+										<input id="rating_4_4" type="radio" name="rating_2" value="4">
+										<label for="rating_4_4">4</label>
+										<input id="rating_4_3" type="radio" name="rating_2" value="3">
+										<label for="rating_4_3">3</label>
+										<input id="rating_4_2" type="radio" name="rating_2" value="2">
+										<label for="rating_4_2">2</label>
+										<input id="rating_4_1" type="radio" name="rating_2" value="1">
+										<label for="rating_4_1">1</label>
+										
+									  </span>
+								</td>
+								<td>
+									<label for="q_2_7">{{tr('q_2_7_b')}}</label>
+								</td>
+								<td>
+									<span class="starRating">
+										<input type="hidden" name="rating[]" value="7">
+										<input id="rating_5_5" type="radio" name="rating_7" value="5">
+										<label for="rating_5_5">5</label>
+										<input id="rating_5_4" type="radio" name="rating_7" value="4">
+										<label for="rating_5_4">4</label>
+										<input id="rating_5_3" type="radio" name="rating_7" value="3">
+										<label for="rating_5_3">3</label>
+										<input id="rating_5_2" type="radio" name="rating_7" value="2">
+										<label for="rating_5_2">2</label>
+										<input id="rating_5_1" type="radio" name="rating_7" value="1">
+										<label for="rating_5_1">1</label>
 										
 									  </span>
 								</td>
@@ -132,74 +173,34 @@
 								<td>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="3">
-										<input id="rating_4_5" type="radio" name="rating_3" value="5">
-										<label for="rating_4_5">5</label>
-										<input id="rating_4_4" type="radio" name="rating_3" value="4">
-										<label for="rating_4_4">4</label>
-										<input id="rating_4_3" type="radio" name="rating_3" value="3">
-										<label for="rating_4_3">3</label>
-										<input id="rating_4_2" type="radio" name="rating_3" value="2">
-										<label for="rating_4_2">2</label>
-										<input id="rating_4_1" type="radio" name="rating_3" value="1">
-										<label for="rating_4_1">1</label>
-										
-									  </span>
-								</td>
-								<td>
-									<label for="q_2_4">{{tr('q_2_4_b')}}</label>
-								</td>
-								<td>
-									<span class="starRating">
-										<input type="hidden" name="rating[]" value="4">
-										<input id="rating_5_5" type="radio" name="rating_4" value="5">
-										<label for="rating_4_5">5</label>
-										<input id="rating_5_4" type="radio" name="rating_4" value="4">
-										<label for="rating_5_4">4</label>
-										<input id="rating_5_3" type="radio" name="rating_4" value="3">
-										<label for="rating_5_3">3</label>
-										<input id="rating_5_2" type="radio" name="rating_4" value="2">
-										<label for="rating_5_2">2</label>
-										<input id="rating_5_1" type="radio" name="rating_4" value="1">
-										<label for="rating_5_1">1</label>
-										
-									  </span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="q_2_3">{{tr('q_2_5_b')}}</label>
-								</td>
-								<td>
-									<span class="starRating">
-										<input type="hidden" name="rating[]" value="5">
-										<input id="rating_6_5" type="radio" name="rating_5" value="5">
+										<input id="rating_6_5" type="radio" name="rating_3" value="5">
 										<label for="rating_6_5">5</label>
-										<input id="rating_6_4" type="radio" name="rating_5" value="4">
+										<input id="rating_6_4" type="radio" name="rating_3" value="4">
 										<label for="rating_6_4">4</label>
-										<input id="rating_6_3" type="radio" name="rating_5" value="3">
+										<input id="rating_6_3" type="radio" name="rating_3" value="3">
 										<label for="rating_6_3">3</label>
-										<input id="rating_6_2" type="radio" name="rating_5" value="2">
+										<input id="rating_6_2" type="radio" name="rating_3" value="2">
 										<label for="rating_6_2">2</label>
-										<input id="rating_6_1" type="radio" name="rating_5" value="1">
+										<input id="rating_6_1" type="radio" name="rating_3" value="1">
 										<label for="rating_6_1">1</label>
 										
 									  </span>
 								</td>
 								<td>
-									<label for="q_2_4">{{tr('q_2_6_b')}}</label>
+									<label for="q_2_8">{{tr('q_2_8_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
-										<input type="hidden" name="rating[]" value="6">
-										<input id="rating_7_5" type="radio" name="rating_6" value="5">
+										<input type="hidden" name="rating[]" value="8">
+										<input id="rating_7_5" type="radio" name="rating_8" value="5">
 										<label for="rating_7_5">5</label>
-										<input id="rating_7_4" type="radio" name="rating_6" value="4">
+										<input id="rating_7_4" type="radio" name="rating_8" value="4">
 										<label for="rating_7_4">4</label>
-										<input id="rating_7_3" type="radio" name="rating_6" value="3">
+										<input id="rating_7_3" type="radio" name="rating_8" value="3">
 										<label for="rating_7_3">3</label>
-										<input id="rating_7_2" type="radio" name="rating_6" value="2">
+										<input id="rating_7_2" type="radio" name="rating_8" value="2">
 										<label for="rating_7_2">2</label>
-										<input id="rating_7_1" type="radio" name="rating_6" value="1">
+										<input id="rating_7_1" type="radio" name="rating_8" value="1">
 										<label for="rating_7_1">1</label>
 										
 									  </span>
@@ -207,39 +208,39 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="q_2_3">{{tr('q_2_7_b')}}</label>
+									<label for="q_2_4">{{tr('q_2_4_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
-										<input type="hidden" name="rating[]" value="7">
-										<input id="rating_8_5" type="radio" name="rating_7" value="5">
+										<input type="hidden" name="rating[]" value="4">
+										<input id="rating_8_5" type="radio" name="rating_4" value="5">
 										<label for="rating_8_5">5</label>
-										<input id="rating_8_4" type="radio" name="rating_7" value="4">
+										<input id="rating_8_4" type="radio" name="rating_4" value="4">
 										<label for="rating_8_4">4</label>
-										<input id="rating_8_3" type="radio" name="rating_7" value="3">
+										<input id="rating_8_3" type="radio" name="rating_4" value="3">
 										<label for="rating_8_3">3</label>
-										<input id="rating_8_2" type="radio" name="rating_7" value="2">
+										<input id="rating_8_2" type="radio" name="rating_4" value="2">
 										<label for="rating_8_2">2</label>
-										<input id="rating_8_1" type="radio" name="rating_7" value="1">
+										<input id="rating_8_1" type="radio" name="rating_4" value="1">
 										<label for="rating_8_1">1</label>
 										
 									  </span>
 								</td>
 								<td>
-									<label for="q_2_4">{{tr('q_2_8_b')}}</label>
+									<label for="q_2_9">{{tr('q_2_9_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
-										<input type="hidden" name="rating[]" value="8">
-										<input id="rating_9_5" type="radio" name="rating_8" value="5">
+										<input type="hidden" name="rating[]" value="9">
+										<input id="rating_9_5" type="radio" name="rating_9" value="5">
 										<label for="rating_9_5">5</label>
-										<input id="rating_9_4" type="radio" name="rating_8" value="4">
+										<input id="rating_9_4" type="radio" name="rating_9" value="4">
 										<label for="rating_9_4">4</label>
-										<input id="rating_9_3" type="radio" name="rating_8" value="3">
+										<input id="rating_9_3" type="radio" name="rating_9" value="3">
 										<label for="rating_9_3">3</label>
-										<input id="rating_9_2" type="radio" name="rating_8" value="2">
+										<input id="rating_9_2" type="radio" name="rating_9" value="2">
 										<label for="rating_9_2">2</label>
-										<input id="rating_9_1" type="radio" name="rating_8" value="1">
+										<input id="rating_9_1" type="radio" name="rating_9" value="1">
 										<label for="rating_9_1">1</label>
 										
 									  </span>
@@ -247,29 +248,27 @@
 							</tr>
 							<tr>
 								<td>
-									<label for="q_2_3">{{tr('q_2_9_b')}}</label>
+									<label for="q_2_5">{{tr('q_2_5_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
-										<input type="hidden" name="rating[]" value="9">
-										<input id="rating_10_5" type="radio" name="rating_9" value="5">
+										<input type="hidden" name="rating[]" value="5">
+										<input id="rating_10_5" type="radio" name="rating_5" value="5">
 										<label for="rating_10_5">5</label>
-										<input id="rating_10_4" type="radio" name="rating_9" value="4">
+										<input id="rating_10_4" type="radio" name="rating_5" value="4">
 										<label for="rating_10_4">4</label>
-										<input id="rating_10_3" type="radio" name="rating_9" value="3">
+										<input id="rating_10_3" type="radio" name="rating_5" value="3">
 										<label for="rating_10_3">3</label>
-										<input id="rating_10_2" type="radio" name="rating_9" value="2">
+										<input id="rating_10_2" type="radio" name="rating_5" value="2">
 										<label for="rating_10_2">2</label>
-										<input id="rating_10_1" type="radio" name="rating_9" value="1">
+										<input id="rating_10_1" type="radio" name="rating_5" value="1">
 										<label for="rating_10_1">1</label>
 										
 									  </span>
 								</td>
-								<td >
-									<label>{{tr('surveyAnswerSuggestions')}}</label><br>
-									<textarea name="message" style="width:26vw"></textarea>
-								</td>
-								<td style="text-align:right;">
+							</tr>
+							<tr>
+								<td>
 									<br>
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="102">
@@ -277,10 +276,14 @@
 										<br>		
 								</td>
 								
-							</tr>
-							<tr>
+								<td colspan="3">
+									<label>{{tr('surveyAnswerSuggestions')}}</label><br>
+									<textarea name="message" style="width:26vw"></textarea>
+								</td>
+								
 								
 							</tr>
+							
 							
 						</table>
 					</form>
@@ -345,7 +348,7 @@
 							</tr>
 					
 							<tr>
-								<td colspan="3" style="text-align:right">
+								<td colspan="3">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="103">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="5" class="pt-trigger" style="margin-right:1vw;">
@@ -365,15 +368,21 @@
 						<table class="formTable" style="width:100%;">
 							<tr>
 								<td>
-									<input type="radio" id="q_4_1_b" name="item" value="1"> <label for="q_4_1_b">{{tr('q_4_1_b')}}</label>
+									<label for="q_4_1_b"><input type="radio" id="q_4_1_b" name="item" value="1"> {{tr('q_4_1_b')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_4_2_b" name="item" value="2"> <label for="q_4_2_b">{{tr('q_4_2_b')}}</label>
+									<label for="q_4_2_b"><input type="radio" id="q_4_2_b" name="item" value="2"> {{tr('q_4_2_b')}}</label>
 								</td>
 								
 							</tr>
 							<tr>
-								<td colspan="2" style="text-align:right">
+								<td colspan="2">
+									<label>{{tr('q_4_b_add')}}</label><br>
+									<textarea name="message" style="width:26vw"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2" >
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="104">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="6" class="pt-trigger" style="margin-right:1vw;">
@@ -393,10 +402,10 @@
 						<table class="formTable" style="width:100%;">
 							<tr>
 								<td>
-									<input type="radio" id="q_5_1_b" name="item" value="1"> <label for="q_5_1_b">{{tr('q_5_1_b')}}</label>
+									<label for="q_5_1_b"><input type="radio" id="q_5_1_b" name="item" value="1"> {{tr('q_5_1_b')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_5_2_b" name="item" value="2"> <label for="q_5_2_b">{{tr('q_5_2_b')}}</label>
+									<label for="q_5_2_b"><input type="radio" id="q_5_2_b" name="item" value="2"> {{tr('q_5_2_b')}}</label>
 								</td>
 								
 							</tr>
@@ -408,7 +417,7 @@
 							</tr>
 							
 							<tr>
-								<td colspan="3" style="text-align:right">
+								<td colspan="3">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="105">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="7" class="pt-trigger" style="margin-right:1vw;">
@@ -433,7 +442,7 @@
 								</td>
 							</tr>
 							<tr>
-								<td colspan="3" style="text-align:right">
+								<td colspan="3">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="106">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="8" class="pt-trigger" style="margin-right:1vw;">
@@ -450,7 +459,7 @@
 						<h3>{{tr('question_7_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_107">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;" id="dayTable">
 							<tr>
 								<td>
 									<label for="q_7_1_b">{{tr('q_7_1_b')}}</label>
@@ -458,7 +467,7 @@
 								<td>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="1">
-										<input id="rating_13_1" type="radio" name="rating_1" value="5">
+										<input id="rating_13_5" type="radio" name="rating_1" value="5">
 										<label for="rating_13_5">5</label>
 										<input id="rating_13_4" type="radio" name="rating_1" value="4">
 										<label for="rating_13_4">4</label>
@@ -471,8 +480,8 @@
 										
 									  </span>
 								</td>
-								<td>
-									<label for="q_7_2_b">{{tr('q_7_2_b')}}</label>
+								<td >
+									<label for="q_7_2_b" style="margin-left: 7vw;">{{tr('q_7_2_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
@@ -486,7 +495,7 @@
 										<input id="rating_14_2" type="radio" name="rating_2" value="2">
 										<label for="rating_14_2">2</label>
 										<input id="rating_14_1" type="radio" name="rating_2" value="1">
-										<label for="rating_11_1">1</label>
+										<label for="rating_14_1">1</label>
 										
 									  </span>
 								</td>
@@ -511,8 +520,8 @@
 										
 									  </span>
 								</td>
-								<td>
-									<label for="q_7_4_b">{{tr('q_7_4_b')}}</label>
+								<td >
+									<label for="q_7_4_b" style="margin-left: 7vw;">{{tr('q_7_4_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
@@ -552,7 +561,7 @@
 									  </span>
 								</td>
 								<td>
-									<label for="q_7_6_b">{{tr('q_7_6_b')}}</label>
+									<label for="q_7_6_b" style="margin-left: 7vw;">{{tr('q_7_6_b')}}</label>
 								</td>
 								<td>
 									<span class="starRating">
@@ -591,8 +600,9 @@
 										
 									  </span>
 								</td>
-								
-								<td colspan="2" style="text-align:right">
+							</tr>
+							<tr>
+								<td colspan="2">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="107">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="9" class="pt-trigger" style="margin-right:1vw">
@@ -631,7 +641,7 @@
 									</td>								
 								</tr>
 								<tr>
-								<td colspan="6" style="text-align:right">
+								<td colspan="6">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="108">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="10" class="pt-trigger" style="margin-right:1vw;">
@@ -654,16 +664,16 @@
 									<td>
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
-											<input id="rating_20_5" type="radio" name="rating_1" value="5">
-											<label for="rating_20_5">5</label>
-											<input id="rating_20_4" type="radio" name="rating_1" value="4">
-											<label for="rating_20_4">4</label>
-											<input id="rating_20_3" type="radio" name="rating_1" value="3">
-											<label for="rating_20_3">3</label>
-											<input id="rating_20_2" type="radio" name="rating_1" value="2">
-											<label for="rating_20_2">2</label>
-											<input id="rating_20_1" type="radio" name="rating_1" value="1">
-											<label for="rating_20_1">1</label>
+											<input id="rating_21_5" type="radio" name="rating_1" value="5">
+											<label for="rating_21_5">5</label>
+											<input id="rating_21_4" type="radio" name="rating_1" value="4">
+											<label for="rating_21_4">4</label>
+											<input id="rating_21_3" type="radio" name="rating_1" value="3">
+											<label for="rating_21_3">3</label>
+											<input id="rating_21_2" type="radio" name="rating_1" value="2">
+											<label for="rating_21_2">2</label>
+											<input id="rating_21_1" type="radio" name="rating_1" value="1">
+											<label for="rating_21_1">1</label>
 
 										  </span>
 									</td>								
@@ -675,7 +685,7 @@
 									</td>
 								</tr>
 								<tr>
-								<td colspan="6" style="text-align:right">
+								<td colspan="6">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="109">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="11" class="pt-trigger" style="margin-right:1vw;">
@@ -711,17 +721,18 @@
 									</td>							
 								</tr>
 								<tr>
-									<td >
-										<label>{{tr('q_10_b_add')}}</label><br>
-										<textarea name="message" style="width:26vw;"></textarea>
-									</td>
-									<td colspan="6" style="text-align:right">
+									<td>
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="110">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="12" class="pt-trigger" style="margin-right:1vw;">
 										<br>
-								</td>
+									</td>
+									<td >
+										<label>{{tr('q_10_b_add')}}</label><br>
+										<textarea name="message" style="width:26vw;height:10vh"></textarea>
+									</td>
 								</tr>
+								
 								
 						</table>
 					</form>
@@ -739,16 +750,16 @@
 									<td>
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
-											<input id="rating_21_5" type="radio" name="rating_1" value="5">
-											<label for="rating_21_5">5</label>
-											<input id="rating_21_4" type="radio" name="rating_1" value="4">
-											<label for="rating_21_4">4</label>
-											<input id="rating_21_3" type="radio" name="rating_1" value="3">
-											<label for="rating_21_3">3</label>
-											<input id="rating_21_2" type="radio" name="rating_1" value="2">
-											<label for="rating_21_2">2</label>
-											<input id="rating_21_1" type="radio" name="rating_1" value="1">
-											<label for="rating_21_1">1</label>
+											<input id="rating_22_5" type="radio" name="rating_1" value="5">
+											<label for="rating_22_5">5</label>
+											<input id="rating_22_4" type="radio" name="rating_1" value="4">
+											<label for="rating_22_4">4</label>
+											<input id="rating_22_3" type="radio" name="rating_1" value="3">
+											<label for="rating_22_3">3</label>
+											<input id="rating_22_2" type="radio" name="rating_1" value="2">
+											<label for="rating_22_2">2</label>
+											<input id="rating_22_1" type="radio" name="rating_1" value="1">
+											<label for="rating_22_1">1</label>
 
 										  </span>
 									</td>								
@@ -760,7 +771,7 @@
 									</td>
 								</tr>
 								<tr>
-								<td colspan="6" style="text-align:right">
+								<td colspan="6">
 										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="111">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="13" class="pt-trigger" style="margin-right:1vw;">
@@ -775,14 +786,14 @@
 						<tr><td>
 					<br>
 					<h3>{{tr('thankYouB')}}</h3><br><br>
-					<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+					<a href="http://agritechnica2015.denkfabrik-group.com/backend/de/survey/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">Zurück zum Anfang der Befragung.</span></a>
 					</td>
 					</tr>
 					</table>
 				</div>
 			</div>
 		</div>
-		<a href="http://baywa-messetool.iq-pi.org/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+		<a href="http://agritechnica2015.denkfabrik-group.com/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 	</section>
 		
 <div id="virtualKeyboardWrapper"></div>

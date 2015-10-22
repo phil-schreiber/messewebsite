@@ -316,7 +316,9 @@ class FeusersController extends ControllerBase
 							while(($data = fgetcsv($handle, 1000, $this->_divider[$this->request->getPost('divider')],$this->_dataWrap[$this->request->getPost('dataFieldWrap')])) !== FALSE){
 								$feuser=new \messetool\Models\Feusers();
 								$fullname='';
-								//$imagename='';
+								$imagename=' ';
+								$imagenameName='';
+								$imageNumber=0;
 								$zipArrStrng='';
 								foreach($indexArray as $index => $indexKey){
 									if($indexKey=='zip'){
@@ -324,14 +326,14 @@ class FeusersController extends ControllerBase
 										$zipArrStrng=$data[$index];
 									}elseif($indexKey=='first_name'){
 										$fullname=$data[$index];
-										//$imagename=  strtolower($data[$index]);
+										$imagenameName=  $data[$index];
 										$ins[$indexKey]=$data[$index];
 									}elseif($indexKey=='last_name'){
 										$fullname.=' '.$data[$index];
-										//$imagename.='_'.strtolower($data[$index]).'.jpg';
+										$imagenameName.='_'.$data[$index];
 										$ins[$indexKey]=$data[$index];
 									}elseif($indexKey=='phone'){
-										$phone= str_replace(array(' ','+49','(',')','/'), array('','','','',''),$data[$index]);
+										$phone= str_replace(array(' ','+49','(',')','/','-'), array('','','','','',''),$data[$index]);
 										if(substr($phone, 0,1)=='0'){
 											$phone='0049'.substr($phone,1);
 										}else{
@@ -339,7 +341,8 @@ class FeusersController extends ControllerBase
 										}
 										$ins[$indexKey]=$phone;
 									}elseif($indexKey=='image'){
-										$imagename='pic_'.$data[$index].'.jpg';
+										
+										$imageNumber=$data[$index];
 									}else{
 										$ins[$indexKey]=$data[$index];
 									}
@@ -347,7 +350,7 @@ class FeusersController extends ControllerBase
 								}
 								$insArray=array_merge($basevals,$ins);
 								$insArray['fullname']=$fullname;
-								$insArray['image']=$imagename;
+								$insArray['image']=$imageNumber.'_'.str_replace(' ', '_', $imagenameName).'.jpg';
 								if($this->request->hasPost('onspot')){
 										$insArray['password']=$this->auth->encryptPassword($insArray['personellnumber']);
 									}

@@ -22,19 +22,20 @@ class IndexController extends ControllerBase
 		
 		
 		$feusers=Feusers::find(array(
-				'conditions' => 'deleted=0 AND usergroup = ?1',
+				'conditions' => 'deleted=0 AND (usergroup = ?1 OR onspot=1)',
 				'bind' => array(
 					1 => $this->config['onspotusergroup']
-				)
+				),
+				'order' => 'last_name ASC'
 			));
 		$allUsers=Feusers::find(array(
-				'conditions' => 'deleted=0 AND usergroup > 1',
-				'bind' => array(
-					1 => $this->config['onspotusergroup']
-				)
+				'conditions' => 'deleted=0 AND usergroup > 1'
+				
 			));
 		$users=array();
+		$onspotUsers=array();
 		foreach($feusers as $feuser){
+			$isOnspot=false;
 			$feuser->available='<span class="onspot inactive"></span>';
 			$onspotDates=$feuser->getOnspotdates();
 					$onspot='<span class="onspot inactive"></span>';
@@ -42,17 +43,23 @@ class IndexController extends ControllerBase
 					foreach($onspotDates as $onspotdate){
 						if(date('d.m.')==date('d.m.',$onspotdate->tstamp)){
 							$feuser->available='<span class="onspot active"></span>';
-							
+							$isOnspot=true;
 						}
 					}
-				$users[]=$feuser;
+				if($isOnspot){
+					$onspotUsers[]=$feuser;
+				}else{
+					$users[]=$feuser;
+				}
+				
 		}
+		$mergedAndSortedUsers=array_merge($onspotUsers,$users);
 		$environment= $this->config['application']['debug'] ? 'development' : 'production';
 		$baseUri=$this->config['application'][$environment]['staticBaseUri'];
 		$path=$baseUri.'/'.$this->view->language.'/feusers/update/';
 		
 		$this->view->setVar('path',$path);
-		$this->view->setVar('feusers',$users);
+		$this->view->setVar('feusers',$mergedAndSortedUsers);
 		$this->view->setVar('allusers',$allUsers);
         
         

@@ -59,10 +59,11 @@ class SearchController extends ControllerBase
 
 	private function Search(){
 		$suggestions=array();
-		if(strlen($this->request->getPost('city'))>0 || strlen($this->request->getPost('firstname')) > 0 || strlen($this->request->getPost('lastname')) >0){
+		if(strlen($this->request->getPost('zip'))>0 || strlen($this->request->getPost('firstname')) > 0 || strlen($this->request->getPost('lastname')) >0){
 			$params=array();
-			if(strlen($this->request->getPost('city'))>0 && is_numeric($this->request->getPost('city'))){
-				$params['zip']['value']=$this->request->getPost('city').'%';
+			if(strlen($this->request->getPost('zip'))>0 && is_numeric($this->request->getPost('zip'))){				
+				$zip=  substr($this->request->getPost('zip'), 0,1)==0 ? substr($this->request->getPost('zip'), 1) : $this->request->getPost('zip');
+				$params['zip']['value']=$zip.'%';
 				$params['zip']['operator']='LIKE';
 			}
 			
@@ -92,26 +93,12 @@ class SearchController extends ControllerBase
 						}
 					}
 				}
-				$info1=$suggestion->onspot ? $suggestion->jobtitle : $suggestion->specialization;
-				$info2=$suggestion->onspot ? $suggestion->city : $suggestion->region;
+				$info1=$suggestion->jobtitle ? $suggestion->jobtitle.'<br>' : '';
+				$info2=$suggestion->specialization ? $suggestion->specialization.'<br>' : '';
+				$info3=$suggestion->division ? $suggestion->division.'<br>' : '';
 				$suggestions['suggestions'][]=array(
 					'value' =>$suggestion->first_name.' '. $suggestion->last_name,
-					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'
-										<table>
-											<tr>
-												<td>
-													<img src="'.$this->userImgExists($suggestion->image).'" style="max-height:100px">
-												</td>
-												<td>
-													<div class="">
-														<span style="font-weight:bold">'.$suggestion->first_name.' '. $suggestion->last_name.'</span>,<br>
-														'.$info1.',<br>
-														'.$info2.'<br><span class="contactButton small">SMS senden</span>
-													</div>
-												</td>
-											</tr>
-										</table>
-									</div>',
+					'html' => '<div class="suggestion-item"'.$onspotTitle.'>'.$onspot.'<table><tr><td><img src="'.$this->userImgExists($suggestion->image).'" style="max-height:100px"></td><td style="word-break: break-all;width:11.4vw"><p><span style="font-weight:bold">'.$suggestion->title.' '.$suggestion->first_name.' '. $suggestion->last_name.'</span><br>'.$info1.''.$info2.$info3.'<span class="contactButton small">SMS senden</span></p></td></tr></table></div>',
 					/*'html' => '<li><input type="hidden" value="'.$suggestion->uid.'">'.$suggestion->first_name.' '. $suggestion->last_name.' | '.$info1.' | '.$info2.' '.$onspot.' </li>',*/
 					'data' => $suggestion->uid
 				);

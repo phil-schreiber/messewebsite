@@ -9,7 +9,7 @@ function init(jQuery){
 	window.setInterval(function(){		
 		
 		if(time==300){
-			window.location.href='http://baywa-messetool.iq-pi.org/';
+			window.location.href='http://agritechnica2015.denkfabrik-group.com/';
 		}else{
 			time++;
 		}
@@ -38,10 +38,10 @@ function init(jQuery){
 			};
 		};
 		var texte={
-			0:"Hallo #Berater#, viele Grüße von der agritechnica sendet #KundeVorname# #KundeNachname#.",
-			1:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Sind Sie/bist Du heute auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
-			2:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Sind Sie/bist Du heute oder morgen auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
-			3:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der agritechnica. Bitte melden Sie sich/melde Dich doch zeitnah nach der agritechnica bezüglich eines Termins bei mir. Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#."			
+			0:"Hallo #Berater#, viele Grüße von der Agritechnica sendet #KundeVorname# #KundeNachname#.",
+			1:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der Agritechnica. Sind Sie/bist Du heute auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
+			2:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der Agritechnica. Sind Sie/bist Du heute oder morgen auch hier anzutreffen? Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#.",
+			3:"Hallo #Berater#, ich stehe gerade auf dem BayWa Stand auf der Agritechnica. Bitte melden Sie sich/melde Dich doch zeitnah nach der Agritechnica bezüglich eines Termins bei mir. Über einen kurzen Rückruf unter #TelefonnummerKunde# freut sich #KundeVorname# #KundeNachname#."			
 		};
 		
 		var insertSelectbox = function(labels) {
@@ -96,8 +96,7 @@ function init(jQuery){
 	jQuery('#consultantSelect').change(function(e){				
 		jQuery('.choice').html(jQuery('#consultantSelect option:selected').text());
 	});
-	jQuery('#smsTextsSelect').on('click','li',function(e){
-		console.log(jQuery(this));
+	jQuery('#smsTextsSelect').on('click','li',function(e){		
 		jQuery('#smsTexts').html(jQuery(this).text());
 		
 	});
@@ -276,7 +275,7 @@ function init(jQuery){
 	}
 	
 	
-	jQuery('.list-group-item').on('click',function(e){						
+	jQuery('.list-group-item.contactable').on('click',function(e){						
 			e.preventDefault();
 			resetContactForm();
 			var chosenRep=jQuery(this).find('input').val();
@@ -337,6 +336,11 @@ function init(jQuery){
 			right:"-50vw"
 		});
 	});
+	jQuery('a.pt-trigger').on('click',function(e){
+		jQuery('.virtualKeyboard').animate({
+			right:"-50vw"
+		});
+	});
 	jQuery('#q_7_1').change(function() {
 		
 		if(this.checked){
@@ -386,12 +390,17 @@ function showResults(data){
 	jQuery('#searchResults').html('');
 	var suggestions=jQuery.parseJSON(data).suggestions;
 	var suggestionsStrng='';
-	for(var i=0; i<suggestions.length;i++){
-		suggestionsStrng+='<div class="autocomplete-suggestion" data-index="' + suggestions[i].data + '">' + suggestions[i].html + '</div>';
-		/*suggestionsStrng+=suggestions[i].html;*/
-		
+	if(suggestions){
+		for(var i=0; i<suggestions.length;i++){
+			suggestionsStrng+='<div class="autocomplete-suggestion" data-index="' + suggestions[i].data + '">' + suggestions[i].html + '</div>';
+			/*suggestionsStrng+=suggestions[i].html;*/
+
+		}
+	}else{
+		suggestionsStrng+='<div><h3>Ihre Suche ergab leider keine Treffer</h3></div>';
 	}
 	jQuery('#searchResults').append('<div class="autocomplete-suggestions">'+suggestionsStrng+'</div>' );
+	
 	
 	/*jQuery('#searchResults').html('<ul id="resultList" class="dropdown">'+suggestionsStrng+'</ul>');*/
 }
@@ -441,9 +450,10 @@ function letsRoll(){
 }
 
 function formIsValid(){
-	var fields =['firstname','lastname','phone','zip','city'];
-	var fieldLength=fields.length;
+	var fields =['firstname','lastname','phone'];
+	var fieldLength=fields.length;	
 	for(var i=0;i<fieldLength;i++){
+		
 		var x = document.forms["contactForm"][fields[i]].value;
 		if (x == null || x == "") {			
 			return false;

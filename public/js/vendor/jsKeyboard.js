@@ -22,13 +22,26 @@ var jsKeyboard = {
          jsKeyboard.show();
          $(':input').not('[type="radio"]').not('[type="checkbox"]').not('[type="reset"]').not('[type="submit"]').on('focus, click', function(e)
          {
+			 
             jsKeyboard.currentElement = $(this);
             jsKeyboard.currentElementCursorPosition = $(this).getCursorPosition();
-            console.log('keyboard is now focused on '+jsKeyboard.currentElement.attr('name')+' at pos('+jsKeyboard.currentElementCursorPosition+')');
+            
+			var numberKeyboardInputs=['phone','zip'];
+			var numberKeyboardIds=['q_10_1_b','q_10_2_b','q_10_3_b','q_10_4_b'];
+			
+			
+			
+			if(numberKeyboardInputs.indexOf(jsKeyboard.currentElement.attr('name')) !== -1 || (numberKeyboardIds.indexOf(jsKeyboard.currentElement.attr('id')) !== -1 && jsKeyboard.currentElement.attr('id') !== 'undefined')){				
+				jsKeyboard.changeToNumber();
+			}else{
+				jsKeyboard.changeToCapitalLetter();
+			}
+			
          });
     },
     focus: function(t) {
         jsKeyboard.currentElement = $(t);
+		console.log(jsKeyboard.currentElement);
         jsKeyboard.show();
     },
     keyboardLayout: "", // it shows the html element where keyboard is generated
@@ -82,6 +95,9 @@ var jsKeyboard = {
             text = (key.isChar != undefined || key.isChar == false) ? key.value : String.fromCharCode(key.value);
 
             s += "<div class=\"" + bClass + "\" onclick=\"" + onclick + "\"><div class=\"" + kClass + "\">" + text + "</div></div>";
+			if(onclick === 'jsKeyboard.del()'){
+			s += '<div class="lineBreak button"></div>';
+			}
 
             bClass = ""; kClass = ""; onclick = ""; text = "";
         }
@@ -124,6 +140,11 @@ var jsKeyboard = {
             b = String.fromCharCode(m),
             pos = jsKeyboard.currentElementCursorPosition,
             output = [a.slice(0, pos), b, a.slice(pos)].join('');
+		
+		
+		if(a.length===0 && jQuery('#keyboardCapitalLetter').is(":visible")){
+			jsKeyboard.changeToSmallLetter();
+		}
         jsKeyboard.currentElement.val(output);
         jsKeyboard.currentElementCursorPosition++; //+1 cursor
         jsKeyboard.updateCursor();
@@ -162,6 +183,7 @@ var jsKeyboard = {
         $("#keyboard").animate({ "bottom": "0" }, "slow", function() { });
     },
     hide: function() {
+		
         $("#keyboard").animate({ "bottom": "-350px" }, "slow", function() { });
     },
     defaultKeyboard: {
@@ -210,15 +232,15 @@ var jsKeyboard = {
                 { value: "Löschen", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button button_del", keyClass: "key key_del" },
         // 2nd row
                 { value: 45, buttonClass: "button button_dash" },{ value: 47 },{ value: 58 },{ value: 59 },
-                { value: 40 },{ value: 41 },{ value: 36 },{ value: 38 },{ value: 64 },
+                { value: 40 },{ value: 41 },/*{ value: 36 },{ value: 38 },{ value: 64 },*/
                 
         //3rd row
-                // { value: "ABC", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "jsKeyboard.changeToCapitalLetter()", keyClass: "key key_capitalletterleft" },
-                { value: "", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "", keyClass: "key" },
-                { value: 63 },{ value: 33 },{ value: 34 },{ value: 124 },{ value: 92 },{ value: 42 },{ value: 61 },{ value: 43 },
-                // { value: "ABC", isChar: "false", buttonClass: "button button_capitalletterright", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterright" },
-                { value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
-                { value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
+                 //{ value: "ABC", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "jsKeyboard.changeToCapitalLetter()", keyClass: "key key_capitalletterleft" },
+                //{ value: "", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "", keyClass: "key" },
+                /*{ value: 63 },{ value: 33 },*/{ value: 34 },{ value: 124 },{ value: 92 },{ value: 42 },{ value: 61 },{ value: 43 },
+                 //{ value: "ABC", isChar: "false", buttonClass: "button button_capitalletterright", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterright" },
+               // { value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
+                //{ value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
 
         // 4th row
                 { value: "ABC", isChar: "false", buttonClass: "button button_numberleft", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterleft" },
@@ -229,23 +251,23 @@ var jsKeyboard = {
         // 1st row
             { value: 91 },{ value: 93 },{ value: 123 },{ value: 125 },{ value: 35 },{ value: 37 },
             { value: 94 },{ value: 42 },{ value: 43 },{ value: 61 },
-            { value: "Delete", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button button_del", keyClass: "key key_del" },
+            { value: "Löschen", isChar: "false", onclick: "jsKeyboard.del()", buttonClass: "button button_del", keyClass: "key key_del" },
         // 2nd row
             { value: 95, buttonClass: "button button_underscore" },{ value: 92 },{ value: 124 },{ value: 126 },
             { value: 60 },{ value: 62 },
             { value: "&euro;", isChar: "false", onclick: "jsKeyboard.writeSpecial('&euro;');" },
             { value: 163 },{ value: 165 },
-            { value: "Enter", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
+            //{ value: "Enter", isChar: "false", buttonClass: "button button_enter", onclick: "jsKeyboard.enter();", keyClass: "key key_enter" },
         // 3rd row
             // { value: "ABC", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterleft" },
-            { value: "", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "", keyClass: "key" },
-            { value: 46 },{ value: 44 },{ value: 63 },{ value: 33 },{ value: 39 },{ value: 34 },{ value: 59 },{ value: 92 },
+            //{ value: "", isChar: "false", buttonClass: "button button_capitalletterleft", onclick: "", keyClass: "key" },
+            /*{ value: 46 },{ value: 44 },{ value: 63 },{ value: 33 },*/{ value: 39 },{ value: 34 },{ value: 59 },{ value: 92 },
             // { value: "ABC", isChar: "false", buttonClass: "button button_capitalletterright", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterright" },
-            { value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
-            { value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
+            //{ value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
+            //{ value: "", isChar: "false", buttonClass: "button", onclick: "", keyClass: "key" },
         // 4th row
             { value: "123", isChar: "false", buttonClass: "button button_numberleft", onclick: "jsKeyboard.changeToNumber();", keyClass: "key key_number" },
-            { value: "Space", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" },
+            { value: "Leertaste", isChar: "false", buttonClass: "button button_space", onclick: "jsKeyboard.space();", keyClass: "key key_space" },
             { value: "ABC", isChar: "false", buttonClass: "button button_symbolsright", onclick: "jsKeyboard.changeToCapitalLetter();", keyClass: "key key_capitalletterleft" },
          ]
     }

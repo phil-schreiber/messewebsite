@@ -3,7 +3,7 @@
 		<a name="survey"></a>
 		<header>
 			<div class="logo">
-				<a href="http://baywa-messetool.iq-pi.org/">{{image('images/baywa-logo.png', "class":"logo")}}</a>
+				<a href="http://agritechnica2015.denkfabrik-group.com/">{{image('images/baywa-logo.png', "class":"logo")}}</a>
 			</div>
 			<div class="headerWrap">
 				<h1>{{tr('surveyHeader')}}</h1>
@@ -25,7 +25,7 @@
 					<div class="statusbar outer">
 						<div class="statusbar inner" style="width:12.5%">
 						</div>
-						<h3>{{tr('question_1')}}</h3>
+						<h3>{{tr('question_1')}} <span style="font-size: 1vw;font-style: italic;">{{tr('multiple')}}</span></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_1">
 						<table class="formTable">
@@ -77,46 +77,46 @@
 					<div class="statusbar outer">
 						<div class="statusbar inner" style="width:25%">
 						</div>
-						<h3>{{tr('question_2')}}</h3>
+						<h3>{{tr('question_2')}} <span style="font-size: 1vw;font-style: italic;">{{tr('multiple')}}</span></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_2">
 						<table class="formTable">
 							<tr>
 								<td>
-									<input type="checkbox" id="q_2_1" name="item[]" value="1"> <label for="q_2_1">{{tr('q_2_1')}}</label>
+									<label for="q_2_1"><input type="checkbox" id="q_2_1" name="item[]" value="1"> {{tr('q_2_1')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_2" name="item[]" value="2"> <label for="q_2_2">{{tr('q_2_2')}}</label>
+									<label for="q_2_2"><input type="checkbox" id="q_2_2" name="item[]" value="2"> {{tr('q_2_2')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_3" name="item[]" value="3"> <label for="q_2_3">{{tr('q_2_3')}}</label>
+									<label for="q_2_3"><input type="checkbox" id="q_2_3" name="item[]" value="3"> {{tr('q_2_3')}}</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_2_4" name="item[]" value="4"> <label for="q_2_4">{{tr('q_2_4')}}</label>
+									<label for="q_2_4"><input type="checkbox" id="q_2_4" name="item[]" value="4"> {{tr('q_2_4')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_5" name="item[]" value="5"> <label for="q_2_5">{{tr('q_2_5')}}</label>
+									<label for="q_2_5"><input type="checkbox" id="q_2_5" name="item[]" value="5"> {{tr('q_2_5')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_6" name="item[]" value="6"> <label for="q_2_6">{{tr('q_2_6')}}</label>
+									<label for="q_2_6"><input type="checkbox" id="q_2_6" name="item[]" value="6"> {{tr('q_2_6')}}</label>
 								</td>
 							</tr>
 								<tr>
 								<td>
-									<input type="checkbox" id="q_2_7" name="item[]" value="7"> <label for="q_2_7">{{tr('q_2_7')}}</label>
+									<label for="q_2_7"><input type="checkbox" id="q_2_7" name="item[]" value="7"> {{tr('q_2_7')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_8" name="item[]" value="8"> <label for="q_2_8">{{tr('q_2_8')}}</label>
+									<label for="q_2_8"><input type="checkbox" id="q_2_8" name="item[]" value="8"> {{tr('q_2_8')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_2_9" name="item[]" value="9"> <label for="q_2_9">{{tr('q_2_9')}}</label>
+									<label for="q_2_9"><input type="checkbox" id="q_2_9" name="item[]" value="9"> {{tr('q_2_9')}}</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_2_10" name="item[]" value="10"> <label for="q_2_10">{{tr('q_2_10')}}</label>
+									<label for="q_2_10"><input type="checkbox" id="q_2_10" name="item[]" value="10"> {{tr('q_2_10')}}</label>
 								</td>
 								<td>
 									<label for="q_2_11">{{tr('q_2_11')}}</label> <input type="text" id="q_2_11" name="openitem[]">
@@ -296,30 +296,30 @@
 						<table class="formTable">
 							<tr>
 								<td>
-									<input type="radio" id="q_6_1" name="item" value="1"> <label for="q_6_1">{{tr('q_6_1')}}</label>
+									<label for="q_6_1"><input type="radio" id="q_6_1" name="item" value="1"> {{tr('q_6_1')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_6_2" name="item" value="2"> <label for="q_6_2">{{tr('q_6_2')}}</label>
+									<label for="q_6_2"><input type="radio" id="q_6_2" name="item" value="2"> {{tr('q_6_2')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_6_3" name="item" value="3"> <label for="q_6_3">{{tr('q_6_3')}}</label>
+									<label for="q_6_3"><input type="radio" id="q_6_3" name="item" value="3"> {{tr('q_6_3')}}</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="radio" id="q_6_4" name="item" value="4"> <label for="q_6_4">{{tr('q_6_4')}}</label>
+									<label for="q_6_4"><input type="radio" id="q_6_4" name="item" value="4"> {{tr('q_6_4')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_6_5" name="item" value="5"> <label for="q_6_5">{{tr('q_6_5')}}</label>
+									<label for="q_6_5"><input type="radio" id="q_6_5" name="item" value="5"> {{tr('q_6_5')}}</label>
 								</td>
 								<td>
-									<input type="radio" id="q_6_6" name="item" value="6"> <label for="q_6_6">{{tr('q_6_6')}}</label>
+									<label for="q_6_6"><input type="radio" id="q_6_6" name="item" value="6"> {{tr('q_6_6')}}</label>
 								</td>
 
 							</tr>
 							<tr>
 									<td>
-									<input type="radio" id="q_6_7" name="item" value="7"> <label for="q_6_7">{{tr('q_6_7')}}</label>
+									<label for="q_6_7"><input type="radio" id="q_6_7" name="item" value="7"> {{tr('q_6_7')}}</label>
 								</td>
 							</tr>
 							<tr>
@@ -337,25 +337,25 @@
 					<div class="statusbar outer">
 						<div class="statusbar inner" style="width:87.5%">
 						</div>
-						<h3>{{tr('question_7')}}</h3>
+						<h3>{{tr('question_7')}} <span style="font-size: 1vw;font-style: italic;">{{tr('multiple')}}</span></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_7">
 						<table class="formTable">
 							<tr>
 								<td colspan="3">
-									<input type="checkbox" id="q_7_1" name="item[]" value="1"> <label for="q_7_1">{{tr('q_7_1_a')}}</label>
+									<label for="q_7_1"><input type="checkbox" id="q_7_1" name="item[]" value="1"> {{tr('q_7_1_a')}}</label>
 									<table id="q_7_1_b_table" style="display:none;border:#fff 1px dotted;margin-left:0;">
 										<tr>
 											<td colspan="4">{{tr('info_7_1_a')}}</td>
 										<tr>
 											<td>
-												<input type="checkbox" id="q_7_2" name="item[]" value="2"> <label for="q_7_2">{{tr('q_7_2')}}</label>
+												<label for="q_7_2"><input type="checkbox" id="q_7_2" name="item[]" value="2"> {{tr('q_7_2')}}</label>
 											</td>
 											<td>
-												<input type="checkbox" id="q_7_3" name="item[]" value="3"> <label for="q_7_3">{{tr('q_7_3')}}</label>
+												<label for="q_7_3"><input type="checkbox" id="q_7_3" name="item[]" value="3"> {{tr('q_7_3')}}</label>
 											</td>
 											<td>
-												<input type="checkbox" id="q_7_4" name="item[]" value="4"> <label for="q_7_4">{{tr('q_7_4')}}</label>
+												<label for="q_7_4"><input type="checkbox" id="q_7_4" name="item[]" value="4"> {{tr('q_7_4')}}</label>
 											</td>
 											<td>
 												<label for="q_7_5">{{tr('q_7_5')}}</label> <input type="text" id="q_7_5" name="openitem[]">
@@ -366,21 +366,21 @@
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_7_6" name="item[]" value="5"> <label for="q_7_6">{{tr('q_7_6')}}</label>
+									<label for="q_7_6"><input type="checkbox" id="q_7_6" name="item[]" value="5"> {{tr('q_7_6')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_7" name="item[]" value="6"> <label for="q_7_7">{{tr('q_7_7')}}</label>
+									<label for="q_7_7"><input type="checkbox" id="q_7_7" name="item[]" value="6"> {{tr('q_7_7')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_8" name="item[]" value="7"> <label for="q_7_8">{{tr('q_7_8')}}</label>
+									<label for="q_7_8"><input type="checkbox" id="q_7_8" name="item[]" value="7"> {{tr('q_7_8')}}</label>
 								</td>
 							</tr>
 							<tr>
 								<td>
-									<input type="checkbox" id="q_7_9" name="item[]" value="8"> <label for="q_7_9">{{tr('q_7_9')}}</label>
+									<label for="q_7_9"><input type="checkbox" id="q_7_9" name="item[]" value="8"> {{tr('q_7_9')}}</label>
 								</td>
 								<td>
-									<input type="checkbox" id="q_7_10" name="item[]" value="9"> <label for="q_7_10">{{tr('q_7_10')}}</label>
+									<label for="q_7_10"><input type="checkbox" id="q_7_10" name="item[]" value="9"> {{tr('q_7_10')}}</label>
 								</td>
 								<td>
 									<label for="q_7_11">{{tr('q_7_11')}}</label> <input type="text" id="q_7_11" name="openitem[]">
@@ -409,42 +409,42 @@
 
 								<tr>
 									<td>
-										<input type="radio" id="q_8_1" name="item" value="0"> <label for="q_8_1">{{tr('q_8_1')}}</label>
+										<label for="q_8_1"><input type="radio" id="q_8_1" name="item" value="0"> {{tr('q_8_1')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_2" name="item" value="1"> <label for="q_8_2">{{tr('q_8_2')}}</label>
+										<label for="q_8_2"><input type="radio" id="q_8_2" name="item" value="1"> {{tr('q_8_2')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_3" name="item" value="2"> <label for="q_8_3">{{tr('q_8_3')}}</label>
+										<label for="q_8_3"><input type="radio" id="q_8_3" name="item" value="2"> {{tr('q_8_3')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_4" name="item" value="3"> <label for="q_8_4">{{tr('q_8_4')}}</label>
+										<label for="q_8_4"><input type="radio" id="q_8_4" name="item" value="3"> {{tr('q_8_4')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_5" name="item" value="4"> <label for="q_8_5">{{tr('q_8_5')}}</label>
+										<label for="q_8_5"><input type="radio" id="q_8_5" name="item" value="4"> {{tr('q_8_5')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_6" name="item" value="5"> <label for="q_8_6">{{tr('q_8_6')}}</label>
+										<label for="q_8_6"><input type="radio" id="q_8_6" name="item" value="5"> {{tr('q_8_6')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_7" name="item" value="6"> <label for="q_8_7">{{tr('q_8_7')}}</label>
+										<label for="q_8_7"><input type="radio" id="q_8_7" name="item" value="6"> {{tr('q_8_7')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_8" name="item" value="7"> <label for="q_8_8">{{tr('q_8_8')}}</label>
+										<label for="q_8_8"><input type="radio" id="q_8_8" name="item" value="7"> {{tr('q_8_8')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_9" name="item" value="8"> <label for="q_8_9">{{tr('q_8_9')}}</label>
+										<label for="q_8_9"><input type="radio" id="q_8_9" name="item" value="8"> {{tr('q_8_9')}}</label>
 									</td>
 									<td>
-										<input type="radio" id="q_8_10" name="item" value="9"> <label for="q_8_10">{{tr('q_8_10')}}</label>
+										<label for="q_8_10"><input type="radio" id="q_8_10" name="item" value="9"> {{tr('q_8_10')}}</label>
 									</td>
 								</tr>
 								<tr>
 									<td colspan="5">
-										<input type="radio" id="q_8_11" name="item" value="10"> <label for="q_8_11">{{tr('q_8_11')}}</label>
+										<label for="q_8_11"><input type="radio" id="q_8_11" name="item" value="10"> {{tr('q_8_11')}}</label>
 									</td>
 									<td colspan="5">
-										<input type="radio" id="q_8_12" name="item" value="11"> <label for="q_8_12">{{tr('q_8_12')}}</label>
+										<label for="q_8_12"><input type="radio" id="q_8_12" name="item" value="11"> {{tr('q_8_12')}}</label>
 									</td>
 								</tr>
 								<tr>
@@ -464,11 +464,11 @@
 					<h3 style="margin-left">{{tr('thankYou')}}</h3>
 					</div>
 					<br><br>
-					<a href="http://baywa-messetool.iq-pi.org/" class="navButton small"  id="consultantNotFound" style="margin-left:30px;float:left"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+					<a href="http://agritechnica2015.denkfabrik-group.com/" class="navButton small"  id="consultantNotFound" style="margin-left:30px;float:left"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 				</div>
 			</div>
 		</div>
-		<a href="http://baywa-messetool.iq-pi.org/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+		<a href="http://agritechnica2015.denkfabrik-group.com/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 	</section>
 
 <div id="virtualKeyboardWrapper"></div>
