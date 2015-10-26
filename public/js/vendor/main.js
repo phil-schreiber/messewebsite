@@ -4,9 +4,14 @@ var baseurl;
 var module='';
 var runAnim=true;
 var time=0;
+var timerInterval;
 function init(jQuery){
 	
-	window.setInterval(function(){		
+	if(typeof(requirePlugins) != 'undefined'){
+		jQuery('#loadingimg').show();	
+		requireControllerPlugins();
+	}
+	timerInterval=window.setInterval(function(){		
 		
 		if(time==300){
 			window.location.href='http://agritechnica2015.denkfabrik-group.com/';
@@ -246,7 +251,7 @@ function init(jQuery){
 	
 	
 	var addStartImgEvents=function(){
-		jQuery("#startImgWrap").on("click",function(e){				
+		jQuery("#start").on("click",function(e){				
 			jQuery(this).off('click');
 			addFlipEvents();
 			removeTouchAnim();
@@ -369,6 +374,19 @@ function smstextBox(){
 	new smsTexte.createBox(berater,kunde);
 	
 }
+function requireControllerPlugins(){
+	
+		for(var i=0; i<requirePlugins.length; i++){
+			if(i==requirePlugins.length-1){
+				require([requirePlugins[i]],letsRoll);
+			}else{
+				require([requirePlugins[i]]);
+			}
+			
+		}	
+	
+	
+};
 
 
 function DropDown(el) {

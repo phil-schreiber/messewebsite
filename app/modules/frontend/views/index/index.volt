@@ -281,7 +281,7 @@
 						</tr>						
 						<tr>
 							<td colspan="2" style="text-align: left; padding-left:3.5vw;">								
-								<input type="hidden" name="terms" id="terms" value="1" checked> <label for="terms">{{tr('terms')}}</label>								
+								<input type="hidden" name="terms" id="terms" value="1" checked="checked"> <label for="terms">{{tr('terms')}}</label>								
 							</td>
 						</tr>
 						<tr>
@@ -298,7 +298,7 @@
 								<td>
 									<h3 style="margin-left">{{tr('messageSent')}}</h3>						
 						<br><br>
-						<a href="http://baywa-messetool.iq-pi.org/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
+						<a href="http://agritechnica2015.denkfabrik-group.com/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">{{tr('backHome')}}</span></a>
 								</td>
 							</tr>						
 							

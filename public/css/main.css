@@ -2039,7 +2039,7 @@ li.list-group-item img{
 	border:#e3e3e3 1px dotted;
 	float:left;
 	
-	width: 20vw;
+	//width: 20vw;
 	margin: 0 1vw 1vw 0;
 	position:relative;
 	height:22.5vh;
@@ -2290,7 +2290,7 @@ table.formTable table td{
 
 /*autocomplete suggestions*/
 .autocomplete-suggestions { overflow: auto;}
-.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;    margin: 0.1vw;min-height:16vh;width:18vw;}
+.autocomplete-suggestion {  border: 1px solid #999; background: #FFF;padding: 2px 5px; white-space: nowrap; overflow: hidden; float:left;    margin: 0.1vw;min-height:16vh;}
 .autocomplete-selected { background: #F0F0F0; }
 .autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
 .autocomplete-group { padding: 2px 5px; }
@@ -2488,7 +2488,7 @@ form .starRating label{
 }
 
 
-table#report td, table#report th{
+table#report td, table#report th, table#average td, table#average th{
 	padding:5px;
 	border:1px solid;
 }

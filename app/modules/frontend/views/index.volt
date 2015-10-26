@@ -15,7 +15,7 @@
 		 {{ get_title() }}
         
 		
-		{{ stylesheet_link('css/jQuery.dataTables.css') }}				
+		
         {{ stylesheet_link('css/main.css') }}     
 		{{ stylesheet_link('css/transition-animations.css') }}     
 		{{ stylesheet_link('css/jsKeyboard.css') }}     

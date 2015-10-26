@@ -53,14 +53,14 @@ var PageTransitions = (function () {
 				if(formIsValid()){
 					$pageTrigger = $(this);
 					var params=jQuery('#contactForm').serialize();
-					if(termsAgreed()){
+					//if(termsAgreed()){
 						ajaxIt("message","create",params,dummyEmpty);
 						document.getElementById("contactForm").reset();
 						jQuery('#contactForm textarea').html('');
 						Animate($pageTrigger);
-					}else{
-						alert("Sie müssen der Datenverarbeitung zustimmen.")
-					}
+					//}else{
+					//	alert("Sie müssen der Datenverarbeitung zustimmen.")
+					//}
 					
 				}else{
 					alert('Bitte füllen Sie die vorgegebenen Felder aus');

@@ -27,7 +27,8 @@ require.config({
 		modernizr:'modernizr-2.6.2.min',
 		transition:'transition',
 		jsKeyboard:'jsKeyboard',
-		autocomplete:'jquery.autocomplete'
+		autocomplete:'jquery.autocomplete',
+		report: 'report'
     }
 });
 
