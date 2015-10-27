@@ -118,7 +118,7 @@
 		<ul class="list-group clearfix">
 		{% for index,feuser in feusers %}
 		
-		<li class='list-group-item {% if feuser.profileid==1 %}	contactable {% endif %}'>
+		<li class='list-group-item {% if feuser.profileid==2 %}	contactable {% endif %}'>
 			{{feuser.available}}
 			<table>
 				<tr>
@@ -134,7 +134,7 @@
 							{% if feuser.division %}
 							{{feuser.division}}
 							{% endif %}
-							{% if feuser.profileid==1 %}
+							{% if feuser.profileid==2 %}
 							<br><span class="contactButton small">SMS senden</span>
 							{% endif %}
 						</div>

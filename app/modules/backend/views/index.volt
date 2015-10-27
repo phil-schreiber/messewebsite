@@ -18,7 +18,7 @@
 		{{ stylesheet_link('css/jQuery.dataTables.css') }}				
         {{ stylesheet_link('css/main.css') }}     
 		{{ stylesheet_link('css/transition-animations.css') }}     
-		{{ stylesheet_link('css/jsKeyboard.css') }}     
+		   
 		{{ assets.outputCss() }}
 		
 		<script data-main="{{ baseurl }}js/vendor/plugins" src="{{ baseurl }}js/require.js"></script>

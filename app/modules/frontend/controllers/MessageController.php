@@ -54,12 +54,12 @@ class MessageController extends ControllerBase
 		$sendMessage=array(
 			'konto' => 2982,
 			'password' => md5('ihttomlin1979'),
-			'service' =>6076,			
+			'service' =>6078,			
 			'text' => $message->message,
 			'encoding' => 0,
 			'from' => $message->phone,
 			'to' => $feuser->phone,
-			'timestamp' => $time,
+			'timestamp' => 0,
 			'return' => 'text',
 			'httphead' => 1,
 			'action' => 'send'

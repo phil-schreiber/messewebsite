@@ -18,7 +18,7 @@ class UsergroupsController extends ControllerBase
 {
 	
 	public function indexAction(){
-		$this->assets->addCss('css/jquery.dataTables.css');
+		
 		$usergroups=Usergroups::find(array(
 				'conditions' => 'deleted=0 AND cruser_id <> 0'
 			));
@@ -36,7 +36,7 @@ class UsergroupsController extends ControllerBase
 	}
 	
 	public function updateAction(){
-		$this->assets->addCss('css/jquery.dataTables.css');
+		
 		$usergroup=Usergroups::findFirst(array(
 				'conditions' => 'deleted=0 AND uid = ?1',
 				'bind' => array(

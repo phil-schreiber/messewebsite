@@ -1,11 +1,11 @@
 
 
 	{{ content() }}
-	<section>
+	
 <div class="container backend">
 	{%- if session.get('auth') -%}
 	
-	<div class="ceElement large">
+	<div>
 	<h1>{{usergroup.title}}</h1>
 		<div class="dataTables_wrapper">
 			<table  class="display dataTable">
@@ -54,4 +54,3 @@
 {%- endif -%}
 
 </div>
-	</section>	

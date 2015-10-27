@@ -21,6 +21,13 @@
 			
 		</div>
 		{% endif %}
+		{% if linkAllowed(session.get('auth'),'report','index') %}		
+		<div class="ceElement xs">
+			<h1>{{ link_to('backend/'~language~'/report/index/', 'Auswertung', 'title': 'Auswertung') }}
+			</h1>
+			
+		</div>
+		{% endif %}
 		
 		
 	</div>
