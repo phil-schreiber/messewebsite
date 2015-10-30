@@ -13,7 +13,7 @@ function init(jQuery){
 	}
 	timerInterval=window.setInterval(function(){		
 		
-		if(time==300){
+		if(time==180){
 			window.location.href='http://agritechnica2015.denkfabrik-group.com/';
 		}else{
 			time++;
@@ -176,9 +176,7 @@ function init(jQuery){
 	jQuery('body').on('click',function(e){
 		time=0;
 	});
-	jQuery('a.pt-trigger').click(function(e){
-		e.preventDefault();
-	});
+	
 	baseurl=document.getElementById('baseurl').value;	
 	module=document.getElementById('module') ? document.getElementById('module').value :'';
 	jQuery('body').append('<div id="loadingimg"><h3>Einen Moment bitte</h3><div><img src="'+baseurl+'public/images/ajax-loader.gif"></div></<div>');
@@ -229,11 +227,15 @@ function init(jQuery){
 	
 	jQuery('a[href^=#].navButton,a[href^=#].navLink').on('click', function(e){
 			e.preventDefault();			
-			var href = jQuery(this).attr('href');		
+			var href = jQuery(this).attr('href');				
+			
 			jQuery('html, body').animate({
 				scrollTop:jQuery(href).offset().top
 			},'slow');				
 			
+			if(href==='#start'){
+				resetContactForm();
+			}
 		});
 	
 	
@@ -276,6 +278,7 @@ function init(jQuery){
 		jQuery('#formPage').addClass('pt-page-current');
 		jQuery('.pt-trigger').off('click');
 		jQuery('#contactForm textarea').html('');
+		jQuery('#contactForm')[0].reset();
 		PageTransitions.init();
 	}
 	
@@ -312,6 +315,10 @@ function init(jQuery){
 		var data=jQuery(this).serialize();
 		ajaxIt("survey","create",data,dummyEmpty);
 	});
+	
+	jQuery('a.pt-trigger').click(function(e){
+		e.preventDefault();
+	});
 	jQuery(document).on('scroll',function(e){
 		jQuery('.virtualKeyboard').each(function(index,el){
 			if(jQuery(el).css('right')==='0px'){
@@ -341,11 +348,8 @@ function init(jQuery){
 			right:"-50vw"
 		});
 	});
-	jQuery('a.pt-trigger').on('click',function(e){
-		jQuery('.virtualKeyboard').animate({
-			right:"-50vw"
-		});
-	});
+	
+	
 	jQuery('#q_7_1').change(function() {
 		
 		if(this.checked){
@@ -365,7 +369,7 @@ function init(jQuery){
 	 
 	 
 	 /*var dd = new DropDown( jQuery('#searchResults') );*/
-	 
+	 jQuery('#surveystartpage').css( "zIndex", 1 );
 }
 
 function smstextBox(){			

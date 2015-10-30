@@ -34,7 +34,7 @@
             <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/backend/views/feusers/index.volt</file>
             <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/backend/controllers/FeusersController.php</file>
             <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/backend/controllers/ControllerBase.php</file>
-            <file>file:/C:/xampp/htdocs/baywa-messetool/app/library/Auth/Auth.php</file>
+            <file>file:/C:/xampp/htdocs/baywa-messetool/app/modules/frontend/views/index.volt</file>
         </group>
     </open-files>
 </project-private>

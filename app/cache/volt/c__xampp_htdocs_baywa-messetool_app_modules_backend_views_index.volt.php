@@ -18,7 +18,7 @@
 		<?php echo $this->tag->stylesheetLink('css/jQuery.dataTables.css'); ?>				
         <?php echo $this->tag->stylesheetLink('css/main.css'); ?>     
 		<?php echo $this->tag->stylesheetLink('css/transition-animations.css'); ?>     
-		<?php echo $this->tag->stylesheetLink('css/jsKeyboard.css'); ?>     
+		   <?php echo $this->tag->stylesheetLink('css/jsKeyboard.css'); ?>   
 		<?php echo $this->assets->outputCss(); ?>
 		
 		<script data-main="<?php echo $baseurl; ?>js/vendor/plugins" src="<?php echo $baseurl; ?>js/require.js"></script>

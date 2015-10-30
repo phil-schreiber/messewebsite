@@ -346,7 +346,7 @@
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
 				
-					<table class="formTable">
+					<table class="formTable" style="height:100%;min-height:100%;">
 						<tr>							
 							<td class="alignLeft marginLeft">
 								<label for="firstname">{{tr('firstname')}}</label><br>
@@ -365,7 +365,7 @@
 						</tr>						
 						<tr>							
 							
-							<td colspan="3" style="text-align: center"><input type="submit" value="{{tr('search')}}"></td>
+							<td colspan="3" style="text-align: center;vertical-align: center"><input type="submit" value="{{tr('search')}}"></td>
 							
 						</tr>							
 						<tr>

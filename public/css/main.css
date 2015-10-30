@@ -2080,7 +2080,7 @@ li.list-group-item img{
 }
 
 #surveyFormWrapper p{
-	padding:10px;
+	padding:10px 10px 10px 0px;
 	font-size:1.3vw;
 	max-width:800px;
 	margin-left:30px;
@@ -2153,7 +2153,7 @@ a.pt-trigger:hover,a.navButton:hover{
     border: 1px solid #01994e;
     outline: none;
 }
-#surveyFormWrapper a.pt-trigger{
+#surveyFormWrapper .pt-trigger{
 	margin-left:30px;
 }
 
@@ -2198,8 +2198,9 @@ a.navButton.small, a.navButton.small span {
 
 table.formTable{
 	width:100%;
-	height:100%;
-	vertical-align: middle;
+	
+	height:80%;
+	vertical-align: top;
 	text-align:center;
 
 }
@@ -2491,4 +2492,14 @@ form .starRating label{
 table#report td, table#report th, table#average td, table#average th{
 	padding:5px;
 	border:1px solid;
+}
+
+.trigger-buttons{
+	position:absolute;
+	bottom:1vw;
+	left:0;
+}
+
+.ontop{
+	z-index: 10;
 }

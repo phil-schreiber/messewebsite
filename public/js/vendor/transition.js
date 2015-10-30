@@ -37,9 +37,13 @@ var PageTransitions = (function () {
             $wrapperDiv.data('isAnimating', false);
             $wrapperDiv.children('.pt-page').eq(startPageIndex).addClass('pt-page-current');
         });
-
+		
         // Adding click event to .pt-trigger
-        $('.pt-trigger').click(function() {
+        $('.pt-trigger').click(function(e) {
+			
+			jQuery('.virtualKeyboard').animate({
+				right:"-50vw"
+			});
 			if($(this).attr('id')=='formTrigger'){
 				if(formIsValid()){
 					smstextBox();

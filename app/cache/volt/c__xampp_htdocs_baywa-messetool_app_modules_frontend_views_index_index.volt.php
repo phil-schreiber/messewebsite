@@ -118,7 +118,7 @@
 		<ul class="list-group clearfix">
 		<?php foreach ($feusers as $index => $feuser) { ?>
 		
-		<li class='list-group-item <?php if ($feuser->profileid == 1) { ?>	contactable <?php } ?>'>
+		<li class='list-group-item <?php if ($feuser->profileid == 2) { ?>	contactable <?php } ?>'>
 			<?php echo $feuser->available; ?>
 			<table>
 				<tr>
@@ -134,7 +134,7 @@
 							<?php if ($feuser->division) { ?>
 							<?php echo $feuser->division; ?>
 							<?php } ?>
-							<?php if ($feuser->profileid == 1) { ?>
+							<?php if ($feuser->profileid == 2) { ?>
 							<br><span class="contactButton small">SMS senden</span>
 							<?php } ?>
 						</div>
@@ -346,7 +346,7 @@
 		<form id="searchForm" autocomplete="off" class="form">
 			<div class="pt-page" style="display:block;visibility: visible">
 				
-					<table class="formTable">
+					<table class="formTable" style="height:100%;min-height:100%;">
 						<tr>							
 							<td class="alignLeft marginLeft">
 								<label for="firstname"><?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('firstname'); ?></label><br>
@@ -365,7 +365,7 @@
 						</tr>						
 						<tr>							
 							
-							<td colspan="3" style="text-align: center"><input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>"></td>
+							<td colspan="3" style="text-align: center;vertical-align: center"><input type="submit" value="<?php echo messetool\Modules\Modules\Frontend\Controllers\ControllerBase::translate('search'); ?>"></td>
 							
 						</tr>							
 						<tr>

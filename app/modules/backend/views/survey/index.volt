@@ -15,20 +15,14 @@
 		</header>
 		<div id="surveyForm" class="form">
 			<div id="surveyFormWrapper" class="pt-wrapper">
-				<div class="pt-page pt-page-1">
+				<div class="pt-page pt-page-1" id="surveystartpage" style="display:block;z-index: 2">
 					<table width="100%">
 						<tr><td>{{tr('surveyHeaderInfoB')}}</td></tr>
-						<tr><td style="height:25vh;">&nbsp;</td></tr>
 						
-						<tr>
-							<td>
-								
-						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span>{{tr('surveyButtonStart')}}</span></a>
-					
-							</td>
-						</tr>
-					
 					</table>
+					<div class="trigger-buttons">
+						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span>{{tr('surveyButtonStart')}}</span></a>
+					</div>
 				</div>
 				<div class="pt-page pt-page-2">
 					<div class="statusbar outer">
@@ -63,18 +57,13 @@
 									<label>{{tr('surveyAnswerSuggestions')}}</label><br>
 									<textarea name="message"></textarea>
 									</div>
-								</td>
-							</tr>
-								<tr>
-								<td>
-									
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="3" class="pt-trigger" style="margin-right:1vw;">
-									
-								</td>
-							</tr>
+								</td>							
 						</table>
-						<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-						<input type="hidden" name="question" value="101">
+						<div class="trigger-buttons">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="3" class="pt-trigger" style="margin-right:1vw;">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="101">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-3">
@@ -84,7 +73,7 @@
 					<h3>{{tr('question_2_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_102">
-							<table class="formTable fullTable" >
+							<table class="formTable fullTable" style="height:90%;">
 							<tr>
 								<td>
 									<label>{{tr('q_2_1_b_title')}}</label><br><br>
@@ -107,10 +96,10 @@
 										
 									  </span>
 								</td>							
-								<td>
+								<td><br><br>
 									<label for="q_2_6">{{tr('q_2_6_b')}}</label>
 								</td>
-								<td>
+								<td><br><br>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="6">
 										<input id="rating_3_5" type="radio" name="rating_6" value="5">
@@ -271,9 +260,7 @@
 							<tr>
 								<td colspan="2">
 									<br>
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="102">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="4" class="pt-trigger" style="margin-right:1vw;">
+										
 										<br>		
 								</td>
 								
@@ -287,6 +274,11 @@
 							
 							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+										<input type="hidden" name="question" value="102">
+										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="4" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-4">
@@ -348,15 +340,13 @@
 								</td>
 							</tr>
 					
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							
+						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
 										<input type="hidden" name="question" value="103">
 										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="5" class="pt-trigger" style="margin-right:1vw;">
-										<br><br>
-								</td>
-							</tr>
-						</table>
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-5">
@@ -366,7 +356,7 @@
 						<h3>{{tr('question_4_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_104">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td>
 									<label for="q_4_1_b"><input type="radio" id="q_4_1_b" name="item" value="1"> {{tr('q_4_1_b')}}</label>
@@ -382,15 +372,13 @@
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
 							</tr>
-							<tr>
-								<td colspan="2" >
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="104">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="6" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="104">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="6" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-6">
@@ -400,7 +388,7 @@
 						<h3>{{tr('question_5_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_105">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td>
 									<label for="q_5_1_b"><input type="radio" id="q_5_1_b" name="item" value="1"> {{tr('q_5_1_b')}}</label>
@@ -415,17 +403,13 @@
 									<label>{{tr('q_5_b_add')}}</label><br>
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
-							</tr>
-							
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="105">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="7" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							</tr>														
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="105">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="7" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-7">
@@ -435,22 +419,19 @@
 						<h3>{{tr('question_6_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_106">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td colspan="2">
 									
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
-							</tr>
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="106">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="8" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							</tr>							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="106">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="8" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-8">
@@ -603,17 +584,13 @@
 									  </span>
 								</td>
 								
-							</tr>
-							<tr>
-								<td colspan="2">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="107">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="9" class="pt-trigger" style="margin-right:1vw">
-										<br>
-								</td>
-							</tr>
-							
+							</tr>														
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="107">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="9" class="pt-trigger" style="margin-right:1vw">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-9">
@@ -623,10 +600,10 @@
 						<h3>{{tr('question_8_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_108">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable" style="width:100%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_20_5" type="radio" name="rating_1" value="5">
@@ -642,16 +619,13 @@
 
 										  </span>
 									</td>								
-								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="108">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="10" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								</tr>								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="108">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="10" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-10">
@@ -661,10 +635,10 @@
 						<h3>{{tr('question_9_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_109">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;height:75%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_21_5" type="radio" name="rating_1" value="5">
@@ -687,15 +661,13 @@
 										<textarea name="message" style="width:26vw"></textarea>
 									</td>
 								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="109">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="11" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="109">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="11" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>				
 				<div class="pt-page pt-page-11">
@@ -705,7 +677,7 @@
 					<h3>{{tr('question_10_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_110">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;">
 							
 								<tr>
 									<td>
@@ -725,19 +697,20 @@
 								</tr>
 								<tr>
 									<td>
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="110">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="12" class="pt-trigger" style="margin-right:1vw;">
-										<br>
+										&nbsp;
+										
 									</td>
 									<td >
 										<label>{{tr('q_10_b_add')}}</label><br>
 										<textarea name="message" style="width:26vw;height:10vh"></textarea>
 									</td>
-								</tr>
-								
-								
+								</tr>																
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="110">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="12" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-12">
@@ -747,10 +720,10 @@
 						<h3>{{tr('question_11_b')}}</h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_111">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;height:75%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_22_5" type="radio" name="rating_1" value="5">
@@ -773,26 +746,25 @@
 										<textarea name="message" style="width:26vw"></textarea>
 									</td>
 								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="{{uniqueId}}">
-										<input type="hidden" name="question" value="111">
-										<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="13" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="{{uniqueId}}">
+							<input type="hidden" name="question" value="111">
+							<input type="submit" value="{{tr('surveyButtonGoon')}}" data-animation="32" data-goto="13" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-13">
-					<table class="formTable">
-						<tr><td>
 					<br>
-					<h3>{{tr('thankYouB')}}</h3><br><br>
-					<a href="http://agritechnica2015.denkfabrik-group.com/backend/de/survey/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">Zurück zum Anfang der Befragung.</span></a>
-					</td>
-					</tr>
-					</table>
+					<div class="statusbar outer">
+					<h3 style="margin-left">{{tr('thankYouB')}}</h3>
+					</div>
+					<div class="trigger-buttons">
+						<a href="http://agritechnica2015.denkfabrik-group.com/backend/de/survey/" class="navButton"  style="margin-left:30px;float:left;font-size:1.5vw;font-weight:normal">Zurück zum Anfang der Befragung.</a>
+						
+					</div>
+					
 				</div>
 			</div>
 		</div>

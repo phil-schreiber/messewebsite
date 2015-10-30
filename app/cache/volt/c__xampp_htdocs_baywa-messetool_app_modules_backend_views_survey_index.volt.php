@@ -15,20 +15,14 @@
 		</header>
 		<div id="surveyForm" class="form">
 			<div id="surveyFormWrapper" class="pt-wrapper">
-				<div class="pt-page pt-page-1">
+				<div class="pt-page pt-page-1" id="surveystartpage" style="display:block;z-index: 2">
 					<table width="100%">
 						<tr><td><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyHeaderInfoB'); ?></td></tr>
-						<tr><td style="height:25vh;">&nbsp;</td></tr>
 						
-						<tr>
-							<td>
-								
-						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonStart'); ?></span></a>
-					
-							</td>
-						</tr>
-					
 					</table>
+					<div class="trigger-buttons">
+						<a href="" class="navButton pt-trigger"   data-animation="32" data-goto="2"><span><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonStart'); ?></span></a>
+					</div>
 				</div>
 				<div class="pt-page pt-page-2">
 					<div class="statusbar outer">
@@ -63,18 +57,13 @@
 									<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyAnswerSuggestions'); ?></label><br>
 									<textarea name="message"></textarea>
 									</div>
-								</td>
-							</tr>
-								<tr>
-								<td>
-									
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="3" class="pt-trigger" style="margin-right:1vw;">
-									
-								</td>
-							</tr>
+								</td>							
 						</table>
-						<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-						<input type="hidden" name="question" value="101">
+						<div class="trigger-buttons">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="3" class="pt-trigger" style="margin-right:1vw;">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="101">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-3">
@@ -84,13 +73,14 @@
 					<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_2_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_102">
-							<table class="formTable fullTable" >
+							<table class="formTable fullTable" style="height:90%;">
 							<tr>
 								<td>
-									<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_2_1_b_title'); ?></label><br>
+									<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_2_1_b_title'); ?></label><br><br>
 									<label for="q_2_1"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_2_1_b'); ?></label>
 								</td>
 								<td>
+									<br><br>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="1">
 										<input id="rating_2_5" type="radio" name="rating_1" value="5">
@@ -268,15 +258,13 @@
 								</td>
 							</tr>
 							<tr>
-								<td>
+								<td colspan="2">
 									<br>
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="102">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="4" class="pt-trigger" style="margin-right:1vw;">
+										
 										<br>		
 								</td>
 								
-								<td colspan="3">
+								<td colspan="2">
 									<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyAnswerSuggestions'); ?></label><br>
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
@@ -286,6 +274,11 @@
 							
 							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+										<input type="hidden" name="question" value="102">
+										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="4" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-4">
@@ -347,15 +340,13 @@
 								</td>
 							</tr>
 					
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							
+						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
 										<input type="hidden" name="question" value="103">
 										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="5" class="pt-trigger" style="margin-right:1vw;">
-										<br><br>
-								</td>
-							</tr>
-						</table>
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-5">
@@ -365,7 +356,7 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_4_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_104">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td>
 									<label for="q_4_1_b"><input type="radio" id="q_4_1_b" name="item" value="1"> <?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_4_1_b'); ?></label>
@@ -381,15 +372,13 @@
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
 							</tr>
-							<tr>
-								<td colspan="2" >
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="104">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="6" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="104">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="6" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-6">
@@ -399,7 +388,7 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_5_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_105">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td>
 									<label for="q_5_1_b"><input type="radio" id="q_5_1_b" name="item" value="1"> <?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_5_1_b'); ?></label>
@@ -414,17 +403,13 @@
 									<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_5_b_add'); ?></label><br>
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
-							</tr>
-							
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="105">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="7" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							</tr>														
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="105">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="7" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-7">
@@ -434,22 +419,19 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_6_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_106">
-						<table class="formTable" style="width:100%;">
+						<table class="formTable" style="width:100%;height:75%">
 							<tr>
 								<td colspan="2">
 									
 									<textarea name="message" style="width:26vw"></textarea>
 								</td>
-							</tr>
-							<tr>
-								<td colspan="3">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="106">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="8" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+							</tr>							
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="106">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="8" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-8">
@@ -480,69 +462,8 @@
 										
 									  </span>
 								</td>
-								<td >
-									<label for="q_7_2_b" style="margin-left: 7vw;"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_2_b'); ?></label>
-								</td>
 								<td>
-									<span class="starRating">
-										<input type="hidden" name="rating[]" value="2">
-										<input id="rating_14_5" type="radio" name="rating_2" value="5">
-										<label for="rating_14_5">5</label>
-										<input id="rating_14_4" type="radio" name="rating_2" value="4">
-										<label for="rating_14_4">4</label>
-										<input id="rating_14_3" type="radio" name="rating_2" value="3">
-										<label for="rating_14_3">3</label>
-										<input id="rating_14_2" type="radio" name="rating_2" value="2">
-										<label for="rating_14_2">2</label>
-										<input id="rating_14_1" type="radio" name="rating_2" value="1">
-										<label for="rating_14_1">1</label>
-										
-									  </span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="q_7_3_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_3_b'); ?></label>
-								</td>
-								<td>
-									<span class="starRating">
-										<input type="hidden" name="rating[]" value="3">
-										<input id="rating_15_5" type="radio" name="rating_3" value="5">
-										<label for="rating_15_5">5</label>
-										<input id="rating_15_4" type="radio" name="rating_3" value="4">
-										<label for="rating_15_4">4</label>
-										<input id="rating_15_3" type="radio" name="rating_3" value="3">
-										<label for="rating_15_3">3</label>
-										<input id="rating_15_2" type="radio" name="rating_3" value="2">
-										<label for="rating_15_2">2</label>
-										<input id="rating_15_1" type="radio" name="rating_3" value="1">
-										<label for="rating_15_1">1</label>
-										
-									  </span>
-								</td>
-								<td >
-									<label for="q_7_4_b" style="margin-left: 7vw;"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_4_b'); ?></label>
-								</td>
-								<td>
-									<span class="starRating">
-										<input type="hidden" name="rating[]" value="4">
-										<input id="rating_16_5" type="radio" name="rating_4" value="5">
-										<label for="rating_16_5">5</label>
-										<input id="rating_16_4" type="radio" name="rating_4" value="4">
-										<label for="rating_16_4">4</label>
-										<input id="rating_16_3" type="radio" name="rating_4" value="3">
-										<label for="rating_16_3">3</label>
-										<input id="rating_16_2" type="radio" name="rating_4" value="2">
-										<label for="rating_16_2">2</label>
-										<input id="rating_16_1" type="radio" name="rating_4" value="1">
-										<label for="rating_16_1">1</label>
-										
-									  </span>
-								</td>
-							</tr>
-							<tr>
-								<td>
-									<label for="q_7_5_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_5_b'); ?></label>
+									<label for="q_7_5_b" style="margin-left: 7vw;"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_5_b'); ?></label>
 								</td>
 								<td>
 									<span class="starRating">
@@ -557,6 +478,26 @@
 										<label for="rating_17_2">2</label>
 										<input id="rating_17_1" type="radio" name="rating_5" value="1">
 										<label for="rating_17_1">1</label>
+										
+									  </span>
+								</td>
+							</tr>
+							<tr><td>
+									<label for="q_7_2_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_2_b'); ?></label>
+								</td>
+								<td>
+									<span class="starRating">
+										<input type="hidden" name="rating[]" value="2">
+										<input id="rating_14_5" type="radio" name="rating_2" value="5">
+										<label for="rating_14_5">5</label>
+										<input id="rating_14_4" type="radio" name="rating_2" value="4">
+										<label for="rating_14_4">4</label>
+										<input id="rating_14_3" type="radio" name="rating_2" value="3">
+										<label for="rating_14_3">3</label>
+										<input id="rating_14_2" type="radio" name="rating_2" value="2">
+										<label for="rating_14_2">2</label>
+										<input id="rating_14_1" type="radio" name="rating_2" value="1">
+										<label for="rating_14_1">1</label>
 										
 									  </span>
 								</td>
@@ -579,10 +520,30 @@
 										
 									  </span>
 								</td>
+								
 							</tr>
 							<tr>
 								<td>
-									<label for="q_7_7_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_7_b'); ?></label>
+									<label for="q_7_3_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_3_b'); ?></label>
+								</td>
+								<td>
+									<span class="starRating">
+										<input type="hidden" name="rating[]" value="3">
+										<input id="rating_15_5" type="radio" name="rating_3" value="5">
+										<label for="rating_15_5">5</label>
+										<input id="rating_15_4" type="radio" name="rating_3" value="4">
+										<label for="rating_15_4">4</label>
+										<input id="rating_15_3" type="radio" name="rating_3" value="3">
+										<label for="rating_15_3">3</label>
+										<input id="rating_15_2" type="radio" name="rating_3" value="2">
+										<label for="rating_15_2">2</label>
+										<input id="rating_15_1" type="radio" name="rating_3" value="1">
+										<label for="rating_15_1">1</label>
+										
+									  </span>
+								</td>
+								<td>
+									<label for="q_7_7_b" style="margin-left: 7vw;"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_7_b'); ?></label>
 								</td>
 								<td>
 									<span class="starRating">
@@ -600,17 +561,36 @@
 										
 									  </span>
 								</td>
+								
 							</tr>
 							<tr>
-								<td colspan="2">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="107">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="9" class="pt-trigger" style="margin-right:1vw">
-										<br>
+								<td >
+									<label for="q_7_4_b"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_7_4_b'); ?></label>
 								</td>
-							</tr>
-							
+								<td>
+									<span class="starRating">
+										<input type="hidden" name="rating[]" value="4">
+										<input id="rating_16_5" type="radio" name="rating_4" value="5">
+										<label for="rating_16_5">5</label>
+										<input id="rating_16_4" type="radio" name="rating_4" value="4">
+										<label for="rating_16_4">4</label>
+										<input id="rating_16_3" type="radio" name="rating_4" value="3">
+										<label for="rating_16_3">3</label>
+										<input id="rating_16_2" type="radio" name="rating_4" value="2">
+										<label for="rating_16_2">2</label>
+										<input id="rating_16_1" type="radio" name="rating_4" value="1">
+										<label for="rating_16_1">1</label>
+										
+									  </span>
+								</td>
+								
+							</tr>														
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="107">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="9" class="pt-trigger" style="margin-right:1vw">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-9">
@@ -620,10 +600,10 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_8_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_108">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable" style="width:100%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_20_5" type="radio" name="rating_1" value="5">
@@ -639,16 +619,13 @@
 
 										  </span>
 									</td>								
-								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="108">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="10" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								</tr>								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="108">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="10" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-10">
@@ -658,10 +635,10 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_9_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_109">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;height:75%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_21_5" type="radio" name="rating_1" value="5">
@@ -684,15 +661,13 @@
 										<textarea name="message" style="width:26vw"></textarea>
 									</td>
 								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="109">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="11" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="109">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="11" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>				
 				<div class="pt-page pt-page-11">
@@ -702,7 +677,7 @@
 					<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_10_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_110">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;">
 							
 								<tr>
 									<td>
@@ -722,19 +697,20 @@
 								</tr>
 								<tr>
 									<td>
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="110">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="12" class="pt-trigger" style="margin-right:1vw;">
-										<br>
+										&nbsp;
+										
 									</td>
 									<td >
 										<label><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_10_b_add'); ?></label><br>
 										<textarea name="message" style="width:26vw;height:10vh"></textarea>
 									</td>
-								</tr>
-								
-								
+								</tr>																
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="110">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="12" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-12">
@@ -744,10 +720,10 @@
 						<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('question_11_b'); ?></h3>
 					</div>
 					<form autocomplete="off" class="survey" name="question_111">
-						<table class="formTable" id="plzTable" style="width:100%;">
+						<table class="formTable"  style="width:100%;height:75%;">
 							
 								<tr>
-									<td>
+									<td style="vertical-align: top;padding-top:3vh">
 										<span class="starRating">
 											<input type="hidden" name="rating[]" value="1">
 											<input id="rating_22_5" type="radio" name="rating_1" value="5">
@@ -770,30 +746,29 @@
 										<textarea name="message" style="width:26vw"></textarea>
 									</td>
 								</tr>
-								<tr>
-								<td colspan="6">
-										<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
-										<input type="hidden" name="question" value="111">
-										<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="13" class="pt-trigger" style="margin-right:1vw;">
-										<br>
-								</td>
-							</tr>
+								
 						</table>
+						<div class="trigger-buttons">
+							<input type="hidden" name="uniqueid" value="<?php echo $uniqueId; ?>">
+							<input type="hidden" name="question" value="111">
+							<input type="submit" value="<?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('surveyButtonGoon'); ?>" data-animation="32" data-goto="13" class="pt-trigger" style="margin-right:1vw;">
+						</div>
 					</form>
 				</div>
 				<div class="pt-page pt-page-13">
-					<table class="formTable">
-						<tr><td>
 					<br>
-					<h3><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('thankYouB'); ?></h3><br><br>
-					<a href="http://agritechnica2015.denkfabrik-group.com/backend/de/survey/" class="navButton"  id="consultantNotFound"><span class="icon i_right_primary"></span><span class="btn_label">Zurück zum Anfang der Befragung.</span></a>
-					</td>
-					</tr>
-					</table>
+					<div class="statusbar outer">
+					<h3 style="margin-left"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('thankYouB'); ?></h3>
+					</div>
+					<div class="trigger-buttons">
+						<a href="http://agritechnica2015.denkfabrik-group.com/backend/de/survey/" class="navButton"  style="margin-left:30px;float:left;font-size:1.5vw;font-weight:normal">Zurück zum Anfang der Befragung.</a>
+						
+					</div>
+					
 				</div>
 			</div>
 		</div>
-		<a href="http://agritechnica2015.denkfabrik-group.com/" class="navButton small backToTop"  ><span class="icon i_up_primary"></span><span class="btn_label"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('backHome'); ?></span></a>
+		
 	</section>
 		
 <div id="virtualKeyboardWrapper"></div>
