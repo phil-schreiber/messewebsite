@@ -1,3 +1,5 @@
+
+
 var viewportW = Math.max(document.documentElement.clientWidth, window.innerWidth || 0)
 var viewportH = Math.max(document.documentElement.clientHeight, window.innerHeight || 0)
 var baseurl;
@@ -11,7 +13,8 @@ function init(jQuery){
 		jQuery('#loadingimg').show();	
 		requireControllerPlugins();
 	}
-	timerInterval=window.setInterval(function(){		
+	
+	timerInterval=window.setInterval(function(){			
 		
 		if(time==180){
 			window.location.href='http://agritechnica2015.denkfabrik-group.com/';

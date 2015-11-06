@@ -96,10 +96,10 @@
 										
 									  </span>
 								</td>							
-								<td>
+								<td><br><br>
 									<label for="q_2_6"><?php echo messetool\Modules\Modules\Backend\Controllers\ControllerBase::translate('q_2_6_b'); ?></label>
 								</td>
-								<td>
+								<td><br><br>
 									<span class="starRating">
 										<input type="hidden" name="rating[]" value="6">
 										<input id="rating_3_5" type="radio" name="rating_6" value="5">
